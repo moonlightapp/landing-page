@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -9,24 +10,30 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
-    },
-    {
-        path: 'home',
-        component: HomeComponent
-    },
-    {
-        path: 'team',
-        component: TeamComponent,
-    },
-    {
-        path: 'contact',
-        component: ContactComponent
-    },
-    {
-        path: 'settings',
-        component: SettingsComponent
+        component: DashboardComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'home',
+                pathMatch: 'full'
+            },
+            {
+                path: 'home',
+                component: HomeComponent
+            },
+            {
+                path: 'team',
+                component: TeamComponent,
+            },
+            {
+                path: 'contact',
+                component: ContactComponent
+            },
+            {
+                path: 'settings',
+                component: SettingsComponent
+            }
+        ]
     }
 ];
 
