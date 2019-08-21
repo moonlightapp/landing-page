@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hooked-app": {
+    "moonlight": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hooked-app",
+            "outputPath": "dist/moonlight",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hooked-app:build"
+            "browserTarget": "moonlight:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "hooked-app:build:production"
+              "browserTarget": "moonlight:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hooked-app:build"
+            "browserTarget": "moonlight:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "hooked-app:serve"
+            "devServerTarget": "moonlight:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "hooked-app:serve:production"
+              "devServerTarget": "moonlight:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "hooked-app"
+  "defaultProject": "moonlight"
 }
