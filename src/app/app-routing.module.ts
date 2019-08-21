@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
     {
         path: '',
-        loadChildren: () => import('./dashboard/dashboard-routing.module').then(m => m.DashboardRoutingModule)
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
     },
 ];
 
