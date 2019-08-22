@@ -1,0 +1,119 @@
+@import 'colors';
+@import 'mixins';
+
+* {
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+    @include box-sizing(border-box);
+}
+
+body {
+    font-size: 15px;
+    min-width: 1024px;
+    color: $black;
+}
+
+input, button {
+    outline: none;
+}
+
+input[type=file] {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+h1, h2, h3, h4 {
+    color: $black;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.content {
+    padding-bottom: 30px;
+    background-color: $white;
+    @include border-radius(6px);
+    @include box-shadow(0px 4px 13px 0 rgba(217, 226, 237, 0.35));
+}
+
+@media (max-width: 1440px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1120px) {
+
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+}

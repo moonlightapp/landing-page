@@ -3,11 +3,16 @@ import { CommonModule } from '@angular/common';
 import { MessageItemComponent } from './message-item.component';
 
 
-
 @NgModule({
-  declarations: [MessageItemComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        MessageItemComponent
+    ],
+    imports: [
+        CommonModule
+    ],
+    exports: [
+        MessageItemComponent
+    ]
 })
-export class MessageItemModule { }
+export class MessageItemModule {
+}

@@ -1,5 +1,6 @@
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { HeaderModule } from '../ui-fragments/header/header.module';
 import { SettingsComponent } from './settings/settings.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
@@ -18,7 +19,8 @@ import { NgModule } from '@angular/core';
     ],
     imports: [
         CommonModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
+        HeaderModule
     ],
 })
 export class DashboardModule {

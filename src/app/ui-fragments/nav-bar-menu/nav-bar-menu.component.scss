@@ -1,0 +1,22 @@
+@import "../../../assets/styles/helpers/mixins";
+@import "../../../assets/styles/helpers/colors";
+
+.nav-bar-container {
+    ul {
+        display: flex;
+        @include align-items(center);
+
+        li {
+            margin-right: 15px;
+            font-size: 18px;
+
+            a {
+                transition: .5s;
+                color: $white;
+                &:hover {
+                    color: $blue-light;
+                }
+            }
+        }
+    }
+}

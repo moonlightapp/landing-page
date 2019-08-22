@@ -1,1 +1,7 @@
-<p>nav-bar-menu works!</p>
+<div class="nav-bar-container">
+    <ul>
+        <li *ngFor="let item of items">
+            <a [routerLink]="item.url">{{ item.title }}</a>
+        </li>
+    </ul>
+</div>
