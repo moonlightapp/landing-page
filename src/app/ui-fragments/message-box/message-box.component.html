@@ -1,1 +1,5 @@
-<p>message-box works!</p>
+<div class="message-box-container" (click)="addMessagesOnKeydown()">
+    <div class="message-item clearfix" *ngFor="let message of messages">
+        <app-message-item [message]="message"></app-message-item>
+    </div>
+</div>

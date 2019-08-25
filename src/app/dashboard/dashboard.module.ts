@@ -1,3 +1,4 @@
+import { MessageBoxModule } from '../ui-fragments/message-box/message-box.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HeaderModule } from '../ui-fragments/header/header.module';
@@ -20,7 +21,8 @@ import { NgModule } from '@angular/core';
     imports: [
         CommonModule,
         DashboardRoutingModule,
-        HeaderModule
+        HeaderModule,
+        MessageBoxModule
     ],
 })
 export class DashboardModule {

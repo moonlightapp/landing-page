@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { MessageItemModule } from '../../ui-kits/message-item/message-item.module';
 import { MessageBoxComponent } from './message-box.component';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 
 @NgModule({
@@ -8,7 +9,8 @@ import { MessageBoxComponent } from './message-box.component';
         MessageBoxComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MessageItemModule
     ],
     exports: [
         MessageBoxComponent

@@ -1,0 +1,29 @@
+@import "../../../assets/styles/helpers/colors";
+@import "../../../assets/styles/helpers/mixins";
+
+.message-item-container {
+    background-color: hsla(89, 43%, 51%, 0.1);
+    min-height: 45px;
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 7px;
+
+    .message-title {
+        margin-bottom: 10px;
+    }
+
+    .message-content {
+        color: $white;
+        word-break: break-word;
+    }
+
+    .color-orange {
+        color: $orange;
+    }
+
+    .color-light-blue {
+        color: $blue-light;
+    }
+}

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { NavigationItem } from '../../interfaces/navigation-item';
+import { NAV_BAR_URLS } from '../../constants/nav-bar-urls';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -7,29 +9,16 @@ import { NavigationItem } from '../../interfaces/navigation-item';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-    public navBarItems: NavigationItem[] = [
-        {
-            url: '/home',
-            title: 'Home'
-        },
-        {
-            url: '/team',
-            title: 'Team'
-        },
-        {
-            url: '/contact',
-            title: 'Contact'
-        },
-        {
-            url: '/settings',
-            title: 'Settings'
-        }
+    public navBarItems: NavigationItem[] = NAV_BAR_URLS;
 
-    ];
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
+    }
+
+    navigateToHomePage() {
+        this.router.navigateByUrl('/home');
     }
 
 }

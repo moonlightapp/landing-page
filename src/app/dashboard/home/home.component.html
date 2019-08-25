@@ -1,3 +1,20 @@
 <div class="home-container">
 
+    <div class="home-section">
+        <h1 class="section-title">Moonlight Project title goes here</h1>
+
+        <div class="angle" (click)="openMessageBox()">
+            <i class="icon-angle-bottom"></i>
+        </div>
+    </div>
+
+    <div class="message-box-modal no-scale" *ngIf="showModal"
+         [class.scale]="showMessageBox">
+        <app-message-box (lastMessage)="showContactDetails()"></app-message-box>
+    </div>
+
+<!--    <div class="message-box-modal navigate-to-contacts" *ngIf="showContactPageLink">-->
+<!--        <a [routerLink]="['/contact']">Navigate to contact page</a>-->
+<!--    </div>-->
+
 </div>
