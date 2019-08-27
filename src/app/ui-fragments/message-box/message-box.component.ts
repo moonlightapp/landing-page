@@ -11,6 +11,11 @@ export class MessageBoxComponent implements OnInit {
 
     public messagesData = [
         {
+            title: 'David',
+            content: 'first question form david',
+            isQuestion: true
+        },
+        {
             title: 'John',
             content: 'John answered davids message',
             isQuestion: false
@@ -47,34 +52,38 @@ export class MessageBoxComponent implements OnInit {
         },
     ];
 
-    public messages = [
-        {
-            title: 'David',
-            content: 'first question form david',
-            isQuestion: true
-        },
-    ];
+    public messages = [];
 
-    @HostListener('window:keydown', ['$event'])
-    onClick($event) {
-        if ($event.keyCode === 40) {
-            this.addMessagesOnKeydown();
-        }
+    @HostListener('document:keydown', ['$event'])
+    onKeyDown($event) {
+        $event.keyCode === 40 && this.addMessagesOnKeydown();
     }
+
+    // @HostListener('document:click', ['$event'])
+    // onClick($event) {
+    //     this.addMessagesOnKeydown();
+    // }
 
     constructor() {
     }
 
     ngOnInit() {
+        this.initFirstMessage();
+    }
+
+    initFirstMessage() {
+        setTimeout(() => {
+            this.messages.push(this.messagesData.shift());
+            this.index++;
+        }, 1500)
     }
 
     addMessagesOnKeydown(): void {
-        if (this.index <= this.messagesData.length - 1)
+        if (this.index <= this.messagesData.length - 1) {
             this.messages.push(this.messagesData[this.index++]);
-
-        if (this.index === this.messagesData.length) {
+        } else if (this.index === this.messagesData.length) {
             this.lastMessage.emit(true);
+            this.messages = [];
         }
     }
-
 }
