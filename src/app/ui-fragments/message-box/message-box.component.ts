@@ -9,54 +9,61 @@ export class MessageBoxComponent implements OnInit {
     @Output() lastMessage = new EventEmitter();
     private index = 0;
 
-    public messagesData = [
+    public messages = [
         {
             title: 'David',
             content: 'first question form david',
-            isQuestion: true
+            isQuestion: true,
+            isVisible: false
         },
         {
             title: 'John',
             content: 'John answered davids first message',
-            isQuestion: false
+            isQuestion: false,
+            isVisible: false
         },
         {
             title: 'Daivd',
             content: 'second question form david',
-            isQuestion: true
+            isQuestion: true,
+            isVisible: false
         },
         {
             title: 'Tom',
             content: 'Tom answered davids second question',
-            isQuestion: false
+            isQuestion: false,
+            isVisible: false
         },
         {
             title: 'Michael',
             content: 'Michael answered Tom question',
-            isQuestion: true
+            isQuestion: true,
+            isVisible: false
         },
         {
             title: 'Jordan',
             content: 'Jordan answered davids second question',
-            isQuestion: false
+            isQuestion: false,
+            isVisible: false
         },
         {
             title: 'David',
             content: 'Tom answered davids second question',
-            isQuestion: true
+            isQuestion: true,
+            isVisible: false
         },
         {
             title: 'David',
             content: 'Tom answered davids last question 321 654 897',
-            isQuestion: false
+            isQuestion: false,
+            isVisible: false
         },
     ];
 
-    public messages = [];
 
     @HostListener('document:keydown', ['$event'])
     onKeyDown($event) {
-        $event.keyCode === 40 && this.addMessagesOnKeydown();
+        this.messages[this.index++].isVisible = true;
     }
 
     // @HostListener('document:click', ['$event'])
@@ -70,21 +77,7 @@ export class MessageBoxComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.initFirstMessage();
+
     }
 
-    initFirstMessage() {
-        setTimeout(() => {
-            this.messages.push(this.messagesData.shift());
-        }, 1500)
-    }
-
-    addMessagesOnKeydown(): any {
-        if (this.index < this.messagesData.length) {
-            return this.messages.push(this.messagesData[this.index++]);
-        }
-
-        this.lastMessage.emit(true);
-        this.messages = [];
-    }
 }

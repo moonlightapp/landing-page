@@ -1,8 +1,7 @@
 <div class="message-item-container" [class.float-right]="message.isQuestion">
     <div  class="message-title"
           [class.color-orange]="message.isQuestion"
-          [class.color-light-blue]="!message.isQuestion"
-    >
+          [class.color-light-blue]="!message.isQuestion">
         {{message.title}}
     </div>
     <div class="message-content">{{message.content}}</div>

@@ -9,5 +9,26 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -25%);
+
+    .message-item {
+        position: relative;
+        padding: 5px 2.5px;
+        border-radius: 25px;
+        font-family: Verdana;
+        letter-spacing: 0.02em;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: normal;
+        opacity: 0;
+        //-webkit-transform: translateY(20px) scale(.9);
+        //-moz-transform: translateY(20px) scale(.9);
+        //-ms-transform: translateY(20px) scale(.9);
+        //transform: translateY(20px) scale(.9);
+        transition: transform 150ms , opacity 150ms;
+    }
+
+    .visible {
+        opacity: 1;
+    }
 }

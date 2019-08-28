@@ -15,20 +15,6 @@ html {
         transform-origin: top;
     }
 
-    .navigate-to-contacts {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 300px;
-        font-size: 18px;
-
-        a {
-            color: $white;
-        }
-    }
-
     .message-box-modal {
         position: absolute;
         z-index: 2;
@@ -64,7 +50,7 @@ html {
 
     .angle {
         position: absolute;
-        bottom: 0;
+        bottom: 20px;
         left: 0;
         right: 0;
         margin: 0 auto;
