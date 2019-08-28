@@ -17,7 +17,7 @@ export class MessageBoxComponent implements OnInit {
         },
         {
             title: 'John',
-            content: 'John answered davids message',
+            content: 'John answered davids first message',
             isQuestion: false
         },
         {
@@ -47,7 +47,7 @@ export class MessageBoxComponent implements OnInit {
         },
         {
             title: 'David',
-            content: 'Tom answered davids second question 321 654 897',
+            content: 'Tom answered davids last question 321 654 897',
             isQuestion: false
         },
     ];
@@ -60,7 +60,9 @@ export class MessageBoxComponent implements OnInit {
     }
 
     // @HostListener('document:click', ['$event'])
-    // onClick($event) {
+    // onClick(event) {
+    //     event.stopPropagation();
+    //     event.preventDefault()
     //     this.addMessagesOnKeydown();
     // }
 
@@ -74,16 +76,15 @@ export class MessageBoxComponent implements OnInit {
     initFirstMessage() {
         setTimeout(() => {
             this.messages.push(this.messagesData.shift());
-            this.index++;
         }, 1500)
     }
 
-    addMessagesOnKeydown(): void {
-        if (this.index <= this.messagesData.length - 1) {
-            this.messages.push(this.messagesData[this.index++]);
-        } else if (this.index === this.messagesData.length) {
-            this.lastMessage.emit(true);
-            this.messages = [];
+    addMessagesOnKeydown(): any {
+        if (this.index < this.messagesData.length) {
+            return this.messages.push(this.messagesData[this.index++]);
         }
+
+        this.lastMessage.emit(true);
+        this.messages = [];
     }
 }

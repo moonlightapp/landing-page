@@ -1,7 +1,8 @@
 @import "../../../assets/styles/helpers/colors";
-
+html {
+    scroll-behavior: smooth;
+}
 .home-container {
-
     .no-scale {
         transform: scale(1, 0);
         transition: 1s;
@@ -9,7 +10,7 @@
     }
 
     .scale {
-        transform: scale(1,1);
+        transform: scale(1, 1);
         transition: 1s;
         transform-origin: top;
     }
@@ -29,22 +30,13 @@
     }
 
     .message-box-modal {
-        position: fixed;
+        position: absolute;
         z-index: 2;
         left: 0;
         top: 0;
         bottom: 0;
         right: 0;
         background-color: #292F3F;
-
-        .message-box {
-            position: fixed;
-            margin: 0 auto;
-            max-width: 650px;
-            width: 100%;
-            transition: transform 150ms;
-            transition-timing-function: ease-out;
-        }
     }
 
     .home-section {
@@ -101,19 +93,3 @@
         100% { transform: translateY(-10px); }
     }
 }
-
-.fadein, .fadeout {
-    opacity: 0;
-    -moz-transition: opacity 0.4s ease-in-out;
-    -o-transition: opacity 0.4s ease-in-out;
-    -webkit-transition: opacity 0.4s ease-in-out;
-    transition: opacity 0.4s ease-in-out;
-}
-.fadein {
-    opacity: 1;
-}
-
-//transform: scale(1, 1);
-//transition: .7s;
-//transform-origin: bottom;
-

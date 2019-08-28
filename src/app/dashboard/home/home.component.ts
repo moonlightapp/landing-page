@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
         setTimeout(() => {
             this.showModal = !this.showModal;
             this.showContactPageLink = true;
-        }, 300);
+        }, 1000);
     }
 
 }
