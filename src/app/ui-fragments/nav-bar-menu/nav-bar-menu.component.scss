@@ -2,6 +2,8 @@
 @import "../../../assets/styles/helpers/colors";
 
 .nav-bar-container {
+    letter-spacing: 0.1em;
+
     ul {
         display: flex;
         @include align-items(center);

@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     public showMessageBox: boolean;
-    public showModal: boolean;
-    public showContactPageLink: boolean;
+    public showScale: boolean;
 
     constructor() {
     }
@@ -16,19 +15,18 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
     }
 
-    public openMessageBox() {
-        this.showModal = !this.showModal;
+    public toggleModal() {
+        this.showMessageBox = !this.showMessageBox;
+
+        setTimeout(() => {
+            this.showScale = this.showMessageBox
+        }, 500)
+    }
+
+    public onLastMessage() {
         setTimeout(() => {
             this.showMessageBox = !this.showMessageBox;
-        }, 300);
+        }, 1000)
+        this.showScale = false;
     }
-
-    public showContactDetails() {
-        this.showMessageBox = !this.showMessageBox;
-        setTimeout(() => {
-            this.showModal = !this.showModal;
-            this.showContactPageLink = true;
-        }, 1000);
-    }
-
 }

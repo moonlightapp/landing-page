@@ -1,5 +1,8 @@
-<div class="message-box-container">
-    <div class="message-item clearfix" [class.visiable]="message.isVisible" *ngFor="let message of messages">
+<div class="message-box-container" id="message-box-container">
+    <div class="message-item clearfix"
+         *ngFor="let message of messages; index as index"
+         [attr.id]="index"
+         [class.visible]="message.isVisible">
         <app-message-item [message]="message"></app-message-item>
     </div>
 </div>

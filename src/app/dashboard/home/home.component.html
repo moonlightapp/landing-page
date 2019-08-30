@@ -4,12 +4,15 @@
         <h1 class="section-title">Moonlight Project title goes here</h1>
     </div>
 
-    <div class="message-box-modal no-scale"
-         [class.scale]="showMessageBox">
-        <app-message-box (lastMessage)="showContactDetails()"></app-message-box>
-    </div>
+    <ng-container *ngIf="showMessageBox">
+        <div class="message-box-modal no-scale"
+             [class.no-scale]="!showScale"
+             [class.scale]="showScale">
+            <app-message-box (lastMessage)="onLastMessage()" [modalIsVisible]="showMessageBox"></app-message-box>
+        </div>
+    </ng-container>
 
-    <div class="angle" (click)="openMessageBox()">
+    <div class="angle" (click)="toggleModal()">
         <i class="icon-angle-bottom"></i>
     </div>
 </div>

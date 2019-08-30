@@ -5,14 +5,14 @@ html {
 .home-container {
     .no-scale {
         transform: scale(1, 0);
-        transition: 1s;
+        transition: .8s;
         transform-origin: bottom;
     }
 
     .scale {
         transform: scale(1, 1);
-        transition: 1s;
-        transform-origin: top;
+        transition: .5s;
+        transform-origin: bottom;
     }
 
     .message-box-modal {

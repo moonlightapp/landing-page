@@ -1,13 +1,14 @@
-import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { AfterContentInit, Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'app-message-box',
     templateUrl: './message-box.component.html',
     styleUrls: ['./message-box.component.scss']
 })
-export class MessageBoxComponent implements OnInit {
+export class MessageBoxComponent implements OnInit, AfterContentInit {
     @Output() lastMessage = new EventEmitter();
-    private index = 0;
+    @Input() modalIsVisible: boolean;
+    private index = 1;
 
     public messages = [
         {
@@ -59,19 +60,18 @@ export class MessageBoxComponent implements OnInit {
             isVisible: false
         },
     ];
+    public isInited = false
 
 
     @HostListener('document:keydown', ['$event'])
-    onKeyDown($event) {
-        this.messages[this.index++].isVisible = true;
+    onKeyDown(event) {
+        this.displayMessagesByIndex();
     }
 
-    // @HostListener('document:click', ['$event'])
-    // onClick(event) {
-    //     event.stopPropagation();
-    //     event.preventDefault()
-    //     this.addMessagesOnKeydown();
-    // }
+    @HostListener('document:click', ['$event'])
+    onClick(event) {
+        this.isInited && this.displayMessagesByIndex();
+    }
 
     constructor() {
     }
@@ -80,4 +80,23 @@ export class MessageBoxComponent implements OnInit {
 
     }
 
+    ngAfterContentInit(): void {
+        setTimeout(() => {
+            this.messages[0].isVisible = true;
+            this.isInited = true;
+        }, 300)
+    }
+
+    displayMessagesByIndex(): any {
+        if (this.index > this.messages.length - 1) {
+            this.messages.forEach(message => message.isVisible = false);
+            this.lastMessage.emit(true);
+        } else  {
+            this.messages[this.index].isVisible = true;
+            let container = document.getElementById('message-box-container');
+            let el = document.getElementById(''+(this.index));
+            container['style'].transform = `translate(-50%, ${-(el.offsetTop + 150)}px)`;
+        }
+        this.index++;
+    }
 }
