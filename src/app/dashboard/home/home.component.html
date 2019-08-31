@@ -1,5 +1,4 @@
 <div class="home-container">
-
     <div class="home-section">
         <h1 class="section-title">Moonlight Project title goes here</h1>
     </div>
@@ -8,7 +7,7 @@
         <div class="message-box-modal no-scale"
              [class.no-scale]="!showScale"
              [class.scale]="showScale">
-            <app-message-box (lastMessage)="onLastMessage()" [modalIsVisible]="showMessageBox"></app-message-box>
+            <app-message-box (lastMessage)="onLastMessage()" [isHomePage]="true" [modalIsVisible]="showMessageBox"></app-message-box>
         </div>
     </ng-container>
 

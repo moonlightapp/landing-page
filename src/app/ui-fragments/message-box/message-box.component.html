@@ -2,7 +2,8 @@
     <div class="message-item clearfix"
          *ngFor="let message of messages; index as index"
          [attr.id]="index"
+         [hidden]="hideMessageBox"
          [class.visible]="message.isVisible">
-        <app-message-item [message]="message"></app-message-item>
+        <app-message-item [isHomePage]="isHomePage" [message]="message"></app-message-item>
     </div>
 </div>

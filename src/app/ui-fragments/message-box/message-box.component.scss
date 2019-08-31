@@ -2,7 +2,6 @@
 @import "../../../assets/styles/helpers/mixins";
 
 .message-box-container {
-    background-color: $dark-blue;
     margin: auto;
     max-width: 650px;
     width: 100%;
@@ -34,5 +33,3 @@
         transition: transform 150ms , opacity 150ms;
     }
 }
-
-.unvisiable {}

@@ -4,11 +4,13 @@
 .message-item-container {
     background-color: hsla(89, 43%, 51%, 0.1);
     min-height: 45px;
-    max-width: 300px;
+    max-width: 350px;
     width: 100%;
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 7px;
+    display: flex;
+    align-items: center;
 
     .message-title {
         margin-bottom: 10px;
@@ -25,5 +27,14 @@
 
     .color-light-blue {
         color: $blue-light;
+    }
+
+    .avatar {
+        width: 120px;
+        margin-right: 10px;
+        img {
+            border-radius: 50%;
+            width: 100%;
+        }
     }
 }

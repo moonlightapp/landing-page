@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MessageItemComponent implements OnInit {
     @Input() message: any = {};
+    @Input() isHomePage: boolean;
 
     constructor() {
     }
