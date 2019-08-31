@@ -1,5 +1,5 @@
-<div class="message-item-container" [class.float-right]="message.isQuestion">
-    <div class="avatar" *ngIf="!message.isQuestion && !isHomePage">
+<div class="message-item-container clearfix" [class.float-right]="message.isQuestion">
+    <div class="avatar float-left" *ngIf="!message.isQuestion && !isHomePage">
         <img [src]="message.avatar" alt="UserAvatar">
     </div>
     <div class="credentials">

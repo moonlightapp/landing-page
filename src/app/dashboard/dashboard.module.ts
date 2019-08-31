@@ -1,3 +1,4 @@
+import { SuccessModalModule } from '../ui-kits/success-modal/success-modal.module';
 import { MessageBoxModule } from '../ui-fragments/message-box/message-box.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -6,6 +7,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -22,7 +24,9 @@ import { NgModule } from '@angular/core';
         CommonModule,
         DashboardRoutingModule,
         HeaderModule,
-        MessageBoxModule
+        MessageBoxModule,
+        ReactiveFormsModule,
+        SuccessModalModule
     ],
 })
 export class DashboardModule {

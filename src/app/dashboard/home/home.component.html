@@ -7,11 +7,15 @@
         <div class="message-box-modal no-scale"
              [class.no-scale]="!showScale"
              [class.scale]="showScale">
-            <app-message-box (lastMessage)="onLastMessage()" [isHomePage]="true" [modalIsVisible]="showMessageBox"></app-message-box>
+            <app-message-box (lastMessage)="onLastMessage()"
+                             [isHomePage]="true"
+                             [messages]="messages"
+                             [modalIsVisible]="showMessageBox"></app-message-box>
         </div>
     </ng-container>
 
     <div class="angle" (click)="toggleModal()">
-        <i class="icon-angle-bottom"></i>
+        <img src="../../../assets/images/2x/baseline_play_circle_filled_white_48dp.png" alt="">
+<!--        <i class="icon-angle-bottom"></i>-->
     </div>
 </div>
