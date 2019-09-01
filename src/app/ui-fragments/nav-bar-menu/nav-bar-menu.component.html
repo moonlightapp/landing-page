@@ -2,7 +2,7 @@
     <ul [class.display-block]="openMenu">
         <li *ngFor="let item of items">
             <a  [routerLink]="item.url"
-                (click)="openMenu = false"
+                (click)="openMenu = false; $event.stopPropagation();"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }">
                 {{ item.title }}
@@ -11,7 +11,7 @@
 
     </ul>
 
-    <div class="burger-menu" (click)="toggleMenu()">
+    <div class="burger-menu" (click)="toggleMenu($event)">
         <ng-container *ngIf="openMenu; else burgerIcon">
             <i class="icon-close"></i>
         </ng-container>

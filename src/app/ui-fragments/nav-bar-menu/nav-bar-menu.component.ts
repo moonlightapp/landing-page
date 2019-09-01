@@ -16,7 +16,8 @@ export class NavBarMenuComponent implements OnInit {
     ngOnInit() {
     }
 
-    public toggleMenu(): void {
+    public toggleMenu(event): void {
+        event.stopPropagation();
         this.openMenu = !this.openMenu;
     }
 
