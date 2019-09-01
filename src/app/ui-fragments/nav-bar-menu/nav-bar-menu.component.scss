@@ -24,8 +24,47 @@
             }
         }
     }
+
+    .burger-menu {
+        display: none;
+        position: absolute;
+        top: 30px;
+        i {
+            font-size: 25px;
+        }
+    }
+
+    .active {
+        color: $blue-light !important;
+    }
+
+    .display-block {
+        display: block;
+    }
 }
 
-.active {
-    color: $blue-light !important;
+@media only screen and (max-width: 800px) {
+    .nav-bar-container {
+        ul {
+            display: none;
+            background: #292F3F;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 20px;
+
+            li {
+                font-size: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .burger-menu {
+        display: block !important;
+    }
 }

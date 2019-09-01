@@ -62,13 +62,13 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
             container['style'].transform = `translate(-50%, ${-(el.offsetTop + 90)}px)`;
         }
 
-        // setTimeout(() => {
-        //     items.forEach((item, index) => {
-        //         if (item.getBoundingClientRect().top < 120 && this.messages[index].isVisible) {
-        //             this.messages[index].isVisible = false;
-        //         }
-        //     })
-        // }, 300)
+        setTimeout(() => {
+            items.forEach((item, index) => {
+                if (item.getBoundingClientRect().top < 120 && this.messages[index].isVisible) {
+                    this.messages[index].isVisible = false;
+                }
+            })
+        }, 300);
 
         this.index++;
     }

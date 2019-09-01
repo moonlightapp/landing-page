@@ -8,11 +8,16 @@ import { NavigationItem } from '../../interfaces/navigation-item';
 })
 export class NavBarMenuComponent implements OnInit {
     @Input() items: NavigationItem[] = [];
+    public openMenu: boolean;
 
     constructor() {
     }
 
     ngOnInit() {
+    }
+
+    public toggleMenu(): void {
+        this.openMenu = !this.openMenu;
     }
 
 }

@@ -1,7 +1,22 @@
 <div class="nav-bar-container">
-    <ul>
+    <ul [class.display-block]="openMenu">
         <li *ngFor="let item of items">
-            <a  [routerLink]="item.url"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ item.title }}</a>
+            <a  [routerLink]="item.url"
+                (click)="openMenu = false"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                {{ item.title }}
+            </a>
         </li>
+
     </ul>
+
+    <div class="burger-menu" (click)="toggleMenu()">
+        <ng-container *ngIf="openMenu; else burgerIcon">
+            <i class="icon-close"></i>
+        </ng-container>
+        <ng-template #burgerIcon>
+            <i class="icon-filter"></i>
+        </ng-template>
+    </div>
 </div>
