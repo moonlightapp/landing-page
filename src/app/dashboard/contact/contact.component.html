@@ -2,13 +2,13 @@
     <div class="container">
         <h3>Contact Form</h3>
 
-        <label for="first_name">First Name</label>
+        <label for="first_name">E Post</label>
         <input [formControl]="form.get('first_name')" type="text" id="first_name" placeholder="Your name..">
 
-        <label for="last_name">Last Name</label>
+        <label for="last_name">Subject</label>
         <input [formControl]="form.get('last_name')" type="text" id="last_name" placeholder="Your last name..">
 
-        <label for="subject">Subject</label>
+        <label for="subject">Message</label>
         <textarea [formControl]="form.get('subject')" id="subject" placeholder="Write something.." style="height:200px"></textarea>
 
         <button (click)="submitForm()">Send</button>

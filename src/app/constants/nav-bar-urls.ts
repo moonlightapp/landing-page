@@ -1,18 +1,18 @@
 export const NAV_BAR_URLS = [
     {
         url: '/home',
-        title: 'Home'
+        title: 'Hjem'
     },
     {
         url: '/team',
-        title: 'Team'
+        title: 'Kontakt'
     },
     {
         url: '/contact',
-        title: 'Contact'
+        title: 'Om Oss'
     },
-    {
-        url: '/settings',
-        title: 'Settings'
-    }
+    // {
+    //     url: '/settings',
+    //     title: 'Settings'
+    // }
 ];
