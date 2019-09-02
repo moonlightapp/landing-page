@@ -83,3 +83,39 @@
         100% { transform: translateY(-10px); }
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .home-container {
+        .home-section {
+            height: 450px;
+            background-size: 285px;
+            .section-title {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .home-container {
+        .home-section {
+            padding-left: 170px;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .home-container {
+        .home-section {
+            padding-left: 55px;
+
+            .section-title {
+                margin: 0;
+                font-size: 25px;
+            }
+        }
+        .angle {
+            width: 50px;
+        }
+    }
+}

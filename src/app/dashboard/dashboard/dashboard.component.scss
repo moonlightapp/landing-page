@@ -25,3 +25,19 @@
         transition: transform 800ms;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .dashboard {
+        .header {
+            padding: 30px 15px 30px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .dashboard {
+        .header {
+            padding: 30px 15px 30px 0;
+        }
+    }
+}
