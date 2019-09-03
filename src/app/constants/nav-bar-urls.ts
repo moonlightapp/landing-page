@@ -5,11 +5,11 @@ export const NAV_BAR_URLS = [
     },
     {
         url: '/team',
-        title: 'Kontakt'
+        title: 'Om Oss'
     },
     {
         url: '/contact',
-        title: 'Om Oss'
+        title: 'Kontakt'
     },
     // {
     //     url: '/settings',
