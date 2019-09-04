@@ -32,19 +32,16 @@
         -ms-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
         width: 100%;
-        max-width: 820px;
+        max-width: 650px;
         height: 650px;
-        background: url(https://hooked.co/images/xhero-phone.png.pagespeed.ic.BeYPaN0-dw.png) no-repeat left;
-        //background: url(../../../assets/images/mobile_image_iphonexspacegrey_portrait.png) no-repeat left;
-        //background: url(../../../assets/images/mockuper.png) no-repeat left;
-        //background: url(../../../assets/images/mockuper_1.png) no-repeat left;
-        background-size: 367px;
-        padding-left: 265px;
-        border: 1px solid transparent;
+        background: url(../../../assets/images/iPhone-8-and-X-mockup.png) no-repeat left;
+        background-size: 750px;
+        padding-left: 195px;
+        background-position-x: -310px;
 
         .section-title {
             font-size: 80px;
-            margin: 125px 0 0;
+            margin: 130px 0 0;
             color: $white;
         }
     }
@@ -85,6 +82,37 @@
         0% { transform: translateY(0); }
         100% { transform: translateY(-10px); }
     }
+
+    .download-links {
+        position: absolute;
+        bottom: 20px;
+        right: 87px;
+        ul {
+            background-color: #12a5f4;
+            border-radius: 5px;
+            transition: 1s;
+
+            li {
+                display: inline-block;
+                padding: 10px 15px ;
+                &:not(:last-child) {
+                    border-right: 1px solid grey;
+                }
+                cursor: pointer;
+                font-size: 15px;
+
+                &:hover {
+                    background-color: #578dfb;
+                    border-radius: 5px;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}
+
+.icon-googleplay:before {
+    color: white;
 }
 
 @media only screen and (max-width: 800px) {
