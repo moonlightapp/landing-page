@@ -90,16 +90,20 @@
         ul {
             background-color: #12a5f4;
             border-radius: 5px;
-            transition: 1s;
 
             li {
                 display: inline-block;
                 padding: 10px 15px ;
+                transition: 1s;
+
                 &:not(:last-child) {
                     border-right: 1px solid grey;
                 }
                 cursor: pointer;
-                font-size: 15px;
+                a {
+                    color: white;
+                    font-size: 15px;
+                }
 
                 &:hover {
                     background-color: #578dfb;
@@ -119,34 +123,85 @@
     .home-container {
         .home-section {
             height: 450px;
-            background-size: 285px;
+            background-size: 600px;
+            background-position-x: -210px;
             .section-title {
                 font-size: 50px;
             }
+        }
+        .download-links {
+            right: 10px;
         }
     }
 }
 
 @media only screen and (max-width: 490px) {
     .home-container {
+        background-size: 550px;
         .home-section {
             padding-left: 170px;
+
+            .section-title {
+                font-size: 45px;
+                margin: 130px 30px 0;
+            }
         }
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 410px) {
     .home-container {
         .home-section {
-            padding-left: 55px;
+            padding-left: 170px;
 
             .section-title {
-                margin: 0;
                 font-size: 25px;
             }
         }
         .angle {
             width: 50px;
+        }
+
+        .download-links {
+            ul {
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 315px) {
+    .home-container {
+        .home-section {
+            padding-left: 113px;
+            height: 450px;
+            background-size: 450px;
+            background-position-x: -81px;
+            background-position-y: 20px;
+
+            .section-title {
+                font-size: 25px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .home-container {
+        .home-section {
+            padding-left: 20px;
+            height: 450px;
+            background-size: 450px;
+            background-position-x: -170px;
+            background-position-y: 20px;
+
+            .section-title {
+                font-size: 25px;
+                margin: 0;
+            }
         }
     }
 }
