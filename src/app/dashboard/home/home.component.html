@@ -8,7 +8,6 @@
 
     <ng-container *ngIf="showMessageBox">
         <div class="message-box-modal no-scale"
-             [class.no-scale]="!showScale"
              [class.scale]="showScale">
             <app-message-box (lastMessage)="onLastMessage()"
                              [isHomePage]="true"
@@ -17,33 +16,27 @@
         </div>
     </ng-container>
 
+    <ng-container *ngIf="showDownloadInfo"> <!--showDownloadInfo-->
+        <div class="message-box-modal hide"
+        [class.show]="showDownloadInfoContent">
+            <div class="message-box-content">
+                <p>Last ned appen for å fortsette å lese historien!</p>
+
+                <div class="pointer" (click)="navigateToHome()">
+                    <div class="angle-top">
+                        <i class="icon-angle-top"></i>
+                    </div>
+
+                    <div class="back-button-text">
+                        Back to top
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </ng-container>
+
     <div class="angle" (click)="toggleModal()">
         <img src="../../../assets/images/2x/baseline_play_circle_filled_white_48dp.png" alt="">
-<!--        <i class="icon-angle-bottom"></i>-->
-    </div>
-
-    <div class="download-links">
-        <ul>
-            <li>
-                <a [routerLink]="['/']">
-                    <i class="icon-appleinc"></i>
-                </a>
-            </li>
-            <li>
-                <a [routerLink]="['/']">
-                    <i class="icon-googleplay"></i>
-                </a>
-            </li>
-            <li>
-                <a [routerLink]="['/']">
-                   <i class="icon-facebook2"></i>
-                </a>
-            </li>
-            <li>
-                <a [routerLink]="['/']">
-                    <i class="icon-instagram"></i>
-                </a>
-            </li>
-        </ul>
     </div>
 </div>

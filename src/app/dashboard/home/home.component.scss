@@ -23,6 +23,50 @@
         background-color: #292F3F;
     }
 
+    .hide {
+        transform: scale(1, 0);
+        transition: .8s;
+        transform-origin: top;
+    }
+
+    .show {
+        transform: scale(1, 1);
+        transition: .5s;
+        transform-origin: top;
+    }
+
+    .message-box-content {
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        position: absolute;
+        width: 100%;
+        max-width: 1200px;
+
+        p {
+            color: white;
+            font-size: 45px;
+        }
+
+        .angle-top {
+            margin-top: 30px;
+
+            i {
+                font-size: 12px;
+                color: #12a5f4 ;
+            }
+        }
+
+        .back-button-text {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    }
+
     .home-section {
         position: absolute;
         top: 50%;
@@ -82,37 +126,6 @@
         0% { transform: translateY(0); }
         100% { transform: translateY(-10px); }
     }
-
-    .download-links {
-        position: absolute;
-        bottom: 20px;
-        right: 87px;
-        ul {
-            background-color: #12a5f4;
-            border-radius: 5px;
-
-            li {
-                display: inline-block;
-                padding: 10px 15px ;
-                transition: 1s;
-
-                &:not(:last-child) {
-                    border-right: 1px solid grey;
-                }
-                cursor: pointer;
-                a {
-                    color: white;
-                    font-size: 15px;
-                }
-
-                &:hover {
-                    background-color: #578dfb;
-                    border-radius: 5px;
-                    transition: .5s;
-                }
-            }
-        }
-    }
 }
 
 .icon-googleplay:before {
@@ -128,9 +141,6 @@
             .section-title {
                 font-size: 50px;
             }
-        }
-        .download-links {
-            right: 10px;
         }
     }
 }
@@ -160,14 +170,6 @@
         }
         .angle {
             width: 50px;
-        }
-
-        .download-links {
-            ul {
-                li {
-                    display: block;
-                }
-            }
         }
     }
 }

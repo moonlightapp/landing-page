@@ -9,6 +9,8 @@ import { HOME_MESSAGES } from '../../constants/home.messages';
 export class HomeComponent implements OnInit {
     public showMessageBox: boolean;
     public showScale: boolean;
+    public showDownloadInfo: boolean;
+    public showDownloadInfoContent: boolean;
     public messages = JSON.parse(JSON.stringify(HOME_MESSAGES));
 
     constructor() {
@@ -30,6 +32,20 @@ export class HomeComponent implements OnInit {
         setTimeout(() => {
             this.showMessageBox = !this.showMessageBox;
         }, 650);
+
+        setTimeout(() => {
+            this.showDownloadInfoContent = !this.showDownloadInfoContent;
+        }, 0);
+
+        this.showDownloadInfo = true;
         this.showScale = false;
+    }
+
+    public navigateToHome():void {
+        setTimeout(() => {
+            this.showDownloadInfo = false;
+        }, 500);
+
+        this.showDownloadInfoContent = !this.showDownloadInfoContent;
     }
 }

@@ -24,12 +24,52 @@
         padding: 30px 70px 60px;
         transition: transform 800ms;
     }
+
+    .download-links {
+        position: absolute;
+        bottom: 20px;
+        right: 87px;
+        z-index: 10;
+        ul {
+            background-color: #12a5f4;
+            border-radius: 5px;
+
+            li {
+                display: inline-block;
+                padding: 10px 15px ;
+                transition: 1s;
+
+                &:not(:last-child) {
+                    border-right: 1px solid grey;
+                }
+                cursor: pointer;
+                a {
+                    color: white;
+                    font-size: 15px;
+                }
+
+                &:hover {
+                    background-color: #578dfb;
+                    border-radius: 5px;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}
+
+.icon-googleplay:before {
+    color: white;
 }
 
 @media only screen and (max-width: 800px) {
     .dashboard {
         .header {
             padding: 30px 15px 30px 0;
+        }
+
+        .download-links {
+            right: 10px;
         }
     }
 }
@@ -38,6 +78,18 @@
     .dashboard {
         .header {
             padding: 30px 15px 30px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .dashboard {
+        .download-links {
+            ul {
+                li {
+                    display: block;
+                }
+            }
         }
     }
 }
