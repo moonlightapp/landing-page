@@ -1,4 +1,5 @@
 import { NewCampaignComponent } from './new-campaign/new-campaign.component';
+import { HeaderModule } from '../ui-fragments/header/header.module';
 import { CampaignComponent } from './campaign/campaign.component';
 import { CampaignRoutingModule } from './campaign-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +17,7 @@ import { NgModule } from '@angular/core';
     ],
     imports: [
         FormsModule,
+        HeaderModule,
         RouterModule,
         CommonModule,
         ReactiveFormsModule,
