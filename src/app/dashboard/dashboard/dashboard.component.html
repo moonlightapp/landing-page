@@ -9,7 +9,7 @@
         </div>
 
         <div class="download-links">
-            <ul>
+            <ul (click)="$event.stopPropagation()">
                 <li>
                     <a [routerLink]="['/']">
                         <i class="icon-appleinc"></i>
