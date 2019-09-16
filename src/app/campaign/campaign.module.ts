@@ -1,4 +1,5 @@
 import { NewCampaignComponent } from './new-campaign/new-campaign.component';
+import { CampaignComponent } from './campaign/campaign.component';
 import { CampaignRoutingModule } from './campaign-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdSetsComponent } from './ad-sets/ad-sets.component';
@@ -10,7 +11,8 @@ import { NgModule } from '@angular/core';
 @NgModule({
     declarations: [
         NewCampaignComponent,
-        AdSetsComponent
+        AdSetsComponent,
+        CampaignComponent
     ],
     imports: [
         FormsModule,
