@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { NgModule } from '@angular/core';
+import { importExpr } from '@angular/compiler/src/output/output_ast';
 
 
 const routes: Routes = [

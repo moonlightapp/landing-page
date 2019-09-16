@@ -7,6 +7,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
     },
+    {
+        path: 'campaign',
+        loadChildren: () => import('./campaign/campaign.module').then(m => m.CampaignModule)
+    }
 ];
 
 @NgModule({

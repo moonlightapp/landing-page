@@ -18,7 +18,7 @@ import { NgModule } from '@angular/core';
         TeamComponent,
         ContactComponent,
         SettingsComponent,
-        DashboardComponent
+        DashboardComponent,
     ],
     imports: [
         CommonModule,
