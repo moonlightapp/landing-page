@@ -20,6 +20,12 @@
         background-color: $white;
         box-shadow: 0 0 15px .5px $black;
 
+        .objective-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .section-title {
             font-weight: 900;
         }

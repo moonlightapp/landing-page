@@ -89,8 +89,11 @@
 
 
     <div class="container">
-        <div>
+        <div class="objective-header">
             <div class="section-title">Campaign Setup</div>
+            <div class="dropdown-container">
+                <p-dropdown [options]="cities" [(ngModel)]="selectedCity1"></p-dropdown>
+            </div>
         </div>
 
         <div class="content">

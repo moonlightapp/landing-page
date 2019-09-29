@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { CalendarModule } from '../ui-kits/calendar/calendar.module';
 import { InputSwitchModule } from '../ui-kits/input-switch/input-switch.module';
 import { TooltipModule } from 'primeng/tooltip';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { TooltipModule } from 'primeng/tooltip';
         CampaignRoutingModule,
         CalendarModule,
         TooltipModule,
+        DropdownModule,
         InputSwitchModule
     ]
 })
