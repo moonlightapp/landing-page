@@ -7,6 +7,9 @@ import { AdSetsComponent } from './ad-sets/ad-sets.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { CalendarModule } from '../ui-kits/calendar/calendar.module';
+import { InputSwitchModule } from '../ui-kits/input-switch/input-switch.module';
+import { TooltipModule } from 'primeng/tooltip';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { NgModule } from '@angular/core';
         RouterModule,
         CommonModule,
         ReactiveFormsModule,
-        CampaignRoutingModule
+        CampaignRoutingModule,
+        CalendarModule,
+        TooltipModule,
+        InputSwitchModule
     ]
 })
 export class CampaignModule {

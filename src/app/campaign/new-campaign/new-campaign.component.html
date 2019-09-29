@@ -14,7 +14,9 @@
                 <div class="items">
                     <div class="item">
                         <div class="name">Awareness</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
                 </div>
             </div>
@@ -23,32 +25,44 @@
                 <div class="items">
                     <div class="item">
                         <div class="name">App Installs</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
 
                     <div class="item">
                         <div class="name">Drive traffic to Website</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
 
                     <div class="item">
                         <div class="name">Drive traffic to app</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
 
                     <div class="item">
                         <div class="name">Engagement</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
 
                     <div class="item">
                         <div class="name">Video Views</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
 
                     <div class="item">
                         <div class="name">Lead Gen</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
                 </div>
             </div>
@@ -57,12 +71,16 @@
                 <div class="items">
                     <div class="item">
                         <div class="name">Website conversations</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
 
                     <div class="item">
                         <div class="name">Catalog Sales</div>
-                        <i class="icon-eye"></i>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="top"></i>
                     </div>
                 </div>
             </div>
@@ -77,7 +95,7 @@
 
         <div class="content">
             <div class="selected-objective-title">
-                objective
+                Objective
             </div>
 
             <div class="objective-details">
@@ -89,7 +107,80 @@
                     <div class="description">Increase awareness of your brand or product.</div>
                 </div>
             </div>
-        </div>
 
+            <div class="campaign-info-section">
+                <div class="title">Campaign Name</div>
+                <div class="form-input">
+                    <label>
+                        <input type="text" placeholder="Your Campaign Name" value="Awareness">
+                    </label>
+                </div>
+            </div>
+
+            <div class="campaign-info-section">
+                <div class="title">
+                    Status
+                    <div>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="right">
+                        </i>
+                    </div>
+                </div>
+                <div class="form-input-switch">
+                    <app-input-switch></app-input-switch>
+                </div>
+            </div>
+
+            <div class="campaign-info-section">
+                <div class="title">Starts & Ends</div>
+                <div class="calendar-container">
+                    <div class="form-input-calendar">
+                        <app-calendar [placeholder]="'Immediately'"></app-calendar>
+                        <div class="title under-input">Pacific Time</div>
+                    </div>
+
+                    <div class="form-input-calendar">
+                        <app-calendar [placeholder]="'Run Immediately'"></app-calendar>
+                        <div class="title under-input">Pacific Time</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campaign-info-section">
+                <div class="title">
+                    DailySpend Cap
+                    <div>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="right">
+                        </i>
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label>
+                        <input type="number" placeholder="No Cap">
+                    </label>
+                </div>
+            </div>
+
+            <div class="campaign-info-section">
+                <div class="title">
+                    LifetimeSpend Cap
+                    <div>
+                        <i class="icon-info"
+                           pTooltip="Tooltip example text"
+                           tooltipPosition="right">
+                        </i>
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label>
+                        <input type="number" placeholder="No Cap">
+                    </label>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
