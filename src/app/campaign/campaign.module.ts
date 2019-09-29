@@ -11,6 +11,8 @@ import { CalendarModule } from '../ui-kits/calendar/calendar.module';
 import { InputSwitchModule } from '../ui-kits/input-switch/input-switch.module';
 import { TooltipModule } from 'primeng/tooltip';
 import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { CheckboxModule } from 'primeng/checkbox';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { DropdownModule } from 'primeng/dropdown';
         CalendarModule,
         TooltipModule,
         DropdownModule,
-        InputSwitchModule
+        RadioButtonModule,
+        InputSwitchModule,
+        CheckboxModule
     ]
 })
 export class CampaignModule {

@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CalendarComponent implements OnInit {
     @Input() placeholder: string;
+    @Input() style: any;
+    @Input() InputStyle: any;
     public value: Date;
     public en: any;
 
