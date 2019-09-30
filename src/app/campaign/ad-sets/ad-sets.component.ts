@@ -1,11 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterContentInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 
 @Component({
     selector: 'app-ad-sets',
     templateUrl: './ad-sets.component.html',
     styleUrls: ['./ad-sets.component.scss']
 })
-export class AdSetsComponent implements OnInit {
+export class AdSetsComponent implements OnInit, AfterContentInit {
+    @ViewChild('infoBox', {static: true}) infoBox: ElementRef;
+
     public cities = [
         {label: 'Attachment Type', value: null},
         {label: 'Longform Video', value: {id: 1, name: 'Longform Video', code: 'NY'}},
@@ -36,11 +38,27 @@ export class AdSetsComponent implements OnInit {
     public selectedValues: string[] = [];
     public showRadioSubMenu: boolean;
     public showTooltip: boolean;
+    public isFixedInfoBox: boolean;
+
+    // @HostListener('window:scroll', ['$event.target'])
+    // onScroll(event) {
+    //     const el = this.infoBox.nativeElement;
+    //     if (el.classList.contains('fixed')) return
+    //     if (el.getBoundingClientRect().y <= 10 && !el.classList.contains('fixed')) {
+    //         el.classList.add('fixed');
+    //     } else {
+    //         el.classList.remove('fixed');
+    //     }
+    // }
 
     constructor() {
     }
 
     ngOnInit() {
+    }
+
+    ngAfterContentInit(): void {
+        console.log(this.infoBox.nativeElement);
     }
 
     public getRadioValue(value): void {

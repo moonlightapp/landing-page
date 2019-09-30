@@ -202,6 +202,7 @@
         .title {
             font-size: 14px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .info-body {
@@ -220,6 +221,7 @@
             .text {
                 .title {
                     font-size: 12px;
+                    margin-bottom: 15px;
                 }
 
                 .text-body {
@@ -257,7 +259,29 @@
                     box-shadow: 0 0 10px 0 #000000;
                     border-radius: 7px;
                 }
+
+                .ui-button-rounded {
+
+                }
+            }
+        }
+
+        .button {
+            margin-top: 15px;
+
+            button {
+                height: 35px;
+                width: 100%;
+                border: 1px solid lightgray;
+                background-color: white;
+                border-radius: 15px;
             }
         }
     }
+}
+
+.fixed {
+    position: fixed !important;
+    z-index: 10;
+    right: 0 !important;
 }
