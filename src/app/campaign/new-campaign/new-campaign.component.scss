@@ -2,6 +2,7 @@
 
 .new-campaign-container {
     margin-top: 25px;
+    position: relative;
 
     .page-title {
         text-align: center;
@@ -68,7 +69,6 @@
                         border: 1px solid  darkgray;
 
                         &:hover {
-                            //background-color: #155e78;
                             background-color: grey;
                             color: white;
                         }
@@ -140,6 +140,43 @@
             }
         }
     }
+
+    .next-page {
+        position: absolute;
+        right: 70px;
+        bottom: 0;
+
+        button {
+            height: 35px;
+            border-radius: 5px;
+            padding: 5px;
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            background-color: #155e78;
+            border: 1px solid white;
+            transition: .7s;
+            box-shadow: 0 0 10px;
+
+            &:hover {
+                background-color: white;
+                color: #155e78;
+                border: 1px solid #155e78;
+            }
+
+            span {
+                font-size: 16px;
+            }
+
+            i {
+                font-size: 16px;
+                margin-left: 25px;
+            }
+        }
+    }
 }
 
 .form-input {
@@ -162,4 +199,9 @@
             border-bottom: 2px solid #155e78 !important;
         }
     }
+}
+
+.active {
+    background-color: grey !important;
+    color: white !important;
 }

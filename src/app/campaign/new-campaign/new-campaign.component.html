@@ -12,10 +12,13 @@
             <div class="objective-section">
                 <div class="title">Awareness</div>
                 <div class="items">
-                    <div class="item">
-                        <div class="name">Awareness</div>
+                    <div class="item"
+                         [class.active]="objective === selectedObjective"
+                         *ngFor="let objective of firstSection"
+                         (click)="selectObjective(objective)">
+                        <div class="name">{{objective.name}}</div>
                         <i class="icon-info"
-                           pTooltip="Tooltip example text"
+                           [pTooltip]="objective.tooltipText"
                            tooltipPosition="top"></i>
                     </div>
                 </div>
@@ -23,45 +26,13 @@
             <div class="objective-section">
                 <div class="title">Consideration</div>
                 <div class="items">
-                    <div class="item">
-                        <div class="name">App Installs</div>
+                    <div class="item"
+                         [class.active]="objective === selectedObjective"
+                         *ngFor="let objective of secondSection"
+                         (click)="selectObjective(objective)">
+                        <div class="name">{{objective.name}}</div>
                         <i class="icon-info"
-                           pTooltip="Tooltip example text"
-                           tooltipPosition="top"></i>
-                    </div>
-
-                    <div class="item">
-                        <div class="name">Drive traffic to Website</div>
-                        <i class="icon-info"
-                           pTooltip="Tooltip example text"
-                           tooltipPosition="top"></i>
-                    </div>
-
-                    <div class="item">
-                        <div class="name">Drive traffic to app</div>
-                        <i class="icon-info"
-                           pTooltip="Tooltip example text"
-                           tooltipPosition="top"></i>
-                    </div>
-
-                    <div class="item">
-                        <div class="name">Engagement</div>
-                        <i class="icon-info"
-                           pTooltip="Tooltip example text"
-                           tooltipPosition="top"></i>
-                    </div>
-
-                    <div class="item">
-                        <div class="name">Video Views</div>
-                        <i class="icon-info"
-                           pTooltip="Tooltip example text"
-                           tooltipPosition="top"></i>
-                    </div>
-
-                    <div class="item">
-                        <div class="name">Lead Gen</div>
-                        <i class="icon-info"
-                           pTooltip="Tooltip example text"
+                           [pTooltip]="objective.tooltipText"
                            tooltipPosition="top"></i>
                     </div>
                 </div>
@@ -69,17 +40,13 @@
             <div class="objective-section">
                 <div class="title">Conversions</div>
                 <div class="items">
-                    <div class="item">
-                        <div class="name">Website conversations</div>
+                    <div class="item"
+                         [class.active]="objective === selectedObjective"
+                         *ngFor="let objective of thirdSection"
+                         (click)="selectObjective(objective)">
+                        <div class="name">{{objective.name}}</div>
                         <i class="icon-info"
-                           pTooltip="Tooltip example text"
-                           tooltipPosition="top"></i>
-                    </div>
-
-                    <div class="item">
-                        <div class="name">Catalog Sales</div>
-                        <i class="icon-info"
-                           pTooltip="Tooltip example text"
+                           [pTooltip]="objective.tooltipText"
                            tooltipPosition="top"></i>
                     </div>
                 </div>
@@ -115,7 +82,7 @@
                 <div class="title">Campaign Name</div>
                 <div class="form-input">
                     <label>
-                        <input type="text" placeholder="Your Campaign Name" value="Awareness">
+                        <input type="text" [placeholder]="selectedObjective || 'Your Campaign Name'" [value]="selectedObjective?.name">
                     </label>
                 </div>
             </div>
@@ -185,5 +152,11 @@
             </div>
 
         </div>
+    </div>
+    <div class="next-page">
+        <button>
+            <span>Next page</span>
+            <i class="icon-arrow-right2"></i>
+        </button>
     </div>
 </div>
