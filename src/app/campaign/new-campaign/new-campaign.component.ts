@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-new-campaign',
@@ -62,7 +63,7 @@ export class NewCampaignComponent implements OnInit {
     public selectedCity1: any;
     public selectedObjective: any;
 
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
@@ -70,5 +71,9 @@ export class NewCampaignComponent implements OnInit {
 
     public selectObjective(objective): void {
         this.selectedObjective = this.selectedObjective === objective ? null: objective;
+    }
+
+    public navigateToAddSetPage(): void {
+        this.router.navigateByUrl('campaign/ad-sets');
     }
 }

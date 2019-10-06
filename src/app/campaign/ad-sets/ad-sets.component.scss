@@ -16,6 +16,7 @@
     }
 
     .container {
+        margin: 0 auto;
         width: 100%;
         height: auto;
         padding: 35px 20px;
@@ -280,8 +281,63 @@
     }
 }
 
-.fixed {
-    position: fixed !important;
-    z-index: 10;
-    right: 0 !important;
+.ad-type-active {
+    border: 2px solid #155e78 !important;
+}
+
+.active-option {
+    background-color: darkgrey !important;
+    color: white !important;
+}
+
+.file-upload-label {
+    i {
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+.navigation-button {
+    &.previews-page {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &.publish {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    button {
+        height: 35px;
+        border-radius: 5px;
+        padding: 5px;
+        min-width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+        background-color: #155e78;
+        border: 1px solid white;
+        transition: .7s;
+
+        &:hover {
+            background-color: white;
+            color: #155e78;
+            border: 1px solid #155e78;
+        }
+
+        span {
+            font-size: 16px;
+        }
+
+        i {
+            font-size: 16px;
+            margin-right: 25px;
+        }
+    }
 }

@@ -1,12 +1,12 @@
-import {AfterContentInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-ad-sets',
     templateUrl: './ad-sets.component.html',
     styleUrls: ['./ad-sets.component.scss']
 })
-export class AdSetsComponent implements OnInit, AfterContentInit {
-    @ViewChild('infoBox', {static: true}) infoBox: ElementRef;
+export class AdSetsComponent implements OnInit {
 
     public cities = [
         {label: 'Attachment Type', value: null},
@@ -31,42 +31,67 @@ export class AdSetsComponent implements OnInit, AfterContentInit {
         {label: '10', value: {id: 10, name: '10'}},
     ];
 
-    public selectedValue: string;
+    public demographicsOptions = [
+        {id: 1, name: 'All'},
+        {id: 2, name: 'Male'},
+        {id: 3, name: 'Female'},
+    ];
+    public selectedDemographicsOption: any;
+
+    public deviceTypes = [
+        {id: 1, name: 'All'},
+        {id: 2, name: 'Android'},
+        {id: 3, name: 'IOS'},
+    ];
+    public selectedDeviceType: any;
+
+    public connectionTypes = [
+        {id: 1, name: 'All'},
+        {id: 2, name: 'Cell'},
+        {id: 3, name: 'WIFI'},
+    ];
+    public selectedConnectionType: any;
+
+    public selectedAddSetIndex: number;
+
     public selectedCity1: any;
     public checkBoxValue1 = 'val1';
     public checkBoxValue2 = null;
     public selectedValues: string[] = [];
     public showRadioSubMenu: boolean;
-    public showTooltip: boolean;
-    public isFixedInfoBox: boolean;
 
-    // @HostListener('window:scroll', ['$event.target'])
-    // onScroll(event) {
-    //     const el = this.infoBox.nativeElement;
-    //     if (el.classList.contains('fixed')) return
-    //     if (el.getBoundingClientRect().y <= 10 && !el.classList.contains('fixed')) {
-    //         el.classList.add('fixed');
-    //     } else {
-    //         el.classList.remove('fixed');
-    //     }
-    // }
-
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
-    }
-
-    ngAfterContentInit(): void {
-        console.log(this.infoBox.nativeElement);
     }
 
     public getRadioValue(value): void {
         this.showRadioSubMenu = value === 'val2';
     }
 
-    public toggleTooltip(): void {
-        this.showTooltip = !this.showTooltip;
+    public selectAddSet(index): void {
+        this.selectedAddSetIndex = this.selectedAddSetIndex === index ? null: index;
+    }
+
+    public selectDemographicsOption(option): void {
+        this.selectedDemographicsOption = this.selectedDemographicsOption === option ? null: option;
+    }
+
+    public selectDeviceType(deviceType): void {
+        this.selectedDeviceType = this.selectedDeviceType === deviceType ? null: deviceType;
+    }
+
+    public selectConnectionType(connectionType): void {
+        this.selectedConnectionType = this.selectedConnectionType === connectionType ? null: connectionType;
+    }
+
+    public publish(): void {
+
+    }
+
+    public previews(): void {
+        this.router.navigateByUrl('campaign/new')
     }
 
 }
