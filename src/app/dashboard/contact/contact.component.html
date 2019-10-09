@@ -1,15 +1,25 @@
 <div class="contact-container">
     <div class="container">
+        <form [formGroup]="form" action="https://formspree.io/xdqdolgm" method="POST">
+            <label for="email">E Post</label>
+            <input type="text" id="email" placeholder="E Post" [formControl]="form.get('email')">
 
-        <label for="email">E Post</label>
-        <input [formControl]="form.get('first_name')" type="text" id="email" placeholder="E Post">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Subject" [formControl]="form.get('subject')">
 
-        <label for="subject">Subject</label>
-        <input [formControl]="form.get('last_name')" type="text" id="subject" placeholder="Subject">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write something..." [formControl]="form.get('message')"></textarea>
 
-        <label for="message">Message</label>
-        <textarea [formControl]="form.get('subject')" id="message" placeholder="Write something.." style="height:200px"></textarea>
-
-        <button (click)="submitForm()">Send</button>
+            <button (click)="form.valid && submitForm()">Send</button>
+        </form>
     </div>
+</div>
+
+<p-toast baseZIndex="100" position="top-right"></p-toast>
+
+<div id="myModal" class="modal" *ngIf="showLoader">
+    <div class="modal-content">
+        <img src="../../../assets/images/loading.gif" alt="">
+    </div>
+
 </div>

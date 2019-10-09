@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FeedbackService } from '../../services/feedback.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
+import { Subscription } from 'rxjs';
+import { finalize } from 'rxjs/operators';
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
     public form: FormGroup;
+    public showLoader: boolean;
+    private feedbackSub: Subscription;
 
-    constructor() {
-    }
+    constructor(
+        private feedBackService: FeedbackService,
+        private messageService: MessageService
+    ) {}
 
     ngOnInit() {
         this.initForm();
@@ -18,14 +26,33 @@ export class ContactComponent implements OnInit {
 
     private initForm(): void {
         this.form = new FormGroup({
-            first_name: new FormControl(null),
-            last_name: new FormControl(null),
-            subject: new FormControl(null),
+            email: new FormControl(null, Validators.required),
+            subject: new FormControl(null, Validators.required),
+            message: new FormControl(null, Validators.required),
         })
     }
 
     public submitForm(): void {
+        this.showLoader = true;
+        this.feedbackSub = this.feedBackService.sendFeedBack(this.form.value)
+            .pipe(
+                finalize(() => this.showLoader = false)
+            )
+            .subscribe(res => {
+                this.form.reset();
+                this.addSingle();
+            })
+    }
 
-        console.log(this.form.value);
+    addSingle() {
+        this.messageService.add({
+            severity:'success',
+            summary:'Success',
+            detail:'Your Feedback Submitted Successfully. '
+        })
+    }
+
+    ngOnDestroy(): void {
+        this.feedbackSub && this.feedbackSub.unsubscribe();
     }
 }
