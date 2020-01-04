@@ -12,6 +12,6 @@ export class FeedbackService {
     }
 
     public sendFeedBack(formValue): Observable<any> {
-        return this.http.post('https://formspree.io/xdqdolgm', formValue);
+        return this.http.post('https://formspree.io/mbnkornm', formValue);
     }
 }
