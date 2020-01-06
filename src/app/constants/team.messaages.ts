@@ -36,7 +36,7 @@ export const TEAM_MESSAGES = [
     },
     {
         title: '',
-        content: 'Marius er iOS-utvikler og aksjonær i Moonlight',
+        content: 'Ola Nordman er iOS-utvikler',
         avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
         isQuestion: false,
         isVisible: false
@@ -50,21 +50,14 @@ export const TEAM_MESSAGES = [
     },
     {
         title: '',
-        content: 'Ardian har vært ansvarlig for å bygge Android-versjonen av appen',
+        content: 'Ola Nordman har vært ansvarlig for å bygge Android-versjonen av appen',
         avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
         isQuestion: false,
         isVisible: false
     },
     {
         title: '',
-        content: 'I tilleggen del av teamet vårt er Fitim, han er aksjonær og forretningsutvikler',
-        avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: '',
-        content: 'I tilleggen del av teamet vårt er Fitim, han er investor og forretningsutvikler',
+        content: 'I tilleggen del av teamet vårt er Ola Nordman, han er aksjonær og forretningsutvikler',
         avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
         isQuestion: false,
         isVisible: false
@@ -78,7 +71,7 @@ export const TEAM_MESSAGES = [
     },
     {
         title: '',
-        content: 'David tar æren for det.',
+        content: 'Ola tar æren for det.',
         avatar: 'https://previews.123rf.com/images/jemastock/jemastock1701/jemastock170100846/68927192-portrait-man-bearded-green-eyes-brown-hair-vector-illustration-eps-10.jpg',
         isQuestion: false,
         isVisible: false
