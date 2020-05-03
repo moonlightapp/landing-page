@@ -58,7 +58,7 @@ export const TEAM_MESSAGES = [
     {
         title: '',
         content: 'I tilleggen del av teamet vårt er Ola Nordman, han er aksjonær og forretningsutvikler',
-        avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
+        avatar: './assets/images/people/fitim.jpg',
         isQuestion: false,
         isVisible: false
     },
