@@ -23,14 +23,14 @@ export const TEAM_MESSAGES = [
     {
         title: '',
         content: 'Dette er utviklet av noen veldig ildsjelungdommer her i Oslo.',
-        avatar: 'http://localhost:4200/assets/images/7.png',
+        avatar: './assets/images/7.png',
         isQuestion: false,
         isVisible: false
     },
     {
         title: '',
         content: 'Jeg kan møte deg med teamet',
-        avatar: 'http://localhost:4200/assets/images/7.png',
+        avatar: './assets/images/7.png',
         isQuestion: false,
         isVisible: false
     },
