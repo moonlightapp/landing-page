@@ -9,7 +9,7 @@ export const TEAM_MESSAGES = [
     {
         title: '',
         content: 'Yo! Moonlight er et app der du kan utforske eller skape de beste fiction-historier i form av chat.',
-        avatar: 'http://localhost:4200/assets/images/7.png',
+        avatar: './assets/images/7.png',
         isQuestion: false,
         isVisible: false
     },
