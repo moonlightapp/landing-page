@@ -2,7 +2,6 @@ export const TEAM_MESSAGES = [
     {
         title: 'Deg',
         content: 'Hei, hva er moonlight?',
-        avatar: 'https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png',
         isQuestion: true,
         isVisible: false
     },
@@ -22,7 +21,7 @@ export const TEAM_MESSAGES = [
     },
     {
         title: '',
-        content: 'Dette er utviklet av noen veldig ildsjelungdommer her i Oslo.',
+        content: 'Dette er utviklet av noen veldig entusiastiske ungdommer her i Oslo.',
         avatar: './assets/images/7.png',
         isQuestion: false,
         isVisible: false
@@ -35,44 +34,132 @@ export const TEAM_MESSAGES = [
         isVisible: false
     },
     {
-        title: '',
-        content: 'Ola Nordman er iOS-utvikler',
-        avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
+        title: 'Marius',
+        content: 'Hi, jeg er ansvarlig for iOS-appen',
+        avatar: './assets/images/people/marius.jpg',
         isQuestion: false,
         isVisible: false
     },
     {
         title: 'Deg',
-        content: 'Hyggelig, hvem lagte android da?',
+        content: 'Hyggelig, hvem lagte android?',
         avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg',
         isQuestion: true,
         isVisible: false
     },
     {
-        title: '',
-        content: 'Ola Nordman har vært ansvarlig for å bygge Android-versjonen av appen',
+        title: 'Ardian',
+        content: 'Hi, jeg har vært ansvarlig for å bygge Android-versjonen av appen',
         avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
         isQuestion: false,
         isVisible: false
     },
     {
         title: '',
-        content: 'I tilleggen del av teamet vårt er Ola Nordman, han er aksjonær og forretningsutvikler',
+        content: 'I tilleggen del av teamet vårt er Fitim, han er aksjonær og forretningsutvikler',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Fitim',
+        content: 'Hi, hyggelig!',
         avatar: './assets/images/people/fitim.jpg',
         isQuestion: false,
         isVisible: false
     },
     {
         title: 'Deg',
-        content: 'Hva med denne vakre hjemmesiden?',
+        content: 'Likesom, hyggelig å møte dere!',
         avatar: 'https://image.freepik.com/free-vector/woman-girl-female-cartoon-avatar-icon_25030-13347.jpg',
         isQuestion: true,
         isVisible: false
     },
     {
+        title: 'Deg',
+        content: 'Hva med denne vakre hjemmesiden?',
+        isQuestion: true,
+        isVisible: false
+    },
+    {
         title: '',
-        content: 'Ola tar æren for det.',
-        avatar: 'https://previews.123rf.com/images/jemastock/jemastock1701/jemastock170100846/68927192-portrait-man-bearded-green-eyes-brown-hair-vector-illustration-eps-10.jpg',
+        content: 'David tar æren for det.',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: '',
+        content: 'I tillegg har vi Endre, vår finansdirektør.',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Deg',
+        content: 'Hi Endre!',
+        isQuestion: true,
+        isVisible: false
+    },
+    {
+        title: 'Endre',
+        content: 'Hi!',
+        avatar: './assets/images/people/endre.jpg',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: '',
+        content: 'Når det gjelder dataanalyse, har vi Besim.',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Besim',
+        content: 'Hi, hyggelig!',
+        avatar: './assets/images/people/besim.jpg',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: '',
+        content: 'I tilleg har vi Victoria, Nagi & Dona.',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: '',
+        content: 'De har gjort appen bedre mens de involverer ekspertisen deres',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: '',
+        content: ' for å få appen til å se bedre ut og også tilpasse historiene',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Deg',
+        content: 'hyggelig å møte dere alle!',
+        isQuestion: true,
+        isVisible: false
+    },
+    {
+        title: '',
+        content: 'Sist, men ikke minst, har vi Besar.',
+        avatar: './assets/images/7.png',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Besar',
+        content: 'Hi!',
+        avatar: './assets/images/people/besar.jpg',
         isQuestion: false,
         isVisible: false
     },
