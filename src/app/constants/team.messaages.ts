@@ -43,7 +43,6 @@ export const TEAM_MESSAGES = [
     {
         title: 'Deg',
         content: 'Hyggelig, hvem lagte android?',
-        avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg',
         isQuestion: true,
         isVisible: false
     },
