@@ -15,7 +15,6 @@ export const TEAM_MESSAGES = [
     {
         title: 'Deg',
         content: 'Det hores bra ut! Hvem har laget dette?',
-        avatar: 'https://cdn.pixabay.com/photo/2017/01/31/21/23/avatar-2027366_960_720.png',
         isQuestion: true,
         isVisible: false
     },
