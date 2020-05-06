@@ -71,7 +71,6 @@ export const TEAM_MESSAGES = [
     {
         title: 'Deg',
         content: 'Likesom, hyggelig å møte dere!',
-        avatar: 'https://image.freepik.com/free-vector/woman-girl-female-cartoon-avatar-icon_25030-13347.jpg',
         isQuestion: true,
         isVisible: false
     },
