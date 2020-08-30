@@ -29,7 +29,7 @@
             }
 
             &:not(:last-child) {
-                margin-right: 15px;
+                margin-right: 25px;
             }
 
             font-size: 18px;
@@ -47,8 +47,9 @@
     .burger-menu {
         display: none;
         position: absolute;
-        top: 33px;
+        top: 26px;
         i {
+            cursor: pointer;
             font-size: 20px;
         }
     }

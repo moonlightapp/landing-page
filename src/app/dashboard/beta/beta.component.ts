@@ -17,6 +17,7 @@ export class BetaComponent implements OnInit, OnDestroy {
     public showLoader: boolean;
     private destroy$ = new Subject();
     private deviceType: boolean;
+    private successMessage: string = 'Success!';
 
     constructor(
         private betaService: BetaService,
@@ -54,7 +55,7 @@ export class BetaComponent implements OnInit, OnDestroy {
         this.messageService.add({
             severity: 'success',
             summary: 'Success',
-            detail: 'Success! '
+            detail: this.successMessage
         })
     }
 
