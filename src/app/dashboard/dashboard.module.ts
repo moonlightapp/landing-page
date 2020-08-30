@@ -2,6 +2,7 @@ import { UserProfileModule } from '../ui-fragments/user-profile/user-profile.mod
 import { SuccessModalModule } from '../ui-kits/success-modal/success-modal.module';
 import { MessageBoxModule } from '../ui-fragments/message-box/message-box.module';
 import { InputSwitchModule } from '../ui-kits/input-switch/input-switch.module';
+import { RadioButtonModule } from '../ui-kits/radio-button/radio-button.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HeaderModule } from '../ui-fragments/header/header.module';
@@ -35,7 +36,8 @@ import { NgModule } from '@angular/core';
         ReactiveFormsModule,
         SuccessModalModule,
         UserProfileModule,
-        InputSwitchModule
+        InputSwitchModule,
+        RadioButtonModule,
     ],
     providers: [
         MessageService,

@@ -11,6 +11,14 @@
             <label for="email">Email</label>
             <input type="text" id="email" placeholder="Email" [formControl]="form.get('email')">
 
+            <div class="radio-button">
+            <app-radio-button [label]="'Android'" [selectedValue]="1" (select)="getSelectedDevice($event)"></app-radio-button>
+            </div>
+
+            <div class="radio-button">
+                <app-radio-button [label]="'IPhone'" [selectedValue]="2" (select)="getSelectedDevice($event )"></app-radio-button>
+            </div>
+
             <button (click)="form.valid && submitForm()">Submit</button>
         </form>
     </div>

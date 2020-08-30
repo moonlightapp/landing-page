@@ -45,10 +45,12 @@
         border-radius: 4px;
         cursor: pointer;
         width: 100%;
+        margin-top: 15px;
     }
 
-    textarea {
-        height: 200px;
+    .radio-button {
+        display: inline-block;
+        margin-right: 10px;
     }
 }
 

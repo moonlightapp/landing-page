@@ -58,6 +58,10 @@ export class BetaComponent implements OnInit, OnDestroy {
         })
     }
 
+    public getSelectedDevice(event): void {
+        console.log('00000000000000000000000', event)
+    }
+
     ngOnDestroy(): void {
         this.destroy$.next(true);
         this.destroy$.unsubscribe();
