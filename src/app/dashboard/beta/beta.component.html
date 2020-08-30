@@ -1,0 +1,26 @@
+<div class="beta-container">
+    <div class="container">
+
+        <div class="title">
+            <h1>Beta is now out</h1>
+            <h5>This is a description text for beta version</h5>
+            <h5>Our beta version is already out, please submit the form to receive beta version</h5>
+        </div>
+
+        <form [formGroup]="form" action="https://formspree.io/mbnkornm" method="POST">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email" [formControl]="form.get('email')">
+
+            <button (click)="form.valid && submitForm()">Submit</button>
+        </form>
+    </div>
+</div>
+
+<p-toast baseZIndex="100" position="top-right"></p-toast>
+
+<div id="myModal" class="modal" *ngIf="showLoader">
+    <div class="modal-content">
+        <img src="../../../assets/images/loading.gif" alt="">
+    </div>
+
+</div>

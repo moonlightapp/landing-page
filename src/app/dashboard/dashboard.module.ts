@@ -5,8 +5,10 @@ import { InputSwitchModule } from '../ui-kits/input-switch/input-switch.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HeaderModule } from '../ui-fragments/header/header.module';
-import { SettingsComponent } from './settings/settings.component';
+import { FeedbackService } from '../services/feedback.service';
 import { ContactComponent } from './contact/contact.component';
+import { BetaService } from '../services/beta.service';
+import { BetaComponent } from './beta/beta.component';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +23,7 @@ import { NgModule } from '@angular/core';
         HomeComponent,
         TeamComponent,
         ContactComponent,
-        SettingsComponent,
+        BetaComponent,
         DashboardComponent,
     ],
     imports: [
@@ -36,7 +38,9 @@ import { NgModule } from '@angular/core';
         InputSwitchModule
     ],
     providers: [
-        MessageService
+        MessageService,
+        FeedbackService,
+        BetaService,
     ]
 })
 export class DashboardModule {

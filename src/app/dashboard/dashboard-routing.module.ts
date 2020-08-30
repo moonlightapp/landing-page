@@ -1,5 +1,5 @@
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SettingsComponent } from './settings/settings.component';
+import { BetaComponent } from './beta/beta.component';
 import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -30,8 +30,8 @@ const routes: Routes = [
                 component: ContactComponent
             },
             {
-                path: 'settings',
-                component: SettingsComponent
+                path: 'beta',
+                component: BetaComponent
             }
         ]
     }

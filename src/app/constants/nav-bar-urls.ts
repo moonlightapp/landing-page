@@ -1,5 +1,9 @@
 export const NAV_BAR_URLS = [
     {
+        url: '/beta',
+        title: 'Beta'
+    },
+    {
         url: '/home',
         title: 'Hjem'
     },
@@ -11,8 +15,4 @@ export const NAV_BAR_URLS = [
         url: '/contact',
         title: 'Kontakt'
     },
-    // {
-    //     url: '/settings',
-    //     title: 'Settings'
-    // }
 ];
