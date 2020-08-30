@@ -1,8 +1,16 @@
+@import "../../../assets/styles/helpers/colors";
+@import "../../../assets/styles/helpers/mixins";
+
 .input-switch-container {
     display: flex;
     align-items: center;
 
     .input-switch-state {
         margin-left: 15px;
+    }
+
+    .label {
+        margin-right: 10px;
+        color: $white;
     }
 }

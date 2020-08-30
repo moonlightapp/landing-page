@@ -1,6 +1,18 @@
 <div class="team-container">
-    <div class="message-box-container">
+    <div class="switch-profile">
+        <app-input-switch [checked]="profileMode"
+                          (onChange)="profileMode = $event"
+                          [label]="profileMode ? 'Grid' : 'List'"
+                          [showSwitchValue]="false"></app-input-switch>
+    </div>
+    <div class="container message-box-container" *ngIf="!profileMode">
         <app-message-box [modalIsVisible]="true"
                          [messages]="messages"></app-message-box>
+    </div>
+
+    <div class="container team-box-container" *ngIf="profileMode">
+        <div class="team-member" *ngFor="let profile of profiles">
+            <app-user-profile [user]="profile"></app-user-profile>
+        </div>
     </div>
 </div>

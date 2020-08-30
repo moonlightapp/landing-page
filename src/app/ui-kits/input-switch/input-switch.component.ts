@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'app-input-switch',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./input-switch.component.scss']
 })
 export class InputSwitchComponent implements OnInit {
+    @Input() checkedText: string = 'Active';
+    @Input() unCheckedText: string = 'Paused';
+    @Input() label: string;
+    @Input() showSwitchValue: boolean = true;
+    @Input() checked: boolean;
 
-    public checked: boolean;
-    public checked1: boolean = false;
-    public checked2: boolean = true;
+    @Output() onChange = new EventEmitter();
 
     constructor() {
     }
@@ -17,4 +20,7 @@ export class InputSwitchComponent implements OnInit {
     ngOnInit() {
     }
 
+    public change(): void {
+        this.onChange.emit(this.checked);
+    }
 }

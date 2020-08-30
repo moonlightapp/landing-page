@@ -1,4 +1,8 @@
 <div class="input-switch-container">
-    <p-inputSwitch class="ui-inputswitch" [(ngModel)]="checked"></p-inputSwitch>
-    <div class="input-switch-state">{{checked ? 'Active': 'Paused'}}</div>
+    <div class="label" *ngIf="label">{{ label }}</div>
+
+    <p-inputSwitch class="ui-inputswitch" [(ngModel)]="checked" (onChange)="change()"></p-inputSwitch>
+
+    <div *ngIf="showSwitchValue"
+         class="input-switch-state">{{ checked ? checkedText : unCheckedText }}</div>
 </div>
