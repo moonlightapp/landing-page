@@ -9,6 +9,25 @@
         @include align-items(center);
 
         li {
+            border-radius: 3px;
+            padding: 2px;
+
+            &:first-child {
+                background-color: $white;
+                a {
+                    color: $blue-light;
+                }
+
+                &:hover {
+                    transition: .3s;
+                    background-color: $blue-light;
+
+                    a {
+                        color: $white !important;
+                    }
+                }
+            }
+
             &:not(:last-child) {
                 margin-right: 15px;
             }

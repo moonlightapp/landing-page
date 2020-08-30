@@ -16,6 +16,7 @@ export class BetaComponent implements OnInit, OnDestroy {
     public form: FormGroup;
     public showLoader: boolean;
     private destroy$ = new Subject();
+    private deviceType: boolean;
 
     constructor(
         private betaService: BetaService,
@@ -35,11 +36,10 @@ export class BetaComponent implements OnInit, OnDestroy {
     }
 
     public submitForm(): void {
-        if (this.form.invalid) return;
+        if (this.form.invalid || !this.deviceType) return;
 
         this.showLoader = true;
-
-        this.betaService.send(this.form.value.email)
+        this.betaService.send({email: this.form.value.email, isAndroid: this.deviceType})
             .pipe(
                 takeUntil(this.destroy$),
                 finalize(() => this.showLoader = false)
@@ -54,12 +54,12 @@ export class BetaComponent implements OnInit, OnDestroy {
         this.messageService.add({
             severity: 'success',
             summary: 'Success',
-            detail: 'Your Feedback Submitted Successfully. '
+            detail: 'Success! '
         })
     }
 
     public getSelectedDevice(event): void {
-        console.log('00000000000000000000000', event)
+        this.deviceType = event === 1;
     }
 
     ngOnDestroy(): void {
