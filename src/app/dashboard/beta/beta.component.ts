@@ -37,7 +37,7 @@ export class BetaComponent implements OnInit, OnDestroy {
     }
 
     public submitForm(): void {
-        if (this.form.invalid || !this.deviceType) return;
+        if (this.form.invalid || this.deviceType === undefined) return;
 
         this.showLoader = true;
         this.betaService.send({email: this.form.value.email, isAndroid: this.deviceType})
