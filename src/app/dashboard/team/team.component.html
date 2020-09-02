@@ -2,7 +2,7 @@
     <div class="switch-profile">
         <app-input-switch [checked]="profileMode"
                           (onChange)="profileMode = $event"
-                          [label]="profileMode ? 'Grid' : 'List'"
+                          [label]="profileMode ? 'Grid' : 'Story'"
                           [showSwitchValue]="false"></app-input-switch>
     </div>
     <div class="container message-box-container" *ngIf="!profileMode">
