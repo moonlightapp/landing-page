@@ -1,5 +1,4 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FeedbackService } from '../../services/feedback.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BetaService } from '../../services/beta.service';
 import { finalize, takeUntil } from 'rxjs/operators';
@@ -15,13 +14,12 @@ export class BetaComponent implements OnInit, OnDestroy {
 
     public form: FormGroup;
     public showLoader: boolean;
-    private destroy$ = new Subject();
     private deviceType: boolean;
-    private successMessage: string = 'Success!';
+    private destroy$ = new Subject();
+    private successMessage: string = 'Successfully submitted, you’ll receive beta invite soon.!';
 
     constructor(
         private betaService: BetaService,
-        private feedBackService: FeedbackService,
         private messageService: MessageService
     ) {
     }
@@ -33,6 +31,8 @@ export class BetaComponent implements OnInit, OnDestroy {
     private initForm(): void {
         this.form = new FormGroup({
             email: new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]),
+            subject: new FormControl(null),
+            message: new FormControl(null),
         })
     }
 
@@ -40,12 +40,15 @@ export class BetaComponent implements OnInit, OnDestroy {
         if (this.form.invalid || this.deviceType === undefined) return;
 
         this.showLoader = true;
-        this.betaService.send({email: this.form.value.email, isAndroid: this.deviceType})
+        this.form.get('subject').patchValue(this.deviceType ? 'Android' : 'IOS');
+        this.form.get('message').patchValue(this.form.value.email);
+
+        this.betaService.send(this.form.value)
             .pipe(
                 takeUntil(this.destroy$),
                 finalize(() => this.showLoader = false)
             )
-            .subscribe(res => {
+            .subscribe(_ => {
                 this.form.reset();
                 this.showSuccessMessage();
             })
