@@ -1,157 +1,115 @@
 export const HOME_MESSAGES = [
     {
-        title: 'Mathias',
-        content: 'Aurora, kan du i det minste snakke med meg?',
+        title: 'Maria',
+        content: 'Hei, hva skjer?',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: 'Aurora',
-        content: 'Slutt å sende meldinger til meg! Jeg kjenner deg ikke.',
+        title: 'Alex',
+        content: 'Hei',
         isQuestion: true,
         isVisible: false
     },
     {
-        title: 'Mathias',
-        content: 'Jeg er din ektemann',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Mathias',
-        content: 'Jeg er den du elsket',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Mathias',
-        content: 'Vi har vært gift i seks år',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Aurora',
-        content: 'Jeg husker deg ikke.',
+        title: 'Alex',
+        content: 'Hvor er du?',
         isQuestion: true,
         isVisible: false
     },
     {
-        title: 'Aurora',
-        content: 'Jeg har aldri vært gift',
+        title: 'Maria',
+        content: 'På McDonalds med min lille søster! 😐',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Alex',
+        content: 'Å, så kjipt for deg 😂',
         isQuestion: true,
         isVisible: false
     },
     {
-        title: 'Aurora',
-        content: 'Og jeg har definitivt ikke en ektemann',
+        title: 'Maria',
+        content: 'Lol',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Maria',
+        content: 'Jeg Hater dette stedet, for å være ærlig! Det er litt skummelt her.',
+        isQuestion: false,
+        isVisible: false
+    },
+    {
+        title: 'Alex',
+        content: 'Maria, du er 16, og du er redd for en jævla fast food restaurant?',
         isQuestion: true,
         isVisible: false
     },
     {
-        title: 'Mathias',
-        content: 'Det må være noe du husker om oss',
+        title: 'Maria',
+        content: 'Vel ja, har du hørt om Ronald McDonald? Han kommer hit hver torsdag.',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: 'Mathias',
-        content: 'Du må vel huske vårt første kyss på balkongen til foreldrene dine.',
+        title: 'Maria',
+        content: 'Hvilken dag er det??',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: 'Mathias',
-        content: 'Jeg savnet deg Aurora',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Mathias',
-        content: 'Du var i koma i en måned',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Aurora',
-        content: 'Jeg har hørt om det',
+        title: 'Alex',
+        content: 'Torsdag den 26. Hvordan det?',
         isQuestion: true,
         isVisible: false
     },
     {
-        title: 'Aurora',
-        content: 'Men jeg ser ikke ut til å huske det',
-        isQuestion: true,
-        isVisible: false
-    },
-    {
-        title: 'Mathias',
-        content: 'Du har hukommelsestap',
+        title: 'Maria',
+        content: 'Torsag?',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: 'Mathias',
-        content: 'Legen sa at i ditt tillfelle.',
+        title: 'Maria',
+        content: 'Ronald McDonald!!?',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: 'Mathias',
-        content: 'Trenger ikke hukommelsen å komme tilbake',
+        title: 'Alex',
+        content: '😟',
+        isQuestion: true,
+        isVisible: false
+    },
+    {
+        title: 'Alex',
+        content: 'Lykke til 😂',
+        isQuestion: true,
+        isVisible: false
+    },
+    {
+        title: 'Maria',
+        content: 'Alex, hold kjeft! 😂',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: 'Aurora',
-        content: 'Hvorfor har legen gitt deg mine personlige opplysninger. Jeg skal saksøke sykehuset for taushetsplikt',
-        isQuestion: true,
-        isVisible: false
-    },
-    {
-        title: 'Mathias',
-        content: 'Jeg er din ektemann, det er derfor',
+        title: 'Maria',
+        content: 'Vent, jeg må gå på do',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: 'Mathias',
-        content: 'vær så snill, HUSK OSS',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Aurora',
-        content: 'Tror du ikke at jeg prøver.',
+        title: 'Alex',
+        content: 'Vent, hva med søsteren din!',
         isQuestion: true,
         isVisible: false
     },
     {
-        title: 'Aurora',
-        content: 'Jeg kan ikke huske deg.',
-        isQuestion: true,
-        isVisible: false
-    },
-    {
-        title: 'Aurora',
-        content: 'Eller noe om oss',
-        isQuestion: true,
-        isVisible: false
-    },
-    {
-        title: 'Mathias',
-        content: 'Vær så snill, vi elsker hverandre. Jeg kan ikke miste deg! ',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Aurora',
-        content: 'Slutt å sende blomster til huset mitt',
-        isQuestion: true,
-        isVisible: false
-    },
-    {
-        title: 'Mathias',
-        content: 'Det er favoritt blomstene dine',
+        title: 'Maria',
+        content: 'Det kommer til å gå bra, skal bare være borte i ca. 3 minutter',
         isQuestion: false,
         isVisible: false
     },
