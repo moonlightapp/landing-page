@@ -48,28 +48,28 @@ export const TEAM_MESSAGES = [
     {
         title: 'Ardian',
         content: 'Hi, yes it is, I have been respoinsible for building the Android version of the app.',
-        avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
+        avatar: './assets/images/people/profile.jpg',
         isQuestion: false,
         isVisible: false
     },
     {
-        title: '',
-        content: 'In addition, part of our team is Fitim, he is one of the early investors and business developers',
-        avatar: './assets/images/7.png',
-        isQuestion: false,
+        title: 'You',
+        content: 'Is Moonlight using the clould? 😄',
+        isQuestion: true,
         isVisible: false
     },
     {
         title: 'Sunil',
-        content: 'Hi, yes it is, I have been respoinsible for building the Android version of the app.',
-        avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
+        content: 'Indeed, Moonlight is running on Amazons public cloud (AWS), I take care of the cloud infrastructure.',
+        avatar: 'https://ca.slack-edge.com/TMG64LZ25-U014ZNREQDR-g4dd3509a826-512',
         isQuestion: false,
         isVisible: false
     },
+
     {
-        title: 'Thomas',
-        content: 'Hi, yes it is, I have been respoinsible for building the Android version of the app.',
-        avatar: 'https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725589_JZfWRosnHjBUXOoYCVXTVQsKwf2CU3gd.jpg',
+        title: '',
+        content: 'In addition, part of our team is Fitim, he is one of the early investors and business developers',
+        avatar: './assets/images/7.png',
         isQuestion: false,
         isVisible: false
     },
