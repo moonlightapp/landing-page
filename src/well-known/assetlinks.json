@@ -1,4 +1,0 @@
-"hosting": {
-    "appAssociation": "AUTO",
-    "rewrites": [ { "source": "/applink/**", "dynamicLinks": true } ]
-}

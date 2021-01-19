@@ -24,6 +24,12 @@ export class TeamComponent implements OnInit {
             avatar: './assets/images/people/marius.jpg'
         },
         {
+            firstName: 'Elin',
+            lastName: 'Gundersen',
+            role: 'Head of Content',
+            avatar: './assets/images/people/elin.jpg'
+        },
+        {
             firstName: 'Ardian',
             lastName: 'Saidi',
             role: 'Android Developer',
@@ -36,10 +42,10 @@ export class TeamComponent implements OnInit {
             avatar: 'https://ca.slack-edge.com/TMG64LZ25-USUV0HMUN-e94bd2a19500-512'
         },
         {
-            firstName: 'Sunil',
-            lastName: 'Shivanand',
-            role: 'Cloud Architect',
-            avatar: 'https://ca.slack-edge.com/TMG64LZ25-U014ZNREQDR-g4dd3509a826-512'
+            firstName: 'Dona',
+            lastName: 'Mulaku',
+            role: 'UI/UX Designer',
+            avatar: './assets/images/people/profile.jpg'
         },
         {
             firstName: 'Endre',
@@ -60,6 +66,18 @@ export class TeamComponent implements OnInit {
             avatar: 'https://ca.slack-edge.com/TMG64LZ25-U017YMEHVTL-c19a18f7e603-512'
         },
         {
+            firstName: 'Perparim',
+            lastName: 'Shala',
+            role: 'Machine Learning Engineer',
+            avatar: './assets/images/people/perparim.jpg'
+        },
+        {
+            firstName: 'Sunil',
+            lastName: 'Shivanand',
+            role: 'Cloud Architect',
+            avatar: 'https://ca.slack-edge.com/TMG64LZ25-U014ZNREQDR-g4dd3509a826-512'
+        },
+        {
             firstName: 'Veton',
             lastName: 'Neziri',
             role: 'Android Developer',
@@ -70,12 +88,6 @@ export class TeamComponent implements OnInit {
             lastName: 'Ismaili',
             role: 'Data Scientist',
             avatar: './assets/images/people/besim.jpg'
-        },
-        {
-            firstName: 'Dona',
-            lastName: 'Mulaku',
-            role: 'UI/UX Designer',
-            avatar: './assets/images/people/profile.jpg'
         },
         {
             firstName: 'David',
