@@ -38,7 +38,7 @@ export class TeamComponent implements OnInit {
         {
             firstName: 'Thomas',
             lastName: 'Pettersen',
-            role: 'Technical Advisor',
+            role: 'Technical Advisor, Investor',
             avatar: 'https://ca.slack-edge.com/TMG64LZ25-USUV0HMUN-e94bd2a19500-512'
         },
         {
