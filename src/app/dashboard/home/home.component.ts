@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { HOME_MESSAGES } from '../../constants/home.messages';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-home',
@@ -7,9 +7,10 @@ import { HOME_MESSAGES } from '../../constants/home.messages';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    public showMessageBox: boolean;
+    public showMessageBox = true;
     public showScale: boolean;
     public showDownloadInfo: boolean;
+    public showMessageBoxModal: boolean;
     public showDownloadInfoContent: boolean;
     public messages = JSON.parse(JSON.stringify(HOME_MESSAGES));
 
@@ -22,30 +23,44 @@ export class HomeComponent implements OnInit {
 
     public toggleModal() {
         this.showMessageBox = !this.showMessageBox;
+        this.messages = [...this.messages];
 
         setTimeout(() => {
-            this.showScale = this.showMessageBox
-        }, 200)
+            this.showScale = this.showMessageBox;
+        }, 200);
     }
 
     public onLastMessage() {
+        this.showMessageBox = false;
+        this.showMessageBoxModal = false;
+
         setTimeout(() => {
-            this.showMessageBox = !this.showMessageBox;
+            // this.showMessageBox = !this.showMessageBox;
+            this.showMessageBox = true;
         }, 650);
 
         setTimeout(() => {
             this.showDownloadInfoContent = !this.showDownloadInfoContent;
         }, 0);
 
-        this.showDownloadInfo = true;
+        this.showDownloadInfo = false;
         this.showScale = false;
     }
 
-    public navigateToHome():void {
+    public navigateToHome(): void {
         setTimeout(() => {
             this.showDownloadInfo = false;
         }, 500);
 
         this.showDownloadInfoContent = !this.showDownloadInfoContent;
+    }
+
+    public openMessageBoxModal(): void {
+        this.showMessageBoxModal = true;
+        this.showMessageBox = false;
+    }
+
+    public navigateToWebStore(): void {
+        window.open('https://testflight.apple.com/join/yb3jdbl6', '_blank');
     }
 }

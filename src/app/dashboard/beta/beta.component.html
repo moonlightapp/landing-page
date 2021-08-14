@@ -2,13 +2,26 @@
     <div class="container">
 
         <div class="title">
-            <h1>Beta is out now</h1>
-            <h5>When we first started to develop the first ever Norwegian storytelling app (we currently support English and Norwegian) we had a long long LONG list of tools we wanted to implement. Be one of the first people to get access on our beta version and try out these tools.</h5>
+            <h1>Beta is now out</h1>
+            <h5>This is a description text for beta version</h5>
+            <h5>Our beta version is already out, please submit the form to receive beta version</h5>
         </div>
 
         <form [formGroup]="form" action="https://formspree.io/mbnkornm" method="POST">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email" [formControl]="form.get('email')">
 
-            <button (click)="goToTestFlight()">Download from TestFlight</button>
+            <div class="radio-button">
+                <app-radio-button [label]="'Android'" [selectedValue]="1"
+                                  (select)="getSelectedDevice($event)"></app-radio-button>
+            </div>
+
+            <div class="radio-button">
+                <app-radio-button [label]="'iPhone'" [selectedValue]="2"
+                                  (select)="getSelectedDevice($event)"></app-radio-button>
+            </div>
+
+            <button (click)="form.valid && submitForm()">Submit</button>
         </form>
     </div>
 </div>

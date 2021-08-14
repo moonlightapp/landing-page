@@ -18,8 +18,9 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
 
     @HostListener('document:keydown', ['$event'])
     onKeyDown(event) {
-        if (event.keyCode === 40)
+        if (event.keyCode === 40) {
             this.displayMessagesByIndex();
+        }
     }
 
     @HostListener('document:click', ['$event'])
@@ -38,12 +39,12 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
         setTimeout(() => {
             this.messages[0].isVisible = true;
             this.isInited = true;
-        }, 800)
+        }, 800);
     }
 
     displayMessagesByIndex(): any {
-        let container = document.getElementById('message-box-container');
-        let items = Array.from(document.getElementsByClassName('message-box-container')[0].querySelectorAll('.message-item'));
+        const container = document.getElementById('message-box-container');
+        const items = Array.from(document.getElementsByClassName('message-box-container')[0].querySelectorAll('.message-item'));
 
         if (this.index > this.messages.length - 1) {
             if (!this.isHomePage) {
@@ -53,12 +54,14 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
                 return;
             }
 
-            this.messages.forEach(message => message.isVisible = false);
+            // this.messages.forEach(message => message.isVisible = false);
+            this.index = 1;
+            this.messages.forEach((message, index) => index ? (message.isVisible = false) : (message.isVisible = true));
             this.hideMessageBox = true;
             this.lastMessage.emit(true);
-        } else  {
+        } else {
             this.messages[this.index].isVisible = true;
-            let el = document.getElementById(''+(this.index));
+            let el = document.getElementById('' + (this.index));
             container['style'].transform = `translate(-50%, ${-(el.offsetTop + 90)}px)`;
         }
 
@@ -67,7 +70,7 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
                 if (item.getBoundingClientRect().top < 120 && this.messages[index].isVisible) {
                     this.messages[index].isVisible = false;
                 }
-            })
+            });
         }, 300);
 
         this.index++;

@@ -1,0 +1,33 @@
+.info-card-container {
+    color: #181727;
+
+    ul {
+        li {
+            .image-container {
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                background-color: #181727;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .title {
+                word-break: break-word;
+                font-weight: 800;
+                font-size: 20px;
+                text-align: left;
+            }
+
+            .description {
+                font-size: 12px;
+                text-align: left;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

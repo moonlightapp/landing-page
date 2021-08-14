@@ -2,20 +2,19 @@
 
 .header-container {
     display: flex;
+    position: relative;
     @include justify-content(space-between);
     @include align-items(center);
 
-    .logo {
-        height: 50px;
-        cursor: pointer;
+    .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
 
         img {
-            height: 100%;
+            cursor: pointer;
         }
-    }
-
-    .nav-bar-menu {
-
     }
 }
 

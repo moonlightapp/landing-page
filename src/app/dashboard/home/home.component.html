@@ -1,26 +1,36 @@
 <div class="home-container">
     <div class="home-section">
-        <h1 class="section-title">
-            <div>Moonlight</div>
-            <div>Stories!</div>
-        </h1>
-    </div>
+        <!--        <h1 class="section-title">-->
+        <!--            <div>Chat</div>-->
+        <!--            <div>historier!</div>-->
+        <!--        </h1>-->
 
-    <ng-container *ngIf="showMessageBox">
-        <div class="message-box-modal no-scale"
-             [class.scale]="showScale">
-            <app-message-box (lastMessage)="onLastMessage()"
+        <div class="home-section-message-box">
+            <app-message-box *ngIf="showMessageBox" (lastMessage)="onLastMessage()"
                              [isHomePage]="true"
                              [messages]="messages"
                              [modalIsVisible]="showMessageBox"></app-message-box>
         </div>
-    </ng-container>
 
-    <ng-container *ngIf="showDownloadInfo"> <!--showDownloadInfo-->
+
+    </div>
+
+    <!--    <ng-container *ngIf="showMessageBox">--> <!--no-scale-->
+    <div class="message-box-modal scale" *ngIf="showMessageBoxModal">
+        <app-message-box (lastMessage)="onLastMessage()"
+                         [isHomePage]="true"
+                         [messages]="messages"
+                         [modalIsVisible]="showMessageBox"></app-message-box>
+
+        <img height="70" width="200" src="assets/images/app-store-logo.png" (click)="navigateToWebStore()" alt="App Store">
+    </div>
+    <!--    </ng-container>-->
+
+    <ng-container *ngIf="showDownloadInfo">
         <div class="message-box-modal hide"
-        [class.show]="showDownloadInfoContent">
+             [class.show]="showDownloadInfoContent">
             <div class="message-box-content">
-                <p>Download the app to continue reading the story!</p>
+                <p>Last ned appen for å fortsette å lese historien!</p>
 
                 <div class="pointer" (click)="navigateToHome()">
                     <div class="angle-top">
@@ -36,7 +46,11 @@
         </div>
     </ng-container>
 
-    <div class="angle" (click)="toggleModal()">
-        <img src="../../../assets/images/2x/baseline_play_circle_filled_white_48dp.png" alt="">
+    <!--        <div class="angle" (click)="toggleModal()" *ngIf="true">-->
+    <!--            <img src="../../../assets/images/2x/baseline_play_circle_filled_white_48dp.png" alt="">-->
+    <!--        </div>-->
+
+    <div class="play-icon-container" (click)="openMessageBoxModal()">
+        <img height="70" width="70" src="assets/images/play-icon-yellow.svg" alt="Play">
     </div>
 </div>

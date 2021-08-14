@@ -3,9 +3,12 @@
         <img [src]="message.avatar" alt="UserAvatar">
     </div>
     <div class="credentials">
-        <div  class="message-title"
-              [class.color-orange]="message.isQuestion"
-              [class.color-light-blue]="!message.isQuestion">
+<!--        <div  class="message-title"-->
+<!--              [class.color-orange]="message.isQuestion"-->
+<!--              [class.color-light-blue]="!message.isQuestion">-->
+<!--            {{message.title}}-->
+<!--        </div>-->
+        <div  class="message-title" [ngStyle]="{color: message.color}">
             {{message.title}}
         </div>
         <div class="message-content">{{message.content}}</div>

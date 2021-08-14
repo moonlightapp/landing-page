@@ -1,5 +1,8 @@
+@import "../../../assets/styles/helpers/colors";
+
 .dashboard {
-    background-image: url("../../../assets/images/bg_stars.png");
+    //background-image: url("../../../assets/images/bg_stars.png");
+    background-image: url("../../../assets/images/main-background.svg");
     color: white;
     position: fixed;
     left: 0;
@@ -21,7 +24,8 @@
         left: 0;
         right: 0;
         z-index: 1500;
-        padding: 30px 70px 60px;
+        //padding-right: 25px;
+        //padding-top: 20px;
         transition: transform 800ms;
     }
 
@@ -30,26 +34,29 @@
         bottom: 20px;
         right: 87px;
         z-index: 10;
+
         ul {
-            background-color: #12a5f4;
             border-radius: 5px;
 
             li {
                 display: inline-block;
-                padding: 10px 15px ;
+                padding: 10px 15px;
                 transition: 1s;
+                cursor: pointer;
+                background-color: $gold;
 
                 &:not(:last-child) {
                     border-right: 1px solid grey;
                 }
-                cursor: pointer;
+
                 a {
-                    color: white;
+                    color: $white;
                     font-size: 15px;
                 }
 
                 &:hover {
-                    background-color: #578dfb;
+                    background-color: $blue-deep-dark;
+                    color: $white;
                     border-radius: 5px;
                     transition: .5s;
                 }
@@ -65,7 +72,7 @@
 @media only screen and (max-width: 800px) {
     .dashboard {
         .header {
-            padding: 30px 15px 30px 0;
+            //padding: 30px 15px 30px 0;
         }
 
         .download-links {
@@ -73,17 +80,15 @@
         }
     }
 
-    //.team-container {
-        .switch-profile {
-            right: 0;
-        }
-    //}
+    .switch-profile {
+        right: 0;
+    }
 }
 
 @media only screen and (max-width: 490px) {
     .dashboard {
         .header {
-            padding: 30px 15px 30px 0;
+            //padding: 30px 15px 30px 0;
         }
     }
 }

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
 import { NavigationItem } from '../../interfaces/navigation-item';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-nav-bar-menu',
@@ -10,7 +11,7 @@ export class NavBarMenuComponent implements OnInit {
     @Input() items: NavigationItem[] = [];
     public openMenu: boolean;
 
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
@@ -19,6 +20,14 @@ export class NavBarMenuComponent implements OnInit {
     public toggleMenu(event): void {
         event.stopPropagation();
         this.openMenu = !this.openMenu;
+    }
+
+    public navigate(url: string, index: number): void {
+        index ? this.router.navigate([url]) : window.open('https://testflight.apple.com/join/yb3jdbl6', '_blank');
+    }
+
+    public navigateToWebStore(): void {
+        window.open('https://testflight.apple.com/join/yb3jdbl6', '_blank');
     }
 
 }

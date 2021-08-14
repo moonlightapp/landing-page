@@ -3,6 +3,8 @@ import { SuccessModalModule } from '../ui-kits/success-modal/success-modal.modul
 import { MessageBoxModule } from '../ui-fragments/message-box/message-box.module';
 import { InputSwitchModule } from '../ui-kits/input-switch/input-switch.module';
 import { RadioButtonModule } from '../ui-kits/radio-button/radio-button.module';
+import { InvestInUsComponent } from './invest-in-us/invest-in-us.component';
+import { InfoCardModule } from '../ui-fragments/info-card/info-card.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HeaderModule } from '../ui-fragments/header/header.module';
@@ -15,7 +17,7 @@ import { TeamComponent } from './team/team.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MessageService } from 'primeng/api';
-import { ToastModule } from 'primeng/toast'
+import { ToastModule } from 'primeng/toast';
 import { NgModule } from '@angular/core';
 
 
@@ -26,6 +28,7 @@ import { NgModule } from '@angular/core';
         ContactComponent,
         BetaComponent,
         DashboardComponent,
+        InvestInUsComponent,
     ],
     imports: [
         CommonModule,
@@ -38,6 +41,7 @@ import { NgModule } from '@angular/core';
         UserProfileModule,
         InputSwitchModule,
         RadioButtonModule,
+        InfoCardModule,
     ],
     providers: [
         MessageService,

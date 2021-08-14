@@ -1,0 +1,46 @@
+<div class="invest-on-us-container">
+    <div class="container-header">
+        <img src="assets/images/invest-on-us-image.svg" alt="Invest on Us">
+
+        <div class="container-content">
+            <p>
+                Willing to take a stake and be part of this venture?
+            </p>
+            <p>
+                We are aiming for market leader position, and we believe we have found a gap in the market that no one
+                is currently filling.
+            </p>
+            <p>
+                We are a solid team, experienced in the most important key areas. With this digital shift we are well
+                connected and flixible in working from anywhere anytime. Our team is super commited to Moonlight and we
+                don't give up no matter how complex the problem is.
+            </p>
+            <p>
+                If you aim to be a part of this next big tech venture, fill out the details below and <b>let us present
+                to you Moonlight!</b>
+            </p>
+        </div>
+    </div>
+
+    <div class="container-footer">
+        <div class="footer-title">
+            It's now or never. We won’t ask for investments forever.
+        </div>
+        <div class="form-container">
+            <div>
+                <input [formControl]="form.get('name')" placeholder="Full Name" type="text">
+                <input [formControl]="form.get('email')" placeholder="Email" type="email">
+            </div>
+            <div>
+                <input [formControl]="form.get('phone')" placeholder="Contact Number" type="tel">
+                <button [disabled]="form.invalid" (click)="submit()">Request a call</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" *ngIf="showLoader">
+    <div class="modal-content">
+        <img src="../../../assets/images/loading.gif" alt="">
+    </div>
+</div>

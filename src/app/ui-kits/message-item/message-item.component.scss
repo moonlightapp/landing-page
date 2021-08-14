@@ -2,12 +2,14 @@
 @import "../../../assets/styles/helpers/mixins";
 
 .message-item-container {
-    background-color: hsla(89, 43%, 51%, 0.1);
+    //background-color: hsla(89, 43%, 51%, 0.1);
     min-height: 45px;
-    max-width: 350px;
+    //max-width: 350px;
+    max-width: 250px;
     width: 100%;
     padding: 10px;
     border-radius: 7px;
+    background: rgba(196, 196, 196, 0.1);
 
     .message-title {
         margin-bottom: 10px;

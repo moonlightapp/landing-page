@@ -9,37 +9,47 @@
         @include align-items(center);
 
         li {
-            border-radius: 3px;
-            padding: 2px;
 
-            &:first-child {
-                background-color: $white;
-                a {
-                    color: $blue-light;
-                }
-
-                &:hover {
-                    transition: .3s;
-                    background-color: $blue-light;
-
-                    a {
-                        color: $white !important;
+            &:not(:first-child) {
+                a:hover {
+                    &:after {
+                        position: absolute;
+                        bottom: -10px;
+                        content: " ";
+                        height: 5px;
+                        width: 5px;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        background-color: $orange-light;
                     }
                 }
             }
 
+
+            border-radius: 3px;
+            padding: 2px;
+            font-size: 14px;
+            position: relative;
+
             &:not(:last-child) {
-                margin-right: 25px;
+                margin-right: 15px;
             }
 
-            font-size: 18px;
+            &:first-child {
+                a {
+                    background-color: $orange-light;
+                    padding: 5px 15px;
+                    border-radius: 15px;
+                    font-weight: 800;
+                    color: $black;
+                }
+            }
 
             a {
+                position: relative;
                 transition: .5s;
                 color: $white;
-                &:hover {
-                    color: $blue-light;
-                }
             }
         }
     }
@@ -48,6 +58,8 @@
         display: none;
         position: absolute;
         top: 26px;
+        right: 26px;
+
         i {
             cursor: pointer;
             font-size: 20px;
@@ -55,7 +67,17 @@
     }
 
     .active {
-        color: $blue-light !important;
+        &:after {
+            position: absolute;
+            bottom: -10px;
+            content: " ";
+            height: 5px;
+            width: 5px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $orange-light;
+        }
     }
 
     .display-block {
@@ -65,9 +87,16 @@
 
 @media only screen and (max-width: 800px) {
     .nav-bar-container {
+
+        .active {
+            &:after {
+                content: none;
+            }
+        }
+
         ul {
             display: none;
-            background: #292F3F;
+            background-image: url("../../../assets/images/main-background.svg");
             position: fixed;
             left: 0;
             right: 0;
@@ -77,6 +106,26 @@
 
             li {
                 font-size: 20px;
+
+                a {
+                    padding: 5px 15px;
+                    border-radius: 15px;
+                    font-weight: 800;
+                }
+
+                &:not(:first-child) {
+                    a:hover {
+                        background-color: $orange-light;
+                        color: $black;
+
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+
+
+
                 &:not(:last-child) {
                     margin-bottom: 15px;
                 }

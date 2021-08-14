@@ -1,1 +1,22 @@
+@import "assets/styles/helpers/fonts";
+
 /* You can add global styles to this file, and also import other style files */
+.ui-radiobutton-label {
+    color: #F9E3A7;
+}
+
+.ui-radiobutton .ui-radiobutton-box.ui-state-active {
+    background-color: #d5bc79 !important;
+    border-color: #d5bc79 !important;
+}
+
+.ui-radiobutton .ui-radiobutton-box.ui-state-focus {
+    box-shadow: 0 0 0 0.2em #F9E3A7 !important;
+}
+
+body {
+    * {
+        font-family: $Poppins-Regular !important;
+        font-size: 16px !important;
+    }
+}

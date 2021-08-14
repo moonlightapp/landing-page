@@ -2,8 +2,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FeedbackService } from '../../services/feedback.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
-import { Subscription } from 'rxjs';
 import { finalize } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-contact',
@@ -18,7 +18,8 @@ export class ContactComponent implements OnInit, OnDestroy {
     constructor(
         private feedBackService: FeedbackService,
         private messageService: MessageService
-    ) {}
+    ) {
+    }
 
     ngOnInit() {
         this.initForm();
@@ -29,7 +30,7 @@ export class ContactComponent implements OnInit, OnDestroy {
             email: new FormControl(null, Validators.required),
             subject: new FormControl(null, Validators.required),
             message: new FormControl(null, Validators.required),
-        })
+        });
     }
 
     public submitForm(): void {
@@ -40,16 +41,18 @@ export class ContactComponent implements OnInit, OnDestroy {
             )
             .subscribe(res => {
                 this.form.reset();
-                this.addSingle();
-            })
+            });
+        // this.addSingle();
+        // this.messageService.add({severity: 'info', summary: 'Service Message', detail: 'Via MessageService'});
+
     }
 
     addSingle() {
         this.messageService.add({
-            severity:'success',
-            summary:'Success',
-            detail:'Your Feedback Submitted Successfully. '
-        })
+            severity: 'success',
+            summary: 'Success',
+            detail: 'Your Feedback Submitted Successfully. '
+        });
     }
 
     ngOnDestroy(): void {

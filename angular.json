@@ -1,5 +1,8 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "cli": {
+      "analytics": "458eb04a-7cce-4358-9d6b-881c5f7a9786"
+    },
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
@@ -25,19 +28,22 @@
                         "aot": false,
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets",
-                            "src/well-known",
-                            "src/apple-app-site-association"
+                            "src/assets"
                         ],
                         "styles": [
                             "src/styles.scss",
                             "src/assets/styles/global.scss",
                             "src/assets/icons/style.scss",
                             "node_modules/primeicons/primeicons.css",
-                            "node_modules/primeng/resources/themes/nova-light/theme.css",
                             "node_modules/primeng/resources/primeng.min.css"
                         ],
-                        "scripts": []
+                        "scripts": [],
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "buildOptimizer": false,
+                        "sourceMap": true,
+                        "optimization": false,
+                        "namedChunks": true
                     },
                     "configurations": {
                         "production": {
@@ -50,7 +56,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "aot": true,
                             "extractLicenses": true,
@@ -69,7 +74,8 @@
                                 }
                             ]
                         }
-                    }
+                    },
+                    "defaultConfiguration": ""
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
@@ -100,7 +106,11 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.scss"
+                            "src/styles.scss",
+                            "src/assets/styles/global.scss",
+                            "src/assets/icons/style.scss",
+                            "node_modules/primeicons/primeicons.css",
+                            "node_modules/primeng/resources/primeng.min.css"
                         ],
                         "scripts": []
                     }

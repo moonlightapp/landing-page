@@ -1,18 +1,30 @@
 export const NAV_BAR_URLS = [
     {
-        url: '/beta',
-        title: 'Beta'
+        url: '/home',
+        title: 'Download Beta',
+        activeClass: false,
     },
     {
         url: '/home',
-        title: 'Home'
+        // title: 'Hjem'
+        title: 'Home',
+        activeClass: true,
     },
     {
-        url: '/team',
-        title: 'About us'
+        url: '/about',
+        // title: 'Om Oss'
+        title: 'About',
+        activeClass: true,
     },
     {
         url: '/contact',
-        title: 'Contact'
+        // title: 'Kontakt'
+        title: 'Contact Us',
+        activeClass: true,
+    },
+    {
+        url: '/invest-in-us',
+        title: 'Invest in Us',
+        activeClass: true,
     },
 ];

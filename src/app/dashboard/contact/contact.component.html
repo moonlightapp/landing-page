@@ -1,25 +1,31 @@
 <div class="contact-container">
+
+    <img src="assets/images/contact-page-image.svg" alt="Contact Us">
+
     <div class="container">
         <form [formGroup]="form" action="https://formspree.io/mbnkornm" method="POST">
             <label for="email">E Post</label>
-            <input type="text" id="email" placeholder="E Post" [formControl]="form.get('email')">
+            <input type="text" id="email" [formControl]="form.get('email')">
 
             <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Subject" [formControl]="form.get('subject')">
+            <input type="text" id="subject" [formControl]="form.get('subject')">
 
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Write something..." [formControl]="form.get('message')"></textarea>
+            <textarea id="message" [formControl]="form.get('message')"></textarea>
 
-            <button (click)="form.valid && submitForm()">Send</button>
+            <button [disabled]="form.invalid" (click)="submitForm()">Send</button>
         </form>
+
+        <div class="info-text">
+            Important Note: We respect privacy and will only use your email to answer your queries.
+        </div>
     </div>
 </div>
 
 <p-toast baseZIndex="100" position="top-right"></p-toast>
 
-<div id="myModal" class="modal" *ngIf="showLoader">
+<div class="modal" *ngIf="showLoader">
     <div class="modal-content">
         <img src="../../../assets/images/loading.gif" alt="">
     </div>
-
 </div>

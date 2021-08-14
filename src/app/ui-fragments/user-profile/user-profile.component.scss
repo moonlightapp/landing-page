@@ -2,9 +2,13 @@
 @import "../../../assets/styles/helpers/mixins";
 
 .user-profile-container {
+    width: 170px;
+    text-align: center;
+
     .avatar {
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
+        margin: 0 auto;
         border-radius: 50%;
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -13,14 +17,18 @@
     }
 
     .credentials {
-        max-width: 150px;
+        max-width: 170px;
+        font-size: 16px;
+        font-weight: 800;
         text-align: center;
         margin-top: 7px;
+        word-break: break-word;
     }
 
     .role {
         font-size: 12px;
         margin-top: 5px;
-        font-style: italic
+        //font-style: italic;
+        word-break: break-word;
     }
 }

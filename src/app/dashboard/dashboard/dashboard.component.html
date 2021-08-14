@@ -1,15 +1,14 @@
 <div class="dashboard">
     <div class="main-container">
-        <div class="header padding-bottom-30">
+        <div class="header">
             <app-header></app-header>
         </div>
 
         <div class="container">
             <router-outlet></router-outlet>
         </div>
-        
 
-        <div class="download-links">
+        <div class="download-links" *ngIf="false">
             <ul (click)="$event.stopPropagation()">
                 <li>
                     <a [routerLink]="['/']">
@@ -22,12 +21,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/Moonlight-App-Stories-106073891239389/" target="_blank">
+                    <a [routerLink]="['/']">
                         <i class="icon-facebook2"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/moonlightappstories/" target="_blank">
+                    <a [routerLink]="['/']">
                         <i class="icon-instagram"></i>
                     </a>
                 </li>

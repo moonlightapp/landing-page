@@ -1,18 +1,40 @@
 <div class="team-container">
-    <div class="switch-profile">
-        <app-input-switch [checked]="profileMode"
-                          (onChange)="profileMode = $event"
-                          [label]="profileMode ? 'Grid' : 'Story'"
-                          [showSwitchValue]="false"></app-input-switch>
-    </div>
-    <div class="container message-box-container" *ngIf="!profileMode">
-        <app-message-box [modalIsVisible]="true"
-                         [messages]="messages"></app-message-box>
+<!--    <div class="switch-profile">-->
+<!--        <app-input-switch [checked]="profileMode"-->
+<!--                          (onChange)="profileMode = $event"-->
+<!--                          [label]="profileMode ? 'Grid' : 'List'"-->
+<!--                          [showSwitchValue]="false"></app-input-switch>-->
+<!--    </div>-->
+<!--    <div class="container message-box-container" *ngIf="!profileMode">-->
+<!--        <app-message-box [modalIsVisible]="true"-->
+<!--                         [messages]="messages"></app-message-box>-->
+<!--    </div>-->
+
+    <div class="team-header-container">
+        <div class="image-container">
+            <img src="assets/images/about_page_header_image.png" alt="About us image">
+        </div>
+        <div class="description-container">
+            There is a huge market opportunity, yet to be utilized  in combining creating, reading, educating and learning with a bite sized formula. Currently we are the only bite size formula app that offer freedom of usage, style and genre across these categories without paid limitations.
+            We offer an easy to use, safe, fun and interactive product wrapped up in a beautiful intuitive and user friendly experience.
+        </div>
     </div>
 
-    <div class="container team-box-container" *ngIf="profileMode">
-        <div class="team-member" *ngFor="let profile of profiles">
-            <app-user-profile [user]="profile"></app-user-profile>
+    <div class="team-info-container">
+        <div class="info-card-item" *ngFor="let item of teamInfoItems">
+            <app-info-card [item]="item"></app-info-card>
+        </div>
+    </div>
+
+    <div class="team-box-container" *ngIf="profileMode">
+        <div class="team-title">
+            OUR DEDICATED TEAM
+        </div>
+
+        <div class="team-box-container-content">
+            <div class="team-member" *ngFor="let profile of profiles">
+                <app-user-profile [user]="profile"></app-user-profile>
+            </div>
         </div>
     </div>
 </div>

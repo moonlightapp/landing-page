@@ -20,7 +20,7 @@ export class BetaComponent implements OnInit, OnDestroy {
 
     constructor(
         private betaService: BetaService,
-        private messageService: MessageService,
+        private messageService: MessageService
     ) {
     }
 
@@ -34,10 +34,6 @@ export class BetaComponent implements OnInit, OnDestroy {
             subject: new FormControl(null),
             message: new FormControl(null),
         })
-    }
-
-    public goToTestFlight(): void {
-        window.location.href = 'https://testflight.apple.com/join/yb3jdbl6';
     }
 
     public submitForm(): void {
