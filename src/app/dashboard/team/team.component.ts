@@ -14,53 +14,103 @@ export class TeamComponent implements OnInit {
 
     public profiles = [
         {
-            firstName: 'Emma',
-            lastName: 'Addison',
-            role: 'Super Admin',
-            avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS5NTBNBrHAvaW_hEYgujDAUqbLQ1j0R22ANw&usqp=CAU'
+            firstName: 'Besar',
+            lastName: 'Ismaili',
+            role: 'CEO',
+            avatar: 'assets/images/people/besar.jpg'
         },
         {
-            firstName: 'Olivia',
-            lastName: 'Addisyn',
-            role: 'CTO',
-            avatar: 'https://static.jobscan.co/blog/uploads/linkedin-profile-picture.jpg'
+            firstName: 'Marius',
+            lastName: 'Fargerhol',
+            role: 'iOS developer',
+            avatar: 'assets/images/people/marius.jpg'
         },
         {
-            firstName: 'Ava',
-            lastName: 'Addy',
-            role: 'Marketing Manager',
-            avatar: 'https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg'
+            firstName: 'Elin',
+            lastName: 'Gundersen',
+            role: 'Company & Product developer',
+            avatar: '/assets/images/people/elin.jpg'
         },
         {
-            firstName: 'Isabella',
-            lastName: 'Kimberley',
-            role: 'UI/UX Designer',
-            avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
+            firstName: 'Taaha',
+            lastName: 'Bin Khaled',
+            role: 'Interaction and Service designer',
+            avatar: '/assets/images/people/taaha.jpg'
         },
         {
-            firstName: 'Sophia',
-            lastName: 'Blakely',
-            role: 'Co-Founder Product & IOS Developer',
-            avatar: 'https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg'
+            firstName: 'Valdrin',
+            lastName: 'Muharemi',
+            role: 'Server-side',
+            avatar: '/assets/images/people/valdrin.jpg'
         },
         {
-            firstName: 'Charlotte',
-            lastName: 'Laverne',
-            role: 'Manager',
-            avatar: 'https://a9p9n2x2.stackpathcdn.com/wp-content/blogs.dir/1/files/2017/01/iStock-459373353-339x480.jpg'
+            firstName: 'Thomas',
+            lastName: 'Pettersen',
+            role: 'Tech & Early investor',
+            avatar: '/assets/images/people/thomas.jpg'
         },
         {
-            firstName: 'Amelia',
-            lastName: 'Leighton',
-            role: 'Marketing Team Lead',
-            avatar: 'https://st2.depositphotos.com/1715570/6423/i/950/depositphotos_64239109-stock-photo-young-black-woman-looking-up.jpg'
+            firstName: 'Ardian',
+            lastName: 'Saidi',
+            role: 'Android developer',
+            avatar: '/assets/images/people/profile.jpg'
         },
         {
-            firstName: 'Harper',
-            lastName: 'Mackenzie',
-            role: 'UI/UX Design Team Lead',
-            avatar: 'https://16asb.itocd.net/www/images/girl/1208601-1208800/e928451f-4246-4e72-898a-829531f7dcd6.jpg'
+            firstName: 'Endre',
+            lastName: 'Grønmyr',
+            role: 'Finance',
+            avatar: '/assets/images/people/endre.jpg'
         },
+        
+        {
+            firstName: 'Besim',
+            lastName: 'Ismaili',
+            role: 'Data Analytics',
+            avatar: '/assets/images/people/besim.jpg'
+        },
+        {
+            firstName: 'Fitim',
+            lastName: 'Beqiri',
+            role: 'Business & Early investor',
+            avatar: '/assets/images/people/fitim.jpg'
+        },
+        {
+            firstName: 'Sunil',
+            lastName: 'Shivanand',
+            role: 'Cloud Architect',
+            avatar: '/assets/images/people/sunil.jpg'
+        },
+        {
+            firstName: 'Veton',
+            lastName: 'Neziri',
+            role: 'Android developer',
+            avatar: '/assets/images/people/profile.jpg'
+        },
+        {
+            firstName: 'Perparim',
+            lastName: 'Shala',
+            role: 'Machine Learning',
+            avatar: '/assets/images/people/perparim.jpg'
+        },
+        {
+            firstName: 'Dona',
+            lastName: 'Mulaku',
+            role: 'UI/UX',
+            avatar: '/assets/images/people/profile.jpg'
+        },
+        {
+            firstName: 'David',
+            lastName: 'Mkrtchyan',
+            role: 'Front-end',
+            avatar: '/assets/images/people/profile.jpg'
+        },
+        {
+            firstName: 'You?',
+            lastName: 'Contact us',
+            role: 'What you do best',
+            avatar: '/assets/images/people/profile.jpg'
+        },
+        
     ];
 
     constructor() {
