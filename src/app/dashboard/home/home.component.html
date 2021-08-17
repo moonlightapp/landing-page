@@ -6,7 +6,9 @@
         <!--        </h1>-->
 
         <div class="home-section-message-box">
-            <app-message-box *ngIf="showMessageBox" (lastMessage)="onLastMessage()"
+            <app-message-box *ngIf="showMessageBox"
+                             (lastMessage)="onLastMessage()"
+                             (onFirstTimeClick)="onFirstTimeClick()"
                              [isHomePage]="true"
                              [messages]="messages"
                              [modalIsVisible]="showMessageBox"></app-message-box>
@@ -18,11 +20,13 @@
     <!--    <ng-container *ngIf="showMessageBox">--> <!--no-scale-->
     <div class="message-box-modal scale" *ngIf="showMessageBoxModal">
         <app-message-box (lastMessage)="onLastMessage()"
+                         (onFirstTimeClick)="onFirstTimeClick()"
                          [isHomePage]="true"
                          [messages]="messages"
                          [modalIsVisible]="showMessageBox"></app-message-box>
 
-        <img height="70" width="200" src="assets/images/app-store-logo.png" (click)="navigateToWebStore()" alt="App Store">
+        <img height="70" width="200" src="assets/images/app-store-logo.png" (click)="navigateToWebStore()"
+             alt="App Store">
     </div>
     <!--    </ng-container>-->
 
@@ -46,9 +50,13 @@
         </div>
     </ng-container>
 
-    <!--        <div class="angle" (click)="toggleModal()" *ngIf="true">-->
-    <!--            <img src="../../../assets/images/2x/baseline_play_circle_filled_white_48dp.png" alt="">-->
-    <!--        </div>-->
+    <!--    <div class="angle" (click)="toggleModal()" *ngIf="true">-->
+    <!--        <img src="../../../assets/images/2x/baseline_play_circle_filled_white_48dp.png" alt="">-->
+    <!--    </div>-->
+
+    <div class="angle" (click)="toggleModal()" *ngIf="showTapIcon">
+        <img src="../../../assets/images/icon_tap.png" alt="Tap">
+    </div>
 
     <div class="play-icon-container" (click)="openMessageBoxModal()">
         <img height="70" width="70" src="assets/images/play-icon-yellow.svg" alt="Play">

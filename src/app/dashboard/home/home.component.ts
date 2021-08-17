@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
     public showMessageBox = true;
     public showScale: boolean;
+    public showTapIcon = true;
     public showDownloadInfo: boolean;
     public showMessageBoxModal: boolean;
     public showDownloadInfoContent: boolean;
@@ -33,6 +34,10 @@ export class HomeComponent implements OnInit {
     public onLastMessage() {
         this.showMessageBox = false;
         this.showMessageBoxModal = false;
+
+        setTimeout(() => {
+            this.showTapIcon = true;
+        }, 1500);
 
         setTimeout(() => {
             // this.showMessageBox = !this.showMessageBox;
@@ -62,5 +67,9 @@ export class HomeComponent implements OnInit {
 
     public navigateToWebStore(): void {
         window.open('https://testflight.apple.com/join/yb3jdbl6', '_blank');
+    }
+
+    public onFirstTimeClick(): void {
+        this.showTapIcon = false;
     }
 }

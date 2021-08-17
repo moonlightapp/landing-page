@@ -6,11 +6,13 @@ import { AfterContentInit, Component, EventEmitter, HostListener, Input, OnInit,
     styleUrls: ['./message-box.component.scss']
 })
 export class MessageBoxComponent implements OnInit, AfterContentInit {
-    @Output() lastMessage = new EventEmitter();
     @Input() modalIsVisible: boolean;
     @Input() isHomePage: boolean;
     @Input() messages: any[];
+    @Output() lastMessage = new EventEmitter();
+    @Output() onFirstTimeClick = new EventEmitter<boolean>();
     private index = 1;
+    private firstTimeClick: boolean;
 
     public isInited = false;
     public hideMessageBox = false;
@@ -25,6 +27,10 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
 
     @HostListener('document:click', ['$event'])
     onClick(event) {
+        if (!this.firstTimeClick) {
+            this.firstTimeClick = true;
+            this.onFirstTimeClick.emit(true);
+        }
         this.isInited && this.displayMessagesByIndex();
     }
 

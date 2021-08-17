@@ -172,6 +172,10 @@
 @media only screen and (max-width: 800px) {
     .home-container {
 
+        .angle {
+            display: none;
+        }
+
         .home-section-message-box {
             display: none;
         }

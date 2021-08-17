@@ -60,6 +60,7 @@
 
         .info-card-item {
             display: inline-block;
+            vertical-align: top;
             max-width: 200px;
             width: 100%;
             margin-bottom: 50px;
@@ -120,6 +121,17 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 @media only screen and (max-width: 800px) {
