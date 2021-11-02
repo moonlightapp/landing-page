@@ -23,11 +23,11 @@ export class NavBarMenuComponent implements OnInit {
     }
 
     public navigate(url: string, index: number): void {
-        index ? this.router.navigate([url]) : window.open('https://testflight.apple.com/join/yb3jdbl6', '_blank');
+        index ? this.router.navigate([url]) : window.open('https://apps.apple.com/no/app/moonlight-create-read-share/id1510126988', '_blank');
     }
 
     public navigateToWebStore(): void {
-        window.open('https://testflight.apple.com/join/yb3jdbl6', '_blank');
+        window.open('https://apps.apple.com/no/app/moonlight-create-read-share/id1510126988', '_blank');
     }
 
 }
