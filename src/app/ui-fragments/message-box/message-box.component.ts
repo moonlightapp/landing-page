@@ -73,7 +73,7 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
 
         setTimeout(() => {
             items.forEach((item, index) => {
-                if (item.getBoundingClientRect().top < 120 && this.messages[index].isVisible) {
+                if (item.getBoundingClientRect().top < 280 && this.messages[index].isVisible) {
                     this.messages[index].isVisible = false;
                 }
             });

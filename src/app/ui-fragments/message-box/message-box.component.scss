@@ -3,15 +3,16 @@
 
 .message-box-container {
     margin: auto;
-    max-width: 350px;
+    max-width: 650px;
     margin-left: 90px;
     width: 100%;
-    min-width: 250px;
+    min-width: 550px;
     position: fixed;
     top: 40%;
-    left: 60%;
+    left: 70%;
     transition: all 0.5s;
     transform: translate(-50%, -90px);
+    pointer-events: none;
 
     .visible {
         opacity: 1 !important;
@@ -40,5 +41,7 @@
         margin-left: 0;
         top: 50%;
         left: 50%;
+        max-width: 350px;
+        min-width: 250px;
     }
 }
