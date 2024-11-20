@@ -1,5 +1,7 @@
 <div class="team-container scroll">
-<!--    <div class="switch-profile">-->
+    <div class="team-header-container">
+
+        <!--    <div class="switch-profile">-->
 <!--        <app-input-switch [checked]="profileMode"-->
 <!--                          (onChange)="profileMode = $event"-->
 <!--                          [label]="profileMode ? 'Grid' : 'List'"-->
@@ -10,30 +12,71 @@
 <!--                         [messages]="messages"></app-message-box>-->
 <!--    </div>-->
 
-    <div class="team-header-container">
+
         <div class="image-container">
             <img src="assets/images/about_page_header_image.png" alt="About us image">
         </div>
         <div class="description-container">
-            There is a huge market opportunity, yet to be utilized  in combining creating, reading, educating and learning with a bite sized formula. Currently we are the only bite size formula app that offer freedom of usage, style and genre across these categories without paid limitations.
-            We offer an easy to use, safe, fun and interactive product wrapped up in a beautiful intuitive and user friendly experience.
+            There is a huge market opportunity, yet to be utilized in combining creating, reading, educating, and learning with a bite-sized formula. Currently, we are the only bite-size formula app that offers freedom of usage, style, and genre across these categories without paid limitations.
+            We offer an easy-to-use, safe, fun, and interactive product wrapped up in a beautiful intuitive and user-friendly experience.
         </div>
     </div>
 
-    <div class="team-info-container">
+    <!-- <div class="team-info-container">
         <div class="info-card-item" *ngFor="let item of teamInfoItems">
             <app-info-card [item]="item"></app-info-card>
         </div>
-    </div>
-
+    </div> -->
+    
     <div class="team-box-container" *ngIf="profileMode">
         <div class="team-title">
             THE PEOPLE RESPONSIBLE FOR THE FUTURE SUCCESS OF MOONLIGHT:
         </div>
-
-        <div class="team-box-container-content">
-            <div class="team-member" *ngFor="let profile of profiles">
-                <app-user-profile [user]="profile"></app-user-profile>
+    
+        <!-- Founders and Core-Team Section -->
+        <div class="team-section">
+            <div class="section-title">Founders and Core-Team</div>
+            <div class="team-box-container-content">
+                <div class="team-member" *ngFor="let profile of profiles.foundersAndCoreTeam">
+                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName">
+                    <div class="name">{{ profile.firstName }} {{ profile.lastName }}</div>
+                    <div class="role">{{ profile.role }}</div>
+                    <div class="link">
+                        <a [href]="profile.link" target="_blank" rel="noopener noreferrer">
+                            <!-- No need for additional text or alt for purely decorative icon -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Marketing Section -->
+        <div class="team-section">
+            <div class="section-title">Marketing</div>
+            <div class="team-box-container-content">
+                <div class="team-member" *ngFor="let profile of profiles.marketing">
+                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName">
+                    <div class="name">{{ profile.firstName }} {{ profile.lastName }}</div>
+                    <div class="role">{{ profile.role }}</div>
+                    <div class="link">
+                        <a [href]="profile.link" target="_blank" rel="noopener noreferrer"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Investors and Advisors Section -->
+        <div class="team-section">
+            <div class="section-title">Investors and Advisors</div>
+            <div class="team-box-container-content">
+                <div class="team-member" *ngFor="let profile of profiles.investorsAndAdvisors">
+                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName">
+                    <div class="name">{{ profile.firstName }} {{ profile.lastName }}</div>
+                    <div class="role">{{ profile.role }}</div>
+                    <div class="link">
+                        <a [href]="profile.link" target="_blank" rel="noopener noreferrer"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -12,106 +12,113 @@ export class TeamComponent implements OnInit {
     public profileMode: boolean = true;
     public teamInfoItems = TEAM_INFO_CARD_ITEMS;
 
-    public profiles = [
-        {
-            firstName: 'Besar',
-            lastName: 'Ismaili',
-            role: 'Founder',
-            avatar: 'assets/images/people/besar.jpg'
-        },
-        {
-            firstName: 'Marius',
-            lastName: 'Fargerhol',
-            role: 'iOS developer',
-            avatar: 'assets/images/people/marius.jpg'
-        },
-        {
-            firstName: 'Elin',
-            lastName: 'Gundersen',
-            role: 'Company & Product developer',
-            avatar: '/assets/images/people/elin.jpg'
-        },
-        {
-            firstName: 'Taaha',
-            lastName: 'Bin Khaled',
-            role: 'Interaction and Service designer',
-            avatar: '/assets/images/people/taaha.jpg'
-        },
-        {
-            firstName: 'Valdrin',
-            lastName: 'Muharemi',
-            role: 'Server-side',
-            avatar: '/assets/images/people/valdrin.jpg'
-        },
-        {
-            firstName: 'Thomas',
-            lastName: 'Pettersen',
-            role: 'Tech & Early investor',
-            avatar: '/assets/images/people/thomas.jpg'
-        },
-        {
-            firstName: 'Ardian',
-            lastName: 'Saidi',
-            role: 'Android developer',
-            avatar: '/assets/images/people/profile.jpg'
-        },
-        {
-            firstName: 'Endre',
-            lastName: 'Grønmyr',
-            role: 'Finance',
-            avatar: '/assets/images/people/endre.jpg'
-        },
-        
-        {
-            firstName: 'Besim',
-            lastName: 'Ismaili',
-            role: 'Data Analytics',
-            avatar: '/assets/images/people/besim.jpg'
-        },
-        {
-            firstName: 'Fitim',
-            lastName: 'Beqiri',
-            role: 'Business dev',
-            avatar: '/assets/images/people/fitim.jpg'
-        },
-        {
-            firstName: 'Sunil',
-            lastName: 'Shivanand',
-            role: 'Cloud Architect',
-            avatar: '/assets/images/people/sunil.jpg'
-        },
-        {
-            firstName: 'Veton',
-            lastName: 'Neziri',
-            role: 'Android developer',
-            avatar: '/assets/images/people/profile.jpg'
-        },
-        {
-            firstName: 'Perparim',
-            lastName: 'Shala',
-            role: 'Machine Learning',
-            avatar: '/assets/images/people/perparim.jpg'
-        },
-        {
-            firstName: 'Dona',
-            lastName: 'Mulaku',
-            role: 'UI/UX',
-            avatar: '/assets/images/people/profile.jpg'
-        },
-        {
-            firstName: 'David',
-            lastName: 'Mkrtchyan',
-            role: 'Front-end',
-            avatar: '/assets/images/people/profile.jpg'
-        },
-        {
-            firstName: 'You?',
-            lastName: 'Contact us',
-            role: 'What you do best',
-            avatar: '/assets/images/people/profile.jpg'
-        },
-        
-    ];
+    public profiles = {
+        foundersAndCoreTeam: [
+            {
+                firstName: 'Besar',
+                lastName: 'Ismaili',
+                role: 'Founder and Senior Developer',
+                avatar: 'assets/images/people/besar.jpg',
+                link: 'https://linkedin.com/in/besar-ismaili'
+            },
+            {
+                firstName: 'Marius',
+                lastName: 'Fargerhol',
+                role: 'Co-Founder and iOS Lead',
+                avatar: 'assets/images/people/marius.jpg',
+                link: 'https://linkedin.com/in/marius-fargerhol'
+            },
+            {
+                firstName: 'Bejtulla',
+                lastName: 'Ajeti',
+                role: 'Front-End Developer',
+                avatar: 'assets/images/people/profile.jpg',
+                link: 'https://linkedin.com/in/bejtullah-ismaili'
+            },
+            {
+                firstName: 'Taaha',
+                lastName: 'Bin Khaled',
+                role: 'Interaction and Service Designer',
+                avatar: '/assets/images/people/taaha.jpg',
+                link: 'https://linkedin.com/in/taaha-bin-khaled'
+            },
+            {
+                firstName: 'Muhamed',
+                lastName: 'Zeqiri',
+                role: 'Back-end Developer',
+                avatar: '/assets/images/people/profile.jpg',
+                link: 'https://linkedin.com/in/muhamed-zeqiri'
+            },
+            {
+                firstName: 'Kujtim',
+                lastName: 'Saliu',
+                role: 'iOS Developer',
+                avatar: '/assets/images/people/profile.jpg',
+                link: 'https://linkedin.com/in/kujtim-saliu'
+            },
+            {
+                firstName: 'Lot',
+                lastName: 'Bajrami',
+                role: 'Full-Stack Developer',
+                avatar: '/assets/images/people/profile.jpg',
+                link: 'https://linkedin.com/in/lot-bajrami'
+            },
+            {
+                firstName: 'Valdrin',
+                lastName: 'Muharemi',
+                role: 'Back-end Developer',
+                avatar: '/assets/images/people/valdrin.jpg',
+                link: 'https://linkedin.com/in/valdrin-muharemi'
+            }
+        ],
+        marketing: [
+            {
+                firstName: 'Andreas',
+                lastName: '',
+                role: 'Marketing',
+                avatar: '/assets/images/people/profile.jpg',
+                link: 'https://linkedin.com/in/just-andreas'
+            }
+        ],
+        investorsAndAdvisors: [
+            {
+                firstName: 'Endre',
+                lastName: 'Grønmyr',
+                role: 'Chairman of the Board',
+                avatar: '/assets/images/people/endre.jpg',
+                link: 'https://linkedin.com/in/endre-grønmyr'
+            },
+            {
+                firstName: 'Arve',
+                lastName: 'Unknown',
+                role: 'Advisor and Investor',
+                avatar: '/assets/images/people/profile.jpg',
+                link: 'https://linkedin.com/in/arve'
+            },
+            {
+                firstName: 'Marius',
+                lastName: 'Fargerhol',
+                role: 'Advisor and Investor',
+                avatar: '/assets/images/people/marius.jpg',
+                link: 'https://linkedin.com/in/marius-fargerhol'
+            },
+            {
+                firstName: 'Thomas',
+                lastName: 'Pettersen',
+                role: 'Advisor and Early Investor',
+                avatar: '/assets/images/people/thomas.jpg',
+                link: 'https://linkedin.com/in/thomas-pettersen'
+            },
+            {
+                firstName: 'Sigurd',
+                lastName: 'Unknown',
+                role: 'Advisor and Investor',
+                avatar: '/assets/images/people/profile.jpg',
+                link: 'https://linkedin.com/in/sigurd'
+            }
+        ]
+    };
+    
 
     constructor() {
     }
