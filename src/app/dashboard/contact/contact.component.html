@@ -1,8 +1,24 @@
 <div class="contact-container">
+    <div class="contact-info">
+        <img src="assets/images/contact-page-image.svg" alt="Contact Us Image">
 
-    <img src="assets/images/contact-page-image.svg" alt="Contact Us">
+        <p class="contact-text">
+            <strong class="headline">We'd Love to Hear From You!</strong><br />
+            Contact us via email at:<br />
+            <span class="email">hello&#64;moonlightapp.co</span>
+        </p>
+    </div>
+</div>
 
-    <div class="container">
+<p-toast baseZIndex="100" position="top-right"></p-toast>
+
+<div class="modal" *ngIf="showLoader">
+    <div class="modal-content">
+        <img src="../../../assets/images/loading.gif" alt="Loading">
+    </div>
+</div>
+
+   <!-- <div class="container">
         <form [formGroup]="form" action="https://formspree.io/mbnkornm" method="POST">
             <label for="email">E Post</label>
             <input type="text" id="email" [formControl]="form.get('email')">
@@ -20,12 +36,4 @@
             Important Note: We respect privacy and will only use your email to answer your queries.
         </div>
     </div>
-</div>
-
-<p-toast baseZIndex="100" position="top-right"></p-toast>
-
-<div class="modal" *ngIf="showLoader">
-    <div class="modal-content">
-        <img src="../../../assets/images/loading.gif" alt="">
-    </div>
-</div>
+</div>-->
