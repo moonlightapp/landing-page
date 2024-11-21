@@ -1,0 +1,299 @@
+@import 'colors';
+
+/*text*/
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.text-transform-none {
+	text-transform: none;
+}
+
+/*float*/
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+/*cursor*/
+.pointer {
+	cursor: pointer;
+}
+
+/*clear*/
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: table;
+}
+
+.clearfix::after {
+	clear: both;
+}
+
+/**/
+
+.bold-600 {
+	font-weight: 600;
+}
+
+/* Font classes */
+@mixin font($value) {
+	font-size: #{$value + px} !important;
+}
+
+@for $i from 0 through 36 {
+	.font-#{$i} {
+		@include font($i);
+	}
+}
+
+/*display*/
+.block {
+   display: block;
+}
+
+.inline {
+	display: inline;
+}
+.inline-block {
+	display: inline-block;
+}
+.flex {
+	display: flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+}
+/*alignement*/
+
+.align-middle {
+	vertical-align: middle !important;
+}
+.align-top {
+	vertical-align: top !important;
+}
+.align-bottom {
+	vertical-align: bottom !important;
+}
+
+/**/
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.no-border {
+	border: 0;
+}
+
+.relative {
+	position: relative;
+}
+
+/* Generate classes for margin */
+@mixin margin-left($value) {
+	margin-left: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.margin-left-#{$i} {
+		@include margin-left($i);
+	}
+}
+
+@mixin margin-right($value) {
+	margin-right: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.margin-right-#{$i} {
+		@include margin-right($i);
+	}
+}
+
+@mixin margin-top($value) {
+	margin-top: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.margin-top-#{$i} {
+		@include margin-top($i);
+	}
+}
+
+@mixin margin-bottom($value) {
+	margin-bottom: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.margin-bottom-#{$i}{
+		@include margin-bottom($i);
+	}
+}
+
+/* Generate classes for padding */
+@mixin padding-left($value) {
+	padding-left: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.padding-left-#{$i} {
+		@include padding-left($i);
+	}
+}
+
+@mixin padding-right($value) {
+	padding-right: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.padding-right-#{$i} {
+		@include padding-right($i);
+	}
+}
+
+@mixin padding-top($value) {
+	padding-top: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.padding-top-#{$i} {
+		@include padding-top($i);
+	}
+}
+
+@mixin padding-bottom($value) {
+	padding-bottom: #{$value + px};
+}
+
+@for $i from 0 through 100 {
+	.padding-bottom-#{$i}{
+		@include padding-bottom($i);
+	}
+}
+
+/* Width with persents */
+@mixin width-percent($value){
+	width: #{$value + '%'};
+}
+
+@for $i from 0 through 100 {
+	.width-percent-#{$i}{
+		@include width-percent($i);
+	}
+}
+
+/* Max-Width with pixels */
+
+@mixin max-width($value){
+	max-width: #{$value * 10 + px};
+}
+
+@for $i from 0 through 50 {
+	.max-width-#{$i * 10}{
+		@include max-width($i);
+	}
+}
+
+/* Min-Width with pixels */
+@mixin min-width($value){
+	min-width: #{$value * 10 + px};
+}
+
+@for $i from 0 through 50 {
+	.min-width-#{$i * 10}{
+		@include min-width($i);
+	}
+}
+
+/*colors*/
+.blue {
+	color: $blue;
+}
+.blue-light {
+	color: $blue-light;
+}
+.black {
+	color: $black;
+}
+.grey {
+	color: $grey;
+}
+.grey-light {
+	color: #eaecf2;
+}
+.grey-dark {
+	color: #8d8d8d;
+}
+.pink {
+	color: $pink;
+}
+.red {
+	color: $red;
+}
+.green {
+	color: $green;
+}
+.green-light {
+	color: $green-light;
+}
+.purple {
+	color: $purple;
+}
+.orange {
+	color: $orange;
+}
+
+/**/
+.divider {
+	width: 1px;
+	border: 0;
+	background-color: $grey;
+	height: 26px;
+	display: inline-block;
+}
+
+@media (max-width: 1440px) {
+	@for $i from 30 through 36 {
+		.font-#{$i} {
+			@include font($i - 4);
+		}
+	}
+	@for $i from 10 through 29 {
+		.font-#{$i} {
+			@include font($i - 2);
+		}
+	}
+}
+
+@media (max-width: 1120px) {
+	@for $i from 30 through 36 {
+		.font-#{$i} {
+			@include font($i - 6);
+		}
+	}
+	@for $i from 20 through 29 {
+		.font-#{$i} {
+			@include font($i - 4);
+		}
+	}
+	@for $i from 10 through 19 {
+		.font-#{$i} {
+			@include font($i - 2);
+		}
+	}
+}
