@@ -5,7 +5,6 @@
         transform: scale(1, 0);
         transition: .8s;
         transform-origin: bottom;
-        pointer-events: none;
     }
 
     .scale {
@@ -164,7 +163,13 @@
         background-color: rgba(255, 255, 255, .5);
         justify-content: center;
         align-items: center;
+        user-select: none !important;
     }
+    
+    .play-icon-container img {
+    user-select: none !important;
+    }
+    
 }
 
 .icon-googleplay:before {

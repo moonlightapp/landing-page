@@ -13,6 +13,8 @@
     transition: all 0.5s;
     transform: translate(-50%, -90px);
     pointer-events: none;
+    user-select: none;
+    --message-top-limit: 240px; // Default value
 
     .visible {
         opacity: 1 !important;
@@ -39,11 +41,14 @@
 
 @media only screen and (max-width: 800px) {
     .message-box-container {
+        --message-top-limit: 180px; // Adjusted value for smaller screens
+    }    
+    .message-box-container {
         margin-left: 0;
         top: 50%;
         left: 50%;
         max-width: 350px;
         min-width: 250px;
-        top: 20%;
+        pointer-events: none;
     }
 }

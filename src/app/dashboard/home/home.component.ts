@@ -37,12 +37,12 @@ export class HomeComponent implements OnInit {
 
         setTimeout(() => {
             this.showTapIcon = true;
-        }, 1500);
+        }, 300);
 
         setTimeout(() => {
             // this.showMessageBox = !this.showMessageBox;
             this.showMessageBox = true;
-        }, 650);
+        }, 150);
 
         setTimeout(() => {
             this.showDownloadInfoContent = !this.showDownloadInfoContent;

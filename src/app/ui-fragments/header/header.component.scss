@@ -5,6 +5,8 @@
     position: relative;
     @include justify-content(space-between);
     @include align-items(center);
+    background-image: url("../../../assets/images/main-background.svg");
+    user-select: none;
 
     .header-logo {
         display: flex;
@@ -30,7 +32,7 @@
     .header-container {
         .logo {
             height: 40px;
-            padding:2rem;
+            padding: 2rem;
         }
     }
 }

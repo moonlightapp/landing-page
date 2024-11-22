@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { AfterContentInit, Component, EventEmitter, HostListener, Input, OnInit, Output, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'app-message-box',
@@ -13,10 +13,10 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
     @Output() onFirstTimeClick = new EventEmitter<boolean>();
     private index = 1;
     private firstTimeClick: boolean;
+    private topLimit: number;
 
     public isInited = false;
     public hideMessageBox = false;
-
 
     @HostListener('document:keydown', ['$event'])
     onKeyDown(event) {
@@ -34,19 +34,35 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
         this.isInited && this.displayMessagesByIndex();
     }
 
-    constructor() {
+    @HostListener('window:resize')
+    onResize() {
+        this.updateTopLimit();
+    }
+
+    constructor(private elementRef: ElementRef) {
     }
 
     ngOnInit() {
-
+        this.updateTopLimit();
     }
 
     ngAfterContentInit(): void {
         setTimeout(() => {
             this.messages[0].isVisible = true;
             this.isInited = true;
-        }, 800);
+        }, 100);
     }
+
+    private updateTopLimit() {
+        const container = document.querySelector('.message-box-container');
+        const computedStyle = getComputedStyle(container);
+        const topLimitVar = computedStyle.getPropertyValue('--message-top-limit');
+        console.log('CSS Variable --message-top-limit:', topLimitVar);
+        this.topLimit = parseInt(topLimitVar, 10) || 280;
+        console.log('Parsed topLimit:', this.topLimit);
+    }
+    
+    
 
     displayMessagesByIndex(): any {
         const container = document.getElementById('message-box-container');
@@ -60,7 +76,6 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
                 return;
             }
 
-            // this.messages.forEach(message => message.isVisible = false);
             this.index = 1;
             this.messages.forEach((message, index) => index ? (message.isVisible = false) : (message.isVisible = true));
             this.hideMessageBox = true;
@@ -73,7 +88,7 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
 
         setTimeout(() => {
             items.forEach((item, index) => {
-                if (item.getBoundingClientRect().top < 280 && this.messages[index].isVisible) {
+                if (item.getBoundingClientRect().top < this.topLimit && this.messages[index].isVisible) {
                     this.messages[index].isVisible = false;
                 }
             });
