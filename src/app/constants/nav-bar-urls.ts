@@ -1,7 +1,7 @@
 export const NAV_BAR_URLS = [
     {
         url: '/home',
-        title: 'Download Beta',
+        title: 'Documentation',
         activeClass: false,
     },
     {

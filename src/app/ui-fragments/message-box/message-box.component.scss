@@ -33,6 +33,7 @@
         -ms-transform: translateY(20px) scale(.9);
         transform: translateY(20px) scale(.9);
         transition: transform 150ms , opacity 150ms;
+        pointer-events: none;
     }
 }
 

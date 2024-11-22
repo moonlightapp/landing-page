@@ -79,3 +79,17 @@
         }
     }
 }
+
+.invest-on-us-container.scroll {
+    overflow-y: scroll;
+    max-height: 80vh; /* Constrain the height to allow scrolling */
+    -webkit-overflow-scrolling: touch; /* Enhance scrolling on mobile */
+}
+
+.scroll::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+
+
+

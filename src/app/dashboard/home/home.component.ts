@@ -68,6 +68,9 @@ export class HomeComponent implements OnInit {
     public navigateToWebStore(): void {
         window.open('https://testflight.apple.com/join/yb3jdbl6', '_blank');
     }
+    public navigateToDocs(): void {
+        window.open('https://docs.moonlightapp.co/d', '_blank');
+    }
 
     public onFirstTimeClick(): void {
         this.showTapIcon = false;

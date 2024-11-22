@@ -19,15 +19,15 @@ export class TeamComponent implements OnInit {
                 lastName: 'Ismaili',
                 role: 'Founder and Senior Developer',
                 avatar: 'assets/images/people/besar.jpg',
-                link: 'https://linkedin.com/in/besar-ismaili',
+                link: 'https://www.linkedin.com/in/besar/',
                 platform:'linkedin'
             },
             {
                 firstName: 'Marius',
-                lastName: 'Fargerhol',
+                lastName: 'Fagerhol',
                 role: 'Co-Founder and iOS Lead',
                 avatar: 'assets/images/people/marius.jpg',
-                link: 'https://linkedin.com/in/marius-fargerhol',
+                link: 'https://www.linkedin.com/in/marius-fagerhol-4076a4126/',
                 platform:'linkedin'
             },
             {
@@ -40,10 +40,10 @@ export class TeamComponent implements OnInit {
             },
             {
                 firstName: 'Taaha',
-                lastName: 'Bin Khaled',
+                lastName: 'Bin Khalid',
                 role: 'Interaction and Service Designer',
                 avatar: 'assets/images/taaha-bin-khaled-image.jpg',
-                link: 'https://linkedin.com/in/taaha-bin-khaled',
+                link: 'https://www.linkedin.com/in/taahabinkhalid/?originalSubdomain=no',
                 platform:'linkedin'
             },
             {
@@ -115,11 +115,11 @@ export class TeamComponent implements OnInit {
                 platform:'linkedin'
             },
             {
-                firstName: 'Marius',
-                lastName: 'Fargerhol',
+                firstName: 'Sigurd William',
+                lastName: 'Rachlew Høystad',
                 role: 'Advisor and Investor',
-                avatar: 'assets/images/people/marius.jpg',
-                link: 'https://linkedin.com/in/marius-fargerhol',
+                avatar: 'assets/images/sigurd-image.jpeg',
+                link: 'https://no.linkedin.com/in/sigurdwrh',
                 platform:'linkedin'
             },
             {
@@ -133,7 +133,7 @@ export class TeamComponent implements OnInit {
             {
                 firstName: 'Elin',
                 lastName: 'Fjeld',
-                role: 'Advisor and Investor',
+                role: 'Advisor, Product Tester and Shareholder',
                 avatar: 'assets/images/elin-fjeld-image.jpeg',
                 link: 'https://no.linkedin.com/in/elinfjeld/en',
                 platform:'linkedin'

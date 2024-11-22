@@ -5,6 +5,7 @@
         transform: scale(1, 0);
         transition: .8s;
         transform-origin: bottom;
+        pointer-events: none;
     }
 
     .scale {
@@ -22,6 +23,7 @@
         top: 0;
         bottom: 0;
         right: 0;
+        pointer-events: none;
 
         img {
             position: absolute;
@@ -56,6 +58,7 @@
         position: absolute;
         width: 100%;
         max-width: 1200px;
+        pointer-events: none;
 
         p {
             color: white;
