@@ -32,5 +32,8 @@ export class NavBarMenuComponent implements OnInit {
     public navigateToDocs(): void {
         window.open('https://docs.moonlightapp.co/d', '_blank');
     }
+    public navigateToTestFlight(): void {
+        window.open('https://testflight.apple.com/join/0DaLdUmA', '_blank');
+    }
 
 }
