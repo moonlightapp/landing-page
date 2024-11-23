@@ -200,8 +200,7 @@
 @media only screen and (max-width: 480px) {
     .home-container {
         .home-section {
-            background-position: 25% 50% !important;
-
+            background: none;
             background-size: 500px auto; /* Further reduced size for mobile */
             height: 60vh;
             max-height: 500px;
