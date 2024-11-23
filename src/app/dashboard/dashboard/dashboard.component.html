@@ -1,33 +1,33 @@
 <div class="dashboard">
-    <div class="main-container">
+    <div class="main-container flex flex-col min-h-screen">
         <div class="header">
             <app-header></app-header>
         </div>
 
-        <div class="container">
+        <div class="container flex-1 px-4 sm:px-6 md:px-8">
             <router-outlet></router-outlet>
         </div>
 
         <div class="download-links" *ngIf="false">
-            <ul (click)="$event.stopPropagation()">
+            <ul class="flex justify-center space-x-4 sm:space-x-6">
                 <li>
-                    <a [routerLink]="['/']">
-                        <i class="icon-appleinc"></i>
+                    <a [routerLink]="['/']" class="text-gray-800 hover:text-blue-500">
+                        <i class="icon-appleinc text-2xl sm:text-3xl"></i>
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['/']">
-                        <i class="icon-googleplay"></i>
+                    <a [routerLink]="['/']" class="text-gray-800 hover:text-blue-500">
+                        <i class="icon-googleplay text-2xl sm:text-3xl"></i>
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['/']">
-                        <i class="icon-facebook2"></i>
+                    <a [routerLink]="['/']" class="text-gray-800 hover:text-blue-500">
+                        <i class="icon-facebook2 text-2xl sm:text-3xl"></i>
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['/']">
-                        <i class="icon-instagram"></i>
+                    <a [routerLink]="['/']" class="text-gray-800 hover:text-blue-500">
+                        <i class="icon-instagram text-2xl sm:text-3xl"></i>
                     </a>
                 </li>
             </ul>

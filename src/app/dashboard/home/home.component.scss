@@ -22,16 +22,14 @@
         top: 0;
         bottom: 0;
         right: 0;
-        pointer-events: none;
+        user-select: none;
 
         img {
             position: absolute;
             bottom: 30px;
             left: 50%;
-            transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%);
         }
-
-        //background-color: #292F3F;
     }
 
     .hide {
@@ -57,7 +55,7 @@
         position: absolute;
         width: 100%;
         max-width: 1200px;
-        pointer-events: none;
+        user-select: none;
 
         p {
             color: white;
@@ -80,20 +78,18 @@
     }
 
     .home-section {
+        user-select: none;
         position: absolute;
-        //border: 1px solid white;
         top: 50%;
         left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         width: 100%;
         max-width: 1200px;
         height: 800px;
-        background: url(../../../assets/images/mockupiphone.svg) no-repeat left;
+        background: url(../../../assets/images/mockupiphone.svg) no-repeat center center;
         background-size: 800px;
-        background-position: -10% 25%;
+        background-position: -10% center; /* Default position for larger screens */
+    
 
         .section-title {
             font-size: 80px;
@@ -111,6 +107,7 @@
         width: 100px;
         height: 100px;
         font-size: 20px;
+        user-select: none;
 
         img {
             cursor: pointer;
@@ -128,11 +125,6 @@
         animation: mover 1s infinite alternate;
     }
 
-    div.angle {
-        -webkit-animation: mover 1s infinite alternate;
-        animation: mover 1s infinite alternate;
-    }
-
     @-webkit-keyframes mover {
         0% {
             transform: translateY(0);
@@ -141,6 +133,7 @@
             transform: translateY(-10px);
         }
     }
+
     @keyframes mover {
         0% {
             transform: translateY(0);
@@ -167,38 +160,51 @@
     }
     
     .play-icon-container img {
-    user-select: none !important;
+        user-select: none !important;
     }
-    
 }
 
 .icon-googleplay:before {
     color: white;
 }
-
-@media only screen and (max-width: 800px) {
+/* For screens 1024px and below */
+@media only screen and (max-width: 1024px) {
     .home-container {
-
-        .angle {
-            display: none;
-        }
-
-        .home-section-message-box {
-            display: none;
-        }
-
-        .message-box-modal {
-            display: block;
-        }
-
-        .play-icon-container {
-            display: flex;
-        }
-
         .home-section {
-            background-size: 1000px;
-            background-position: 43% 5%;
+            position: absolute; /* Keep this absolute */
+            top: 50%; /* Keep vertical centering */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Maintain centering transform */
+            height: 80vh; /* Adjust height to be relative to viewport */
+            max-height: 800px;
             width: 100%;
+            background-position: 66% 50% !important;
+            background-size: 800px auto; /* Adjusted size for better visibility */
+            margin: 0 auto;
+        }
+    }
+}
+
+/* For devices smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .home-container {
+        .home-section {
+            background-size: 800px auto; /* Reduced size for tablets */
+            height: 70vh;
+            max-height: 800px;
+        }
+    }
+}
+
+/* For devices smaller than 480px */
+@media only screen and (max-width: 480px) {
+    .home-container {
+        .home-section {
+            background-position: 25% 50% !important;
+
+            background-size: 500px auto; /* Further reduced size for mobile */
+            height: 60vh;
+            max-height: 500px;
         }
     }
 }

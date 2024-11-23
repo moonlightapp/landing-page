@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
 
     .contact-info {
         @include flex-center;
@@ -32,13 +32,13 @@
         }
 
         .contact-text {
-            font-size: 32px;
+            font-size: 22px;
             color: white;
             line-height: 1.6;
             letter-spacing: 0.5px;
 
             .headline {
-                font-size: 42px;
+                font-size: 22px;
                 color: $gold;
                 text-transform: uppercase;
                 font-weight: 700;
@@ -47,7 +47,7 @@
             }
 
             .email {
-                font-size: 48px;
+                font-size: 28px;
                 color: $gold;
                 text-decoration: none;
                 cursor: pointer;
@@ -74,14 +74,14 @@
             }
 
             .contact-text {
-                font-size: 24px;
+                font-size: 20px;
 
                 .headline {
-                    font-size: 32px;
+                    font-size: 26px;
                 }
 
                 .email {
-                    font-size: 36px;
+                    font-size: 30px;
                 }
             }
         }
@@ -92,14 +92,14 @@
     .contact-container {
         .contact-info {
             .contact-text {
-                font-size: 18px;
+                font-size: 14px;
 
                 .headline {
-                    font-size: 26px;
+                    font-size: 18px;
                 }
 
                 .email {
-                    font-size: 28px;
+                    font-size: 22px;
                 }
             }
         }

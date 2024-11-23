@@ -1,7 +1,5 @@
-<div class="team-container scroll">
-    <div class="team-header-container">
-
-        <!--    <div class="switch-profile">-->
+<div class="team-container scroll p-4 sm:p-6 md:p-8">
+       <!--    <div class="switch-profile">-->
 <!--        <app-input-switch [checked]="profileMode"-->
 <!--                          (onChange)="profileMode = $event"-->
 <!--                          [label]="profileMode ? 'Grid' : 'List'"-->
@@ -11,79 +9,75 @@
 <!--        <app-message-box [modalIsVisible]="true"-->
 <!--                         [messages]="messages"></app-message-box>-->
 <!--    </div>-->
-
-
-        <div class="image-container">
-            <img src="assets/images/about_page_header_image.png" alt="About us image">
+    <!-- Team Header Section -->
+    <div class="team-header-container mb-8">
+        <div class="image-container mb-6 sm:mb-0">
+            <img src="assets/images/about_page_header_image.png" alt="About us image" class="w-full h-auto rounded-lg">
         </div>
-        <div class="description-container">
+        <div class="description-container text-lg sm:text-xl text-gray-700">
             We’ve discovered a huge opportunity to mix creating, reading, teaching, and learning into bite-sized pieces. Moonlight is the only app that lets you freely explore any style or genre across all these areas without any paywalls or limitations. Plus, with our $ML token, you can support your favorite creators and unlock even more features. We offer a fun, safe, and interactive platform that’s super easy to use and beautifully designed.
         </div>
     </div>
 
-    <!-- <div class="team-info-container">
+      <!-- <div class="team-info-container">
         <div class="info-card-item" *ngFor="let item of teamInfoItems">
             <app-info-card [item]="item"></app-info-card>
         </div>
     </div> -->
-    
     <div class="team-box-container" *ngIf="profileMode">
-        <div class="team-title">
+        <div class="team-title text-2xl font-semibold text-center mb-6">
             THE PEOPLE RESPONSIBLE FOR THE FUTURE SUCCESS OF MOONLIGHT:
         </div>
-    
-        <!-- Founders and Core-Team Section -->
-        <div class="team-section">
-            <div class="section-title">FOUNDERS AND CORE-TEAM</div>
-            <div class="team-box-container-content">
-                <div class="team-member" *ngFor="let profile of profiles.foundersAndCoreTeam">
-                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName">
-                    <div class="name">{{ profile.firstName }} {{ profile.lastName }}</div>
-                    <div class="role">{{ profile.role }}</div>
-                    <div class="link" *ngIf="profile.link && profile.platform">
+
+        <!-- Founders and Core Team Section -->
+        <div class="team-section mb-8">
+            <div class="section-title text-xl font-bold text-gray-900">FOUNDERS AND CORE-TEAM</div>
+            <div class="team-box-container-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <div class="team-member text-center" *ngFor="let profile of profiles.foundersAndCoreTeam">
+                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName" class="w-32 h-32 mx-auto rounded-full">
+                    <div class="name mt-2 text-lg font-semibold">{{ profile.firstName }} {{ profile.lastName }}</div>
+                    <div class="role text-gray-500">{{ profile.role }}</div>
+                    <div class="link mt-2" *ngIf="profile.link && profile.platform">
                         <a [href]="profile.link" target="_blank" rel="noopener noreferrer">
-                            <img [src]="'assets/images/' + getPlatformIcon(profile.platform)" 
-                                 [alt]="profile.platform + ' Icon'" />
+                            <img [src]="'assets/images/' + getPlatformIcon(profile.platform)" [alt]="profile.platform + ' Icon'" class="w-6 h-6 mx-auto">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- Marketing Section -->
-        <div class="team-section">
-            <div class="section-title">MARKETING</div>
-            <div class="team-box-container-content">
-                <div class="team-member" *ngFor="let profile of profiles.marketing">
-                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName">
-                    <div class="name">{{ profile.firstName }} {{ profile.lastName }}</div>
-                    <div class="role">{{ profile.role }}</div>
-                    <div class="link" *ngIf="profile.link && profile.platform">
+        <div class="team-section mb-8">
+            <div class="section-title text-xl font-bold text-gray-900">MARKETING</div>
+            <div class="team-box-container-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <div class="team-member text-center" *ngFor="let profile of profiles.marketing">
+                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName" class="w-32 h-32 mx-auto rounded-full">
+                    <div class="name mt-2 text-lg font-semibold">{{ profile.firstName }} {{ profile.lastName }}</div>
+                    <div class="role text-gray-500">{{ profile.role }}</div>
+                    <div class="link mt-2" *ngIf="profile.link && profile.platform">
                         <a [href]="profile.link" target="_blank" rel="noopener noreferrer">
-                            <img [src]="'assets/images/' + getPlatformIcon(profile.platform)" 
-                                 [alt]="profile.platform + ' Icon'" />
+                            <img [src]="'assets/images/' + getPlatformIcon(profile.platform)" [alt]="profile.platform + ' Icon'" class="w-6 h-6 mx-auto">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- Investors and Advisors Section -->
-        <div class="team-section">
-            <div class="section-title">INVESTORS AND ADVISORS</div>
-            <div class="team-box-container-content">
-                <div class="team-member" *ngFor="let profile of profiles.investorsAndAdvisors">
-                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName">
-                    <div class="name">{{ profile.firstName }} {{ profile.lastName }}</div>
-                    <div class="role">{{ profile.role }}</div>
-                    <div class="link" *ngIf="profile.link && profile.platform">
+        <div class="team-section mb-8">
+            <div class="section-title text-xl font-bold text-gray-900">INVESTORS AND ADVISORS</div>
+            <div class="team-box-container-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <div class="team-member text-center" *ngFor="let profile of profiles.investorsAndAdvisors">
+                    <img [src]="profile.avatar" [alt]="'Photo of ' + profile.firstName + ' ' + profile.lastName" class="w-32 h-32 mx-auto rounded-full">
+                    <div class="name mt-2 text-lg font-semibold">{{ profile.firstName }} {{ profile.lastName }}</div>
+                    <div class="role text-gray-500">{{ profile.role }}</div>
+                    <div class="link mt-2" *ngIf="profile.link && profile.platform">
                         <a [href]="profile.link" target="_blank" rel="noopener noreferrer">
-                            <img [src]="'assets/images/' + getPlatformIcon(profile.platform)" 
-                                 [alt]="profile.platform + ' Icon'" />
+                            <img [src]="'assets/images/' + getPlatformIcon(profile.platform)" [alt]="profile.platform + ' Icon'" class="w-6 h-6 mx-auto">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+</div>

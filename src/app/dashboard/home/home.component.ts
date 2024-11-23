@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
 
         setTimeout(() => {
             this.showScale = this.showMessageBox;
-        }, 200);
+        }, 400);
     }
 
     public onLastMessage() {

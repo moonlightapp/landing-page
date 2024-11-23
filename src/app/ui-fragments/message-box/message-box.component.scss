@@ -35,11 +35,11 @@
         -ms-transform: translateY(20px) scale(.9);
         transform: translateY(20px) scale(.9);
         transition: transform 150ms , opacity 150ms;
-        pointer-events: none;
+        user-select: none;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .message-box-container {
         --message-top-limit: 180px; // Adjusted value for smaller screens
     }    
@@ -49,6 +49,20 @@
         left: 50%;
         max-width: 350px;
         min-width: 250px;
-        pointer-events: none;
+        user-select: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .message-box-container {
+        --message-top-limit: 180px; // Adjusted value for smaller screens
+    }    
+    .message-box-container {
+        margin-left: 0;
+        top: 50%;
+        left: 50%;
+        max-width: 450px;
+        min-width: 350px;
+        user-select: none; 
     }
 }

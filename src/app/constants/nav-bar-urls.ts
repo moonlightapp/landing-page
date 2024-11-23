@@ -11,9 +11,9 @@ export const NAV_BAR_URLS = [
         activeClass: true,
     },
     {
-        url: '/about',
+        url: '/team',
         // title: 'Om Oss'
-        title: 'About',
+        title: 'Team',
         activeClass: true,
     },
     {

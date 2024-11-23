@@ -86,7 +86,7 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .nav-bar-container {
 
         .active {
@@ -107,10 +107,10 @@
             padding-top: 3.25rem;
 
             li {
-                font-size: 20px;
+                font-size: 16px;
 
                 a {
-                    padding: 5px 15px;
+                    padding: 2.5px 10px;
                     border-radius: 15px;
                     font-weight: 800;
                 }

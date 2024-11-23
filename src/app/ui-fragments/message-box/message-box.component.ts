@@ -50,7 +50,7 @@ export class MessageBoxComponent implements OnInit, AfterContentInit {
         setTimeout(() => {
             this.messages[0].isVisible = true;
             this.isInited = true;
-        }, 100);
+        }, 200);
     }
 
     private updateTopLimit() {

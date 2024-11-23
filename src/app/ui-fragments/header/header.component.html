@@ -1,10 +1,12 @@
-<div class="header-container container">
-
+<div class="header-container container mx-auto px-4 py-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+    <!-- Logo Section -->
     <div class="header-logo" (click)="navigateToHomePage()">
-        <img height="60" width="240" src="assets/images/moonlight_website_logo.svg" alt="Logo">
+        <img height="60" width="240" src="assets/images/moonlight_website_logo.svg" alt="Logo" class="cursor-pointer">
     </div>
 
-    <div class="nav-bar-menu">
+    <!-- Navigation Bar -->
+    <div class="nav-bar-menu hidden md:flex">
         <app-nav-bar-menu [items]="navBarItems"></app-nav-bar-menu>
     </div>
 </div>
+
