@@ -50,6 +50,11 @@
     <div class="angle" *ngIf="showTapIcon">
         <img src="./assets/images/icon_tap.png" alt="Tap" class="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto mt-4">
     </div>
+    <div class="test-flight-container text-center">
+        <div (click)="navigateToTestFlight()">
+          <img class="test-flight-img" src="assets/images/flight-test-img.png" alt="Test Flight">
+        </div>
+      </div>
 
     <div class="play-icon-container flex justify-center mt-8" (click)="openMessageBoxModal()">
         <img height="70" width="70" src="./assets/images/play-icon-yellow.svg" alt="Play"

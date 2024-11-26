@@ -75,4 +75,7 @@ export class HomeComponent implements OnInit {
     public onFirstTimeClick(): void {
         this.showTapIcon = false;
     }
+    public navigateToTestFlight(): void {
+        window.open('https://testflight.apple.com/join/0DaLdUmA', '_blank');
+    }
 }

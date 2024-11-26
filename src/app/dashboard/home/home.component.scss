@@ -167,21 +167,65 @@
 .icon-googleplay:before {
     color: white;
 }
+
+.test-flight-container {
+    position: fixed;
+    bottom: 5rem; 
+    left: 50%; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease, bottom 0.5s ease; 
+}
+  
+  .test-flight-img {
+    height: auto;
+    max-width: 200px; 
+    cursor: pointer; 
+  }
 /* For screens 1024px and below */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1022px) {
     .home-container {
         .home-section {
-            position: absolute; /* Keep this absolute */
-            top: 50%; /* Keep vertical centering */
+            position: absolute; 
+            top: 50%; 
             left: 50%;
-            transform: translate(-50%, -50%); /* Maintain centering transform */
-            height: 80vh; /* Adjust height to be relative to viewport */
+            transform: translate(-50%, -50%); 
+            height: 80vh; 
             max-height: 800px;
             width: 100%;
             background-position: 66% 50% !important;
-            background-size: 800px auto; /* Adjusted size for better visibility */
+            background-size: 800px auto; 
             margin: 0 auto;
         }
+    }
+    .test-flight-container {
+        display: none; 
+    }
+}
+/* For screens 1024px, position at the bottom-center, angle above it */
+@media only screen and (min-width: 1023px) and (max-width: 1200px) {
+    .test-flight-container {
+       position: absolute;
+            bottom: 2rem;
+            transform: translate(-50%, -50%);  
+    }
+    .home-container{
+        .angle {
+            position: absolute;
+            bottom: 5rem; 
+            margin-bottom: 2rem; 
+        }
+    }
+   
+}
+
+/* For screens above 1024px, position at the bottom-right */
+@media only screen and (min-width: 1201px) {
+    .test-flight-container {
+        bottom: 2rem;
+        transform: translate(-15%, -15%);  
     }
 }
 
