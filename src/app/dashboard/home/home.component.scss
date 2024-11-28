@@ -171,7 +171,7 @@
 .test-flight-container {
     position: fixed;
     bottom: 5rem; 
-    left: 50%; 
+    right: 15%; 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -184,7 +184,7 @@
     height: auto;
     max-width: 200px; 
     cursor: pointer;
-    user-select: none; 
+    user-select: none;
   }
 /* For screens 1024px and below */
 @media only screen and (max-width: 1022px) {
@@ -211,7 +211,7 @@
     .test-flight-container {
        position: absolute;
             bottom: 2rem;
-            transform: translate(-50%, -50%);  
+            transform: translate(15%, -25%);  
     }
     .home-container{
         .angle {
@@ -223,13 +223,6 @@
    
 }
 
-/* For screens above 1024px, position at the bottom-right */
-@media only screen and (min-width: 1201px) {
-    .test-flight-container {
-        bottom: 2rem;
-        transform: translate(-15%, -15%);  
-    }
-}
 
 /* For devices smaller than 768px */
 @media only screen and (max-width: 768px) {
@@ -252,4 +245,19 @@
             max-height: 500px;
         }
     }
+}
+
+@media only screen and (min-width: 1920px) {
+    .home-container {
+        .home-section {
+            background-size: 800px auto; /* Reduced size for tablets */
+            height: 70vh;
+            max-height: 800px;
+        }
+    }
+    .test-flight-container {
+        position: absolute;
+             bottom: 4rem;
+             transform: translate(5%, -25%);  
+     }
 }
