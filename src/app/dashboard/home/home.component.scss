@@ -105,14 +105,17 @@
             width: 100%;
             transition: left 0.5s ease, bottom 0.5s ease; 
             user-select: none;
-        }
+            pointer-events: none;
+        
           
           .test-flight-img {
             height: auto;
             max-width: 200px; 
             cursor: pointer;
             user-select: none;
+            pointer-events: all;
           }
+        }
     }
 
     .angle {

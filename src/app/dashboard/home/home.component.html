@@ -15,9 +15,14 @@
         </div>
         <div class="test-flight-container text-center">
             <div>
-              <img class="test-flight-img" src="assets/images/flight-test-img.png" alt="Test Flight" (click)="navigateToTestFlight()">
+                <img 
+                    class="test-flight-img" 
+                    src="assets/images/flight-test-img.png" 
+                    alt="Test Flight" 
+                    (click)="navigateToTestFlight()"> <!-- Click event only on image -->
             </div>
-          </div>
+        </div>
+        
     </div>
 
     <div class="message-box-modal scale" *ngIf="showMessageBoxModal">
