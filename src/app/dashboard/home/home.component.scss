@@ -96,6 +96,23 @@
             margin: 130px 0 0;
             color: $white;
         }
+
+        .test-flight-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-33%, 70%);
+            width: 100%;
+            transition: left 0.5s ease, bottom 0.5s ease; 
+            user-select: none;
+        }
+          
+          .test-flight-img {
+            height: auto;
+            max-width: 200px; 
+            cursor: pointer;
+            user-select: none;
+          }
     }
 
     .angle {
@@ -168,24 +185,6 @@
     color: white;
 }
 
-.test-flight-container {
-    position: fixed;
-    bottom: 5rem; 
-    right: 15%; 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: left 0.5s ease, bottom 0.5s ease; 
-    user-select: none;
-}
-  
-  .test-flight-img {
-    height: auto;
-    max-width: 200px; 
-    cursor: pointer;
-    user-select: none;
-  }
 /* For screens 1024px and below */
 @media only screen and (max-width: 1022px) {
     .home-container {
@@ -207,22 +206,40 @@
     }
 }
 /* For screens 1024px, position at the bottom-center, angle above it */
-@media only screen and (min-width: 1023px) and (max-width: 1200px) {
-    .test-flight-container {
-       position: absolute;
-            bottom: 2rem;
-            transform: translate(15%, -25%);  
-    }
+@media only screen and (min-width: 1023px) and (max-width: 1199px) {
+    
     .home-container{
         .angle {
             position: absolute;
             bottom: 5rem; 
             margin-bottom: 2rem; 
         }
-    }
-   
+        .home-section{
+            .test-flight-container {
+                position: absolute;
+                bottom: 2rem;
+                transform: translate(-10%, 160%);  
+            }
+        }
+    }   
 }
-
+@media only screen and (min-width: 1200px) {
+    
+    .home-container{
+        .angle {
+            position: absolute;
+            bottom: 5rem; 
+            margin-bottom: 2rem; 
+        }
+        .home-section{
+            .test-flight-container {
+                position: absolute;
+                bottom: 2rem;
+                transform: translate(-33%, 60%);  
+            }
+        }
+    }   
+}
 
 /* For devices smaller than 768px */
 @media only screen and (max-width: 768px) {
@@ -254,10 +271,10 @@
             height: 70vh;
             max-height: 800px;
         }
+        .test-flight-container {
+            position: absolute;
+                 bottom: 4rem;
+                 transform: translate(5%, -25%);  
+         }
     }
-    .test-flight-container {
-        position: absolute;
-             bottom: 4rem;
-             transform: translate(5%, -25%);  
-     }
 }
