@@ -566,6 +566,9 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -895,6 +898,17 @@ video {
 body * {
   font-family: Poppins-Regular !important;
   font-size: 16px !important;
+}
+.ui-datepicker {
+  background-color: white !important;
+  border: 1px solid lightgray !important;
+}
+.ui-dropdown-items-wrapper {
+  background-color: white !important;
+  border: 1px solid lightgray !important;
+}
+.ui-inputswitch-slider {
+  background-color: #F9E3A7;
 }
 .hover\:text-blue-500:hover {
   --tw-text-opacity: 1;
