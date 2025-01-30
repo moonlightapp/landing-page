@@ -27,9 +27,4 @@ export const NAV_BAR_URLS = [
         title: 'Invest in Us',
         activeClass: true,
     },
-    {
-        url: '/campaign',
-        title: 'New Campaign',
-        activeClass: true,
-    },
 ];
