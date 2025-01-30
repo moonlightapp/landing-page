@@ -1,8 +1,12 @@
 @import '../../../assets/styles/helpers/colors';
 
 .new-campaign-container {
+    display: flex;
+    flex-direction: column;
     margin-top: 25px;
     position: relative;
+    width: 100%;
+    height: auto;
 
     .page-title {
         text-align: center;
@@ -18,8 +22,9 @@
         margin: 0 auto;
         margin-top: 15px;
         max-width: 800px;
-        background-color: $white;
+        background-color: white;
         box-shadow: 0 0 15px .5px $black;
+        border-radius: 1rem;
 
         .objective-header {
             display: flex;
@@ -57,7 +62,7 @@
                         height: 50px;
                         color: #16191c;
                         box-shadow: none;
-                        background: #dddddd;
+                        background: #eaeaea;
                         padding: 12px;
                         display: flex;
                         justify-content: space-between;
@@ -66,11 +71,11 @@
                         cursor: pointer;
                         margin-bottom: 5px;
                         border-radius: 10px;
-                        border: 1px solid  darkgray;
+                        border: 1px solid  white;
 
                         &:hover {
-                            background-color: grey;
-                            color: white;
+                            background-color: #fdefc777;
+                            color: black;
                         }
 
                         i {
@@ -156,15 +161,8 @@
             justify-content: center;
             cursor: pointer;
             color: white;
-            background-color: #155e78;
-            border: 1px solid white;
             transition: .7s;
-
-            &:hover {
-                background-color: white;
-                color: #155e78;
-                border: 1px solid #155e78;
-            }
+            border: 1px solid white;
 
             span {
                 font-size: 16px;
@@ -201,6 +199,6 @@
 }
 
 .active {
-    background-color: grey !important;
-    color: white !important;
+    background-color: #F9E3A7 !important;
+    color: black !important;
 }

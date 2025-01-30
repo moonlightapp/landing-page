@@ -16,22 +16,9 @@
             <div class="form-input">
                 <label>
                     <input type="text"
-                           value="Snap Ad, United Kingdom, All Genders, All Ages"
+                           value="United Kingdom, All Genders, All Ages"
                            placeholder="Your Ad Set Name">
                 </label>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="placeholder">
-                <div class="name">Snap Pixel</div>
-                <i class="icon-info"
-                   pTooltip="Tooltip example text"
-                   tooltipPosition="right"></i>
-            </div>
-
-            <div class="form-input-switch">
-                <app-input-switch></app-input-switch>
             </div>
         </div>
 
@@ -89,17 +76,6 @@
             </div>
         </div>
 
-        <div class="section">
-            <div class="placeholder">
-                <div class="name">Attachment</div>
-                <i class="icon-info"
-                   pTooltip="Tooltip example text"
-                   tooltipPosition="right"></i>
-            </div>
-            <div class="form-input-dropdown">
-                <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
-            </div>
-        </div>
 
     </div>
 
@@ -150,30 +126,22 @@
 
     <div class="container">
         <div class="section-header">
-            <div class="section-title">Location</div>
-            <div class="section-actions">
+            <div class="section-title">Locations</div>
+            <!--<div class="section-actions">
                 <div class="inline-block map">Map</div>
                 <div class="inline-block explore">Expolre</div>
                 <div class="inline-block upload"><i class="icon-export2"></i></div>
-            </div>
+            </div>-->
         </div>
 
         <div class="section">
-            <div class="placeholder">
+            <!--<div class="placeholder">
                 <div class="name">Locations</div>
-            </div>
+            </div>-->
 
             <div class="location-drop-downs">
                 <div class="form-input-dropdown" style="width: 20%;">
-                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
-                </div>
-
-                <div class="form-input-dropdown" style="width: 20%;">
-                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
-                </div>
-
-                <div class="form-input-dropdown" style="width: 50%;">
-                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
+                    <p-dropdown [options]="locations" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
                 </div>
             </div>
         </div>
@@ -191,14 +159,14 @@
 
             <div class="age-ranges">
                 <div class="form-input-dropdown inline-block">
-                    <p-dropdown [options]="ages" [(ngModel)]="selectedCity1"></p-dropdown>
+                    <p-dropdown [options]="ages" [(ngModel)]="selectedAge"></p-dropdown>
                 </div>
 
-                <div class="divider-simple inline-block">-</div>
+                <!--<div class="divider-simple inline-block">-</div>
 
                 <div class="form-input-dropdown inline-block">
-                    <p-dropdown [options]="ages" [(ngModel)]="selectedCity1"></p-dropdown>
-                </div>
+                    <p-dropdown [options]="ages" [(ngModel)]="selectedCity2"></p-dropdown>
+                </div>-->
             </div>
         </div>
 
@@ -223,7 +191,7 @@
             </div>
 
             <div class="form-input-dropdown">
-                <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
+                <p-dropdown [options]="languages" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
             </div>
         </div>
 
@@ -255,7 +223,7 @@
             </div>
 
             <div class="form-input-dropdown">
-                <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
+                <p-dropdown [options]="audiences" [(ngModel)]="selectedAudience" [style]="{width: '100%'}"></p-dropdown>
             </div>
         </div>
 
@@ -294,7 +262,7 @@
             </div>
         </div>
 
-        <div class="section">
+       <!--  <div class="section">
             <div class="placeholder">
                 <div class="name">Device Makes</div>
                 <i class="icon-info"
@@ -302,10 +270,10 @@
                    tooltipPosition="right"></i>
             </div>
 
-            <div class="form-input-dropdown">
+           <div class="form-input-dropdown">
                 <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
-            </div>
-        </div>
+           </div>
+        </div>-->
 
         <div class="section">
             <div class="placeholder">
@@ -322,7 +290,7 @@
             </div>
         </div>
 
-        <div class="section">
+       <!-- <div class="section">
             <div class="placeholder">
                 <div class="name">Carriers</div>
             </div>
@@ -330,7 +298,7 @@
             <div class="form-input-dropdown">
                 <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
             </div>
-        </div>
+        </div>-->
     </div>
 
     <div class="container">
@@ -363,14 +331,14 @@
                 <div class="form-input float-left" style="width: 48%">
                     <label>
                         <input type="text"
-                               value="£50.00"
-                               placeholder="£5.00">
+                               value="$50.00"
+                               placeholder="$5.00">
                     </label>
                 </div>
 
-                <div class="form-input-dropdown float-right" style="width: 48%">
+               <!-- <div class="form-input-dropdown float-right" style="width: 48%">
                     <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [style]="{width: '100%'}"></p-dropdown>
-                </div>
+                </div>-->
             </div>
         </div>
 
