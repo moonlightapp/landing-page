@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { NgModule } from '@angular/core';
+import {TeamMissionComponent} from './team-mission/team-mission.component';
 
 
 const routes: Routes = [
@@ -23,8 +24,8 @@ const routes: Routes = [
                 component: HomeComponent
             },
             {
-                path: 'team',
-                component: TeamComponent,
+                path: 'team-mission',
+                component: TeamMissionComponent,
             },
             {
                 path: 'contact',

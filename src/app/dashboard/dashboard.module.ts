@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { NgModule } from '@angular/core';
+import {TeamMissionComponent} from './team-mission/team-mission.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { NgModule } from '@angular/core';
         BetaComponent,
         DashboardComponent,
         InvestInUsComponent,
+        TeamMissionComponent
     ],
     imports: [
         CommonModule,
