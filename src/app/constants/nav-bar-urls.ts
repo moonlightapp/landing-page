@@ -16,15 +16,4 @@ export const NAV_BAR_URLS = [
         title: 'Team',
         activeClass: true,
     },
-    {
-        url: '/contact',
-        // title: 'Kontakt'
-        title: 'Contact Us',
-        activeClass: true,
-    },
-    {
-        url: '/invest-in-us',
-        title: 'Invest in Us',
-        activeClass: true,
-    },
 ];
