@@ -1684,7 +1684,7 @@
           redirectTo: 'team-mission',
           pathMatch: 'full'
         }, {
-          path: 'home',
+          path: 'project',
           component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__.HomeComponent
         }, {
           path: 'team-mission',
