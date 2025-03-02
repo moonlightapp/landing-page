@@ -1,19 +1,19 @@
 export const NAV_BAR_URLS = [
     {
-        url: '/home',
+        url: '/team-mission',
         title: 'Documentation',
         activeClass: false,
     },
     {
-        url: '/home',
+        url: '/team-mission',
         // title: 'Hjem'
-        title: 'Home',
+        title: 'Mission',
         activeClass: true,
     },
     {
-        url: '/team-mission',
+        url: '/home',
         // title: 'Om Oss'
-        title: 'Team',
+        title: 'Project',
         activeClass: true,
     },
 ];

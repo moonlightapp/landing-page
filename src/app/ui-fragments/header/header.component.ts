@@ -10,15 +10,22 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
     public navBarItems: NavigationItem[] = NAV_BAR_URLS;
+    public isTeamMission: boolean = false;
+
 
     constructor(private router: Router) {
     }
 
     ngOnInit() {
+        this.isTeamMission = this.router.url === '/team-mission';
+
+        this.router.events.subscribe(() => {
+            this.isTeamMission = this.router.url === '/team-mission';
+        });
     }
 
     navigateToHomePage() {
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/team-mission');
     }
 
 }
