@@ -1166,7 +1166,7 @@ const routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'home',
+                redirectTo: 'team-mission',
                 pathMatch: 'full'
             },
             {

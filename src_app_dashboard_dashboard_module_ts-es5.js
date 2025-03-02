@@ -1681,7 +1681,7 @@
         component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.DashboardComponent,
         children: [{
           path: '',
-          redirectTo: 'home',
+          redirectTo: 'team-mission',
           pathMatch: 'full'
         }, {
           path: 'home',
