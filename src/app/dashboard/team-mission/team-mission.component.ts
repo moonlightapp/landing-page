@@ -34,6 +34,8 @@ export class TeamMissionComponent implements OnInit {
 
     public allMembers: any[] = [];
     public selectedMember: any;
+    private touchTimeout: any;
+    protected isMobile = false;
 
     constructor() {
     }
@@ -47,6 +49,14 @@ export class TeamMissionComponent implements OnInit {
 
         // Default selected member
         this.selectedMember = this.allMembers[0];
+
+        // Detect if the device is mobile
+        this.isMobile = this.checkIfMobile();
+    }
+
+    // Check if the device is mobile
+    checkIfMobile(): boolean {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
 
     showMemberDetails(member: any): void {
@@ -61,4 +71,29 @@ export class TeamMissionComponent implements OnInit {
         }
     }
 
+    // Handle click events
+    onClick(member: any): void {
+        if (!this.isMobile) {
+            // On desktop, click opens the link
+            this.openMemberLink(member);
+        } else {
+            // On mobile, click selects the member
+            this.showMemberDetails(member);
+        }
+    }
+
+    // Handle touch events for mobile
+    onTouchStart(member: any): void {
+        if (this.isMobile) {
+            this.touchTimeout = setTimeout(() => {
+                this.openMemberLink(member);
+            }, 1000); // 1 second long press
+        }
+    }
+
+    onTouchEnd(member: any): void {
+        if (this.isMobile) {
+            clearTimeout(this.touchTimeout);
+        }
+    }
 }
