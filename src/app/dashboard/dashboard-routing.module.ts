@@ -20,7 +20,7 @@ const routes: Routes = [
                 pathMatch: 'full'
             },
             {
-                path: 'project',
+                path: 'platform',
                 component: HomeComponent
             },
             {
