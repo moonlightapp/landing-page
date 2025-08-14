@@ -962,26 +962,8 @@
         isQuestion: true,
         isVisible: false
       }, {
-        title: 'Ela',
-        content: 'Wow, can creators make money too?',
-        color: '#58E5C4',
-        isQuestion: false,
-        isVisible: false
-      }, {
         title: 'Adam',
-        content: 'Absolutely! Creators earn $ML tokens for their content—direct tips, premium purchases, you name it. NFTs? You can even mint parts of your story!',
-        color: '#F9E3A7',
-        isQuestion: true,
-        isVisible: false
-      }, {
-        title: 'Ela',
-        content: 'NFTs for content?! That’s next-level. Feels like creators’ turn, like designers with NFT art last year.',
-        color: '#58E5C4',
-        isQuestion: false,
-        isVisible: false
-      }, {
-        title: 'Adam',
-        content: 'Exactly! Moonlight is like the future of storytelling—high-tech, creator-first, and powered by AI tools for writing. Our team has already built apps for millions of users!',
+        content: 'Moonlight is like the future of storytelling—high-tech, creator-first, and powered by AI tools for writing. Our team has already built apps for millions of users!',
         color: '#F9E3A7',
         isQuestion: true,
         isVisible: false
@@ -993,7 +975,7 @@
         isVisible: false
       }, {
         title: 'Adam',
-        content: 'There’s a custom LLM behind it. It helps with tone adjustments, story generation, even fixing grammar. And it’s super easy to use.',
+        content: 'There’s an AI system behind it. It helps with tone adjustments, story generation, and even fixing grammar — and it’s super easy to use.',
         color: '#F9E3A7',
         isQuestion: true,
         isVisible: false
@@ -2294,8 +2276,8 @@
               firstName: 'Bejtulla',
               lastName: 'Ajeti,',
               role: 'Specializes in crafting responsive, user-friendly web interfaces.',
-              avatar: 'assets/images/people/profile.jpg',
-              link: '',
+              avatar: 'assets/images/bejtulla-ajeti-image.jpeg',
+              link: 'https://www.linkedin.com/in/bejtulla-ajeti-564abb177',
               platform: 'linkedin',
               team: 'Front-End Developer'
             }, {
@@ -2336,6 +2318,22 @@
               role: 'Back-End Developer',
               avatar: 'assets/images/valdrin-muharemi-image.jpeg',
               link: 'https://www.linkedin.com/in/valdrin-muharemi',
+              platform: 'linkedin',
+              team: 'Founders & Core Team'
+            }, {
+              firstName: 'Ali',
+              lastName: 'Amzai,',
+              role: 'Specializes in crafting responsive, user-friendly web interfaces.',
+              avatar: 'assets/images/ali-amzai-image.jpeg',
+              link: 'https://www.linkedin.com/in/ali-amzai-138489228',
+              platform: 'linkedin',
+              team: 'Founders & Core Team'
+            }, {
+              firstName: 'Endrit',
+              lastName: 'Ambari,',
+              role: 'Specializes in crafting responsive, user-friendly web interfaces.',
+              avatar: 'assets/images/endrit-ambari-image.jpeg',
+              link: 'https://www.linkedin.com/in/endrit-ambari-819a761a9',
               platform: 'linkedin',
               team: 'Founders & Core Team'
             }],
@@ -2390,7 +2388,7 @@
               team: 'Advisor & Early Investor'
             }, {
               firstName: 'Elin',
-              lastName: 'Fjeld,',
+              lastName: 'Fjeld',
               role: 'Advisor, Product Tester and Shareholder',
               avatar: 'assets/images/elin-fjeld-image.jpeg',
               link: 'https://no.linkedin.com/in/elinfjeld/en',
@@ -2563,8 +2561,8 @@
               firstName: 'Bejtulla',
               lastName: 'Ajeti',
               role: 'Front-End Developer',
-              avatar: 'assets/images/people/profile.jpg',
-              link: '',
+              avatar: 'assets/images/bejtulla-ajeti-image.jpeg',
+              link: 'https://www.linkedin.com/in/bejtulla-ajeti-564abb177',
               platform: 'linkedin'
             }, {
               firstName: 'Taaha',
@@ -2600,6 +2598,20 @@
               role: 'Back-end Developer',
               avatar: 'assets/images/valdrin-muharemi-image.jpeg',
               link: 'https://www.linkedin.com/in/valdrin-muharemi',
+              platform: 'linkedin'
+            }, {
+              firstName: 'Ali',
+              lastName: 'Amzai',
+              role: 'Front-End Developer',
+              avatar: 'assets/images/ali-amzai-image.jpeg',
+              link: 'https://www.linkedin.com/in/ali-amzai-138489228',
+              platform: 'linkedin'
+            }, {
+              firstName: 'Endrit',
+              lastName: 'Ambari',
+              role: 'Front-End Developer',
+              avatar: 'assets/images/endrit-ambari-image.jpeg',
+              link: 'https://www.linkedin.com/in/endrit-ambari-819a761a9',
               platform: 'linkedin'
             }],
             marketing: [{
@@ -3875,7 +3887,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"team-container scroll  items-center text-center\">\n    <!-- Team Header Section -->\n    <div class=\"team-header-container  flex flex-col items-center text-center\">\n        <div class=\"header-logo\">\n            <img height=\"80\" width=\"300\" src=\"assets/images/moonlight_website_logo.svg\" alt=\"Logo\">\n        </div>\n        <div class=\"space-y-16 w-full max-w-5xl px-6 items-center text-center\">\n\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8 items-center text-center\">\n                <p>Moonlight is redefining content creation and consumption by blending bite-sized storytelling, interactive engagement, and Web3 incentives. As attention spans shrink and traditional platforms fail to innovate, Moonlight provides a dynamic space where creators can craft immersive narratives, monetize their work, and engage directly with their audience. </p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8 items-center text-center\">\n            <p>Moonlight ensures that creators are fairly rewarded, while readers enjoy a seamless, personalized experience tailored to modern content consumption habits.</p>\n            </div>\n            <div class=\"space-y-8 w-full max-w-5xl px-4 items-center text-center\">\n                <!-- Title Container -->\n                <div class=\"title-container p-6 rounded-lg mx-4\">\n                    <p class=\"text-xl font-bold\">Meet the Team and Advisors</p>\n                </div>\n\n                <!-- Team Members List -->\n                <div class=\"team-members-list flex flex-wrap justify-start sm:justify-center gap-4\">\n                    <div *ngFor=\"let member of allMembers\"\n                         class=\"team-member text-gray-800 cursor-pointer p-1 sm:p-2 rounded-lg hover:bg-gray-200\"\n                         (mouseenter)=\"!isMobile && showMemberDetails(member)\"\n                         [class.active]=\"member === selectedMember\"\n                         (click)=\"onClick(member)\"\n                         (touchstart)=\"onTouchStart(member)\"\n                         (touchend)=\"onTouchEnd(member)\">\n                        <p class=\"font-semibold text-[12px] sm:text-sm md:text-base\">{{ member.firstName }} {{ member.lastName }}</p>\n                    </div>\n                </div>\n\n                <!-- Team Member Details -->\n                <div class=\"team-member-details p-6 md:p-6 sm:p-8 mt-6 rounded-lg text-center bg-gray-100 items-center\">\n                    <h3 class=\"team-text text-lg font-semibold\">{{ selectedMember.firstName }} {{ selectedMember.lastName }} <span class=\"font-bold\">{{ selectedMember.team }}</span></h3>\n                    <p class=\"team-text text-center text-sm sm:text-[12px] d:text-base lg:text-lg\">{{ selectedMember.role }}</p>\n                </div>\n            </div>\n            <div class=\"title-container p-10 rounded-lg  mx-8\">\n                <p>The Cognitive Science of Better Content</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n                <p>The way we consume and create content is deeply rooted in psychology and evolving user behavior. At Moonlight, we continuously study reading habits, attention spans, cognitive engagement, and the psychology of storytelling to refine how content is experienced. Our goal is to make both consumption and creation effortless, engaging, and rewarding.</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n\n            <p>We’re not just building a platform, we’re applying scientific research, behavioral insights, and real user data to ensure that every feature, from bite-sized content formats to AI-powered creative tools, is designed to optimize focus, creativity, and retention.</p>\n            </div>\n            <div class=\"title-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n                <p>Strong Foundations, Lasting Impact</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n                <p>Building with intention. At Moonlight, we believe in crafting technology the right way, avoiding shortcuts that may compromise long-term scalability, security, or user experience. Every line of code, every feature, and every design choice is made with a deep focus on longevity and performance. Our infrastructure is built from the ground up, using native technologies endorsed by Apple and Google.</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n            <p>Scalability at the core. Rather than patching together existing frameworks, we’ve architected Moonlight’s backend with custom-built, scalable infrastructure, designed to handle future growth while maintaining reliability.</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n            <p>User experience backed by science. Every design choice in Moonlight, from typography to interface layout, is rooted in behavioral research and cognitive studies. We optimize for readability, attention retention, and seamless interaction, ensuring that both content consumption and creation feel natural and effortless. Our UI isn’t just beautiful, it’s scientifically refined for maximum engagement and user satisfaction.</p>\n            </div>\n\n            <div class=\"title-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8 mt-12\">\n                <p>Join Us</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8\">\n                <p>\n                    If you’re a software engineer, Figma designer, or someone who believes they can contribute to this mission, we’d love to hear from you. Whether it’s shaping our infrastructure, refining user experience, or bringing new creative ideas to life, there’s room for passionate minds to make an impact.\n                    Send your resume to\n                    <a href=\"mailto:hello@moonlightapp.co\" class=\"underline\">hello@moonlightapp.co</a>.\n                    Follow us on X\n                    <a href=\"https://x.com/ml_ai_official\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">(@ml_ai_official)</a>\n                    and be part of the journey.\n                </p>\n            </div>\n\n        </div>\n    </div>\n    <div class=\"title-container text-s p-12 rounded-lg  mx-8 flex flex-col items-center text-center mt-\">\n        <p>© 2025 Moonlight.</p>\n    </div>\n</div>\n";
+      __webpack_exports__["default"] = "<div class=\"team-container scroll  items-center text-center\">\n    <!-- Team Header Section -->\n    <div class=\"team-header-container  flex flex-col items-center text-center\">\n        <div class=\"header-logo\">\n            <img height=\"80\" width=\"300\" src=\"assets/images/moonlight_website_logo.svg\" alt=\"Logo\">\n        </div>\n        <div class=\"space-y-16 w-full max-w-5xl px-6 items-center text-center\">\n\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8 items-center text-center\">\n                <p>Moonlight is redefining content creation and consumption by blending bite-sized storytelling and interactive engagement. As attention spans shrink and traditional platforms fail to innovate, Moonlight provides a dynamic space where creators can craft immersive narratives, and engage directly with their audience. </p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8 items-center text-center\">\n            <p>Moonlight ensures that creators are fairly rewarded, while readers enjoy a seamless, personalized experience tailored to modern content consumption habits.</p>\n            </div>\n            <div class=\"space-y-8 w-full max-w-5xl px-4 items-center text-center\">\n                <!-- Title Container -->\n                <div class=\"title-container p-6 rounded-lg mx-4\">\n                    <p class=\"text-xl font-bold\">Meet the Team and Advisors</p>\n                </div>\n\n                <!-- Team Members List -->\n                <div class=\"team-members-list flex flex-wrap justify-start sm:justify-center gap-4\">\n                    <div *ngFor=\"let member of allMembers\"\n                         class=\"team-member text-gray-800 cursor-pointer p-1 sm:p-2 rounded-lg hover:bg-gray-200\"\n                         (mouseenter)=\"!isMobile && showMemberDetails(member)\"\n                         [class.active]=\"member === selectedMember\"\n                         (click)=\"onClick(member)\"\n                         (touchstart)=\"onTouchStart(member)\"\n                         (touchend)=\"onTouchEnd(member)\">\n                        <p class=\"font-semibold text-[12px] sm:text-sm md:text-base\">{{ member.firstName }} {{ member.lastName }}</p>\n                    </div>\n                </div>\n\n                <!-- Team Member Details -->\n                <div class=\"team-member-details p-6 md:p-6 sm:p-8 mt-6 rounded-lg text-center bg-gray-100 items-center\">\n                    <h3 class=\"team-text text-lg font-semibold\">{{ selectedMember.firstName }} {{ selectedMember.lastName }} <span class=\"font-bold\">{{ selectedMember.team }}</span></h3>\n                    <p class=\"team-text text-center text-sm sm:text-[12px] d:text-base lg:text-lg\">{{ selectedMember.role }}</p>\n                </div>\n            </div>\n            <div class=\"title-container p-10 rounded-lg  mx-8\">\n                <p>The Cognitive Science of Better Content</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n                <p>The way we consume and create content is deeply rooted in psychology and evolving user behavior. At Moonlight, we continuously study reading habits, attention spans, cognitive engagement, and the psychology of storytelling to refine how content is experienced. Our goal is to make both consumption and creation effortless, engaging, and rewarding.</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n\n            <p>We’re not just building a platform, we’re applying scientific research, behavioral insights, and real user data to ensure that every feature, from bite-sized content formats to AI-powered creative tools, is designed to optimize focus, creativity, and retention.</p>\n            </div>\n            <div class=\"title-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n                <p>Strong Foundations, Lasting Impact</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n                <p>Building with intention. At Moonlight, we believe in crafting technology the right way, avoiding shortcuts that may compromise long-term scalability, security, or user experience. Every line of code, every feature, and every design choice is made with a deep focus on longevity and performance. Our infrastructure is built from the ground up, using native technologies endorsed by Apple and Google.</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n            <p>Scalability at the core. Rather than patching together existing frameworks, we’ve architected Moonlight’s backend with custom-built, scalable infrastructure, designed to handle future growth while maintaining reliability.</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg  mx-8\">\n            <p>User experience backed by science. Every design choice in Moonlight, from typography to interface layout, is rooted in behavioral research and cognitive studies. We optimize for readability, attention retention, and seamless interaction, ensuring that both content consumption and creation feel natural and effortless. Our UI isn’t just beautiful, it’s scientifically refined for maximum engagement and user satisfaction.</p>\n            </div>\n\n            <div class=\"title-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8 mt-12\">\n                <p>Join Us</p>\n            </div>\n            <div class=\"description-container text-lg sm:text-xl text-gray-700 p-10 rounded-lg mx-8\">\n                <p>\n                    If you’re a software engineer, Figma designer, or someone who believes they can contribute to this mission, we’d love to hear from you. Whether it’s shaping our infrastructure, refining user experience, or bringing new creative ideas to life, there’s room for passionate minds to make an impact.\n                    Send your resume\n                    <a href=\"mailto:hello@moonlightapp.co\" class=\"underline\">here</a>.\n                    <br>Follow us on X\n                    <a href=\"https://x.com/ml_ai_official\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">(@ml_ai_official)</a>,\n                     tiktok\n                    <a href=\"https://www.tiktok.com/@moonlightdotink?is_from_webapp=1&sender_device=pc\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">(@moonlightdotink)</a>,\n                    instagram\n                    <a href=\"https://www.instagram.com/moonlightdotink?utm_source=ig_web_button_share_sheet&igsh=MzlqOTEyaHU1NTVp\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">(moonlightdotink)</a>\n                    and be part of the journey.\n                </p>\n            </div>\n\n        </div>\n    </div>\n    <div class=\"title-container text-s p-12 rounded-lg  mx-8 flex flex-col items-center text-center mt-\">\n        <p>© 2025 Moonlight.</p>\n    </div>\n</div>\n";
       /***/
     },
 
