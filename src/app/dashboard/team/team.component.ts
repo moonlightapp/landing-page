@@ -34,8 +34,8 @@ export class TeamComponent implements OnInit {
                 firstName: 'Bejtulla',
                 lastName: 'Ajeti',
                 role: 'Front-End Developer',
-                avatar: 'assets/images/people/profile.jpg',
-                link: '',
+                avatar: 'assets/images/bejtulla-ajeti-image.jpeg',
+                link: 'https://www.linkedin.com/in/bejtulla-ajeti-564abb177',
                 platform:'linkedin'
             },
             {
@@ -77,7 +77,23 @@ export class TeamComponent implements OnInit {
                 avatar: 'assets/images/valdrin-muharemi-image.jpeg',
                 link: 'https://www.linkedin.com/in/valdrin-muharemi',
                 platform:'linkedin'
-            }
+            },
+            {
+                firstName: 'Ali',
+                lastName: 'Amzai',
+                role: 'Front-End Developer',
+                avatar: 'assets/images/ali-amzai-image.jpeg',
+                link: 'https://www.linkedin.com/in/ali-amzai-138489228',
+                platform:'linkedin'
+            },
+            {
+                firstName: 'Endrit',
+                lastName: 'Ambari',
+                role: 'Front-End Developer',
+                avatar: 'assets/images/endrit-ambari-image.jpeg',
+                link: 'https://www.linkedin.com/in/endrit-ambari-819a761a9',
+                platform:'linkedin'
+            },
         ],
         marketing: [
             {
@@ -140,7 +156,7 @@ export class TeamComponent implements OnInit {
             }
         ]
     };
-    
+
 
     constructor() {
     }
@@ -157,6 +173,6 @@ export class TeamComponent implements OnInit {
         };
         return icons[platform] || ''; // Return empty if no valid platform
     }
-    
+
 
 }

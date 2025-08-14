@@ -43,29 +43,8 @@ export const HOME_MESSAGES = [
         isVisible: false
     },
     {
-        title: 'Ela',
-        content: 'Wow, can creators make money too?',
-        color: '#58E5C4',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
         title: 'Adam',
-        content: 'Absolutely! Creators earn $ML tokens for their content—direct tips, premium purchases, you name it. NFTs? You can even mint parts of your story!',
-        color: '#F9E3A7',
-        isQuestion: true,
-        isVisible: false
-    },
-    {
-        title: 'Ela',
-        content: 'NFTs for content?! That’s next-level. Feels like creators’ turn, like designers with NFT art last year.',
-        color: '#58E5C4',
-        isQuestion: false,
-        isVisible: false
-    },
-    {
-        title: 'Adam',
-        content: 'Exactly! Moonlight is like the future of storytelling—high-tech, creator-first, and powered by AI tools for writing. Our team has already built apps for millions of users!',
+        content: 'Moonlight is like the future of storytelling—high-tech, creator-first, and powered by AI tools for writing. Our team has already built apps for millions of users!',
         color: '#F9E3A7',
         isQuestion: true,
         isVisible: false
@@ -79,7 +58,7 @@ export const HOME_MESSAGES = [
     },
     {
         title: 'Adam',
-        content: 'There’s a custom LLM behind it. It helps with tone adjustments, story generation, even fixing grammar. And it’s super easy to use.',
+        content: 'There’s an AI system behind it. It helps with tone adjustments, story generation, and even fixing grammar — and it’s super easy to use.',
         color: '#F9E3A7',
         isQuestion: true,
         isVisible: false
@@ -280,5 +259,5 @@ export const HOME_MESSAGES = [
         isQuestion: true,
         isVisible: false
     },
-    
+
 ];
