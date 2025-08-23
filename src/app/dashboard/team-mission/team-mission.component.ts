@@ -98,4 +98,12 @@ export class TeamMissionComponent implements OnInit {
             clearTimeout(this.touchTimeout);
         }
     }
+
+
+    public navigateToTermsOfService(): void {
+        window.open('https://moonlight.ink/terms-and-conditions', '_blank');
+    }
+    public navigateToPrivacyPolicy(): void {
+        window.open('https://moonlight.ink/privacy-policy', '_blank');
+    }
 }
